@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Arcade",
+			"Path": "..\\Source\\Arcade.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ArcadeEditor",
+			"Path": "..\\Source\\ArcadeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Unreal 5/Arcade/Content/Maps/L_MainMenu.umap",
+				"C:/Unreal 5/Arcade/Content/GameModes/GM_MainMenu.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenuPawn.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/WB_MainMenu.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/retro.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/retro_Font.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenu.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenuController.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenuPawb.uasset"
+			]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Unreal 5\\Arcade\\Source\\Arcade\\Arcade.Build.cs",
+		"C:\\Unreal 5\\Arcade\\Source\\Arcade.Target.cs",
+		"C:\\Unreal 5\\Arcade\\Source\\ArcadeEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}
