@@ -39,20 +39,19 @@ class ARCADE_API ACC_MainMenuController : public APlayerController
 public:
 	ACC_MainMenuController();
 	
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
+	TSubclassOf<UCC_MainMenuWidget> StartingWidget; // The widget class to instantiate at start
 protected:
 
 	virtual void BeginPlay() override;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
-	TSubclassOf<UCC_MainMenuWidget> StartingWidget; // The widget class to instantiate at start
+	
 
 	UPROPERTY()
 	UCC_MainMenuWidget* CurrentWidgetInstance = nullptr; // Keep track of the current widget instance
 
 
-	UFUNCTION(BlueprintCallable, Category = "UI", meta = (ExposeOnSpawn = "true"))
-	void ShowWidget( TSubclassOf<UCC_MainMenuWidget> NewWidget); // Function to show the widget
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Location")
 	FTransform InitialCameraLocation; // Initial camera location
@@ -60,6 +59,10 @@ protected:
 	
 public:
 	
+	UFUNCTION(BlueprintCallable, Category = "UI", meta = (ExposeOnSpawn = "true"))
+	void ShowWidget(TSubclassOf<UCC_MainMenuWidget> NewWidget); // Function to show the widget
+
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
 	TMap<EArcadeMachine, FTransform> ArcadeCameraLocations; // Map of arcade machine types to camera locations
 

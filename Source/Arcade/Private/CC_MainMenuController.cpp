@@ -43,6 +43,7 @@ void ACC_MainMenuController::BeginPlay()
 			WB_MainMenu->SetMainMenuController(this);
 			CurrentWidgetInstance = WB_MainMenu;
 			WB_MainMenu->AddToViewport();
+
 		}
 
 		GetAllArcades(ArcadeCameraLocations);
@@ -57,7 +58,7 @@ void ACC_MainMenuController::ShowWidget(TSubclassOf<UCC_MainMenuWidget> NewWidge
 {
 	if (CurrentWidgetInstance)
 	{
-		CurrentWidgetInstance->RemoveFromViewport();
+		CurrentWidgetInstance->RemoveFromParent();
 		CurrentWidgetInstance = nullptr;
 	}
 
@@ -73,7 +74,7 @@ void ACC_MainMenuController::RemoveCurrentWidget()
 {
 	if (CurrentWidgetInstance)
 	{
-		CurrentWidgetInstance->RemoveFromViewport();
+		CurrentWidgetInstance->RemoveFromParent();
 		CurrentWidgetInstance = nullptr;
 	}
 }

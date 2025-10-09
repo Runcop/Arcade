@@ -17,6 +17,7 @@ ARCADE_API UClass* Z_Construct_UClass_UCC_MainMenuWidget();
 ARCADE_API UClass* Z_Construct_UClass_UCC_MainMenuWidget_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
@@ -62,6 +63,180 @@ DEFINE_FUNCTION(UCC_MainMenuWidget::execNextSelectedGame)
 	P_NATIVE_END;
 }
 // ********** End Class UCC_MainMenuWidget Function NextSelectedGame *******************************
+
+// ********** Begin Class UCC_MainMenuWidget Function OnBackClicked ********************************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "OnBackClicked", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execOnBackClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBackClicked();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function OnBackClicked **********************************
+
+// ********** Begin Class UCC_MainMenuWidget Function OnBackToMainMenuClicked **********************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "OnBackToMainMenuClicked", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execOnBackToMainMenuClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBackToMainMenuClicked();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function OnBackToMainMenuClicked ************************
+
+// ********** Begin Class UCC_MainMenuWidget Function OnNextClicked ********************************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "OnNextClicked", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execOnNextClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnNextClicked();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function OnNextClicked **********************************
+
+// ********** Begin Class UCC_MainMenuWidget Function OnQuitClicked ********************************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "OnQuitClicked", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execOnQuitClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnQuitClicked();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function OnQuitClicked **********************************
+
+// ********** Begin Class UCC_MainMenuWidget Function OnSettingsClicked ****************************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "OnSettingsClicked", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execOnSettingsClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSettingsClicked();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function OnSettingsClicked ******************************
+
+// ********** Begin Class UCC_MainMenuWidget Function OnStartClicked *******************************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "OnStartClicked", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execOnStartClicked)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnStartClicked();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function OnStartClicked *********************************
 
 // ********** Begin Class UCC_MainMenuWidget Function PreviousSelectedGame *************************
 struct Z_Construct_UFunction_UCC_MainMenuWidget_PreviousSelectedGame_Statics
@@ -115,13 +290,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_SetMainMenuController_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Controller" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Optionally, you can set the reference from C++ or Blueprint\n" },
-#endif
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Optionally, you can set the reference from C++ or Blueprint" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Controller;
@@ -164,13 +333,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_SetNavigationEnabled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "UI" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Function to enable/disable navigation\n" },
-#endif
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Function to enable/disable navigation" },
-#endif
 	};
 #endif // WITH_METADATA
 	static void NewProp_bEnabled_SetBit(void* Obj);
@@ -208,15 +371,58 @@ DEFINE_FUNCTION(UCC_MainMenuWidget::execSetNavigationEnabled)
 }
 // ********** End Class UCC_MainMenuWidget Function SetNavigationEnabled ***************************
 
+// ********** Begin Class UCC_MainMenuWidget Function UpdateSelectedGameText ***********************
+struct Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Update the onscreen game name\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Update the onscreen game name" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_MainMenuWidget, nullptr, "UpdateSelectedGameText", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_MainMenuWidget::execUpdateSelectedGameText)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateSelectedGameText();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_MainMenuWidget Function UpdateSelectedGameText *************************
+
 // ********** Begin Class UCC_MainMenuWidget *******************************************************
 void UCC_MainMenuWidget::StaticRegisterNativesUCC_MainMenuWidget()
 {
 	UClass* Class = UCC_MainMenuWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "NextSelectedGame", &UCC_MainMenuWidget::execNextSelectedGame },
+		{ "OnBackClicked", &UCC_MainMenuWidget::execOnBackClicked },
+		{ "OnBackToMainMenuClicked", &UCC_MainMenuWidget::execOnBackToMainMenuClicked },
+		{ "OnNextClicked", &UCC_MainMenuWidget::execOnNextClicked },
+		{ "OnQuitClicked", &UCC_MainMenuWidget::execOnQuitClicked },
+		{ "OnSettingsClicked", &UCC_MainMenuWidget::execOnSettingsClicked },
+		{ "OnStartClicked", &UCC_MainMenuWidget::execOnStartClicked },
 		{ "PreviousSelectedGame", &UCC_MainMenuWidget::execPreviousSelectedGame },
 		{ "SetMainMenuController", &UCC_MainMenuWidget::execSetMainMenuController },
 		{ "SetNavigationEnabled", &UCC_MainMenuWidget::execSetNavigationEnabled },
+		{ "UpdateSelectedGameText", &UCC_MainMenuWidget::execUpdateSelectedGameText },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -259,14 +465,8 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuController_MetaData[] = {
 		{ "Category", "Default" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Reference to the main menu controller\n" },
-#endif
 		{ "ExposeOnSpawn", "true" },
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Reference to the main menu controller" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuWidgetClass_MetaData[] = {
 		{ "Category", "UI" },
@@ -279,13 +479,73 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Back_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Buttons (match names in your Widget Blueprint)\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Buttons (match names in your Widget Blueprint)" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Quit_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Start_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_MainMenuWidget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Settings_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_MainMenuWidget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_NextArrow_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_MainMenuWidget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_BackArrow_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_MainMenuWidget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TXT_GameSelected_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_MainMenuWidget" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Text to update on next/back\n" },
+#endif
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Text to update on next/back" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartButtonWidget_MetaData[] = {
+		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Optional widget classes used by your buttons\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Optional widget classes used by your buttons" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_SelectGame_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Settings_MetaData[] = {
+		{ "Category", "UI" },
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
@@ -294,13 +554,28 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 	static const UECodeGen_Private::FIntPropertyParams NewProp_SelectedGame;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Back;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Quit;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Start;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Settings;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_NextArrow;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_BackArrow;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_GameSelected;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_StartButtonWidget;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_SelectGame;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_Settings;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame, "NextSelectedGame" }, // 191623077
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked, "OnBackClicked" }, // 74646048
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked, "OnBackToMainMenuClicked" }, // 2628173438
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked, "OnNextClicked" }, // 1733443797
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked, "OnQuitClicked" }, // 2220857065
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked, "OnSettingsClicked" }, // 3146675508
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked, "OnStartClicked" }, // 2368149671
 		{ &Z_Construct_UFunction_UCC_MainMenuWidget_PreviousSelectedGame, "PreviousSelectedGame" }, // 2094643577
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetMainMenuController, "SetMainMenuController" }, // 3267189370
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetNavigationEnabled, "SetNavigationEnabled" }, // 820917705
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetMainMenuController, "SetMainMenuController" }, // 1090807239
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetNavigationEnabled, "SetNavigationEnabled" }, // 3120703673
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText, "UpdateSelectedGameText" }, // 1343726564
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -313,12 +588,28 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCC_MainMenuWid
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_SelectedGame = { "SelectedGame", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, SelectedGame), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectedGame_MetaData), NewProp_SelectedGame_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Back = { "BTN_Back", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_Back), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Back_MetaData), NewProp_BTN_Back_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Quit = { "BTN_Quit", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_Quit), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Quit_MetaData), NewProp_BTN_Quit_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Start = { "BTN_Start", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_Start), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Start_MetaData), NewProp_BTN_Start_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Settings = { "BTN_Settings", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_Settings), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Settings_MetaData), NewProp_BTN_Settings_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_NextArrow = { "BTN_NextArrow", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_NextArrow), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_NextArrow_MetaData), NewProp_BTN_NextArrow_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_BackArrow = { "BTN_BackArrow", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_BackArrow), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_BackArrow_MetaData), NewProp_BTN_BackArrow_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_TXT_GameSelected = { "TXT_GameSelected", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, TXT_GameSelected), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_GameSelected_MetaData), NewProp_TXT_GameSelected_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_StartButtonWidget = { "StartButtonWidget", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, StartButtonWidget), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_MainMenuWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartButtonWidget_MetaData), NewProp_StartButtonWidget_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_WB_SelectGame = { "WB_SelectGame", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, WB_SelectGame), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_MainMenuWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_SelectGame_MetaData), NewProp_WB_SelectGame_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_WB_Settings = { "WB_Settings", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, WB_Settings), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_MainMenuWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_Settings_MetaData), NewProp_WB_Settings_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCC_MainMenuWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_MainMenuController,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_MainMenuWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_SelectedGame,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Back,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Quit,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Start,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Settings,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_NextArrow,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_BackArrow,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_TXT_GameSelected,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_StartButtonWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_WB_SelectGame,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_WB_Settings,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCC_MainMenuWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UCC_MainMenuWidget_Statics::DependentSingletons[])() = {
@@ -357,10 +648,10 @@ UCC_MainMenuWidget::~UCC_MainMenuWidget() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_MainMenuWidget, UCC_MainMenuWidget::StaticClass, TEXT("UCC_MainMenuWidget"), &Z_Registration_Info_UClass_UCC_MainMenuWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_MainMenuWidget), 1824767094U) },
+		{ Z_Construct_UClass_UCC_MainMenuWidget, UCC_MainMenuWidget::StaticClass, TEXT("UCC_MainMenuWidget"), &Z_Registration_Info_UClass_UCC_MainMenuWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_MainMenuWidget), 3745890096U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_1863650275(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_3704622597(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
