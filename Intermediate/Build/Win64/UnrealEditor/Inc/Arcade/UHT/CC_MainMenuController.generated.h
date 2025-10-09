@@ -16,10 +16,26 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class UCC_MainMenuWidget;
+enum class EArcadeMachine : uint8;
+enum class EArcadeMachine : uint8; 
+
 // ********** Begin Class ACC_MainMenuController ***************************************************
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGameSelected); \
+	DECLARE_FUNCTION(execIsCameraMoving); \
+	DECLARE_FUNCTION(execOnCameraTimelineFinished); \
+	DECLARE_FUNCTION(execCameraTimelineProgress); \
+	DECLARE_FUNCTION(execMoveCameraToInitialLocation); \
+	DECLARE_FUNCTION(execRemoveCurrentWidget); \
+	DECLARE_FUNCTION(execGetAllArcades); \
+	DECLARE_FUNCTION(execMoveCameraToArcade); \
+	DECLARE_FUNCTION(execShowWidget);
+
+
 ARCADE_API UClass* Z_Construct_UClass_ACC_MainMenuController_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_21_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_MainMenuController(); \
 	friend struct Z_Construct_UClass_ACC_MainMenuController_Statics; \
@@ -30,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_MainMenuController)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_21_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_MainMenuController(ACC_MainMenuController&&) = delete; \
 	ACC_MainMenuController(const ACC_MainMenuController&) = delete; \
@@ -40,12 +56,13 @@ public: \
 	NO_API virtual ~ACC_MainMenuController();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_18_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_21_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_32_PROLOG
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_21_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_21_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_35_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -56,5 +73,16 @@ class ACC_MainMenuController;
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h
+
+// ********** Begin Enum EArcadeMachine ************************************************************
+#define FOREACH_ENUM_EARCADEMACHINE(op) \
+	op(EArcadeMachine::PingPong) \
+	op(EArcadeMachine::PacMan) \
+	op(EArcadeMachine::SpaceInvaders) 
+
+enum class EArcadeMachine : uint8;
+template<> struct TIsUEnumClass<EArcadeMachine> { enum { Value = true }; };
+template<> ARCADE_API UEnum* StaticEnum<EArcadeMachine>();
+// ********** End Enum EArcadeMachine **************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

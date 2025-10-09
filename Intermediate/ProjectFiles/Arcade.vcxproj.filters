@@ -11,7 +11,10 @@
     <None Include="..\..\Source\ArcadeEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\Arcade.zip" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -42,6 +45,9 @@
     <Filter Include="Source\Arcade\Private">
       <UniqueIdentifier>{AC86043F-5CB9-308D-9F99-461FE15E5D2C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_ArcadeBase.cpp">
+      <Filter>Source\Arcade\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\CC_Gamemode.cpp">
       <Filter>Source\Arcade\Private</Filter>
     </ClCompile>
@@ -51,9 +57,18 @@
     <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuPawn.cpp">
       <Filter>Source\Arcade\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuWidget.cpp">
+      <Filter>Source\Arcade\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPong.cpp">
+      <Filter>Source\Arcade\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Arcade\Public">
       <UniqueIdentifier>{2C0BE153-D7E9-37E4-8965-01D068FAAFE7}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_ArcadeBase.h">
+      <Filter>Source\Arcade\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_Gamemode.h">
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
@@ -61,6 +76,12 @@
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuPawn.h">
+      <Filter>Source\Arcade\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuWidget.h">
+      <Filter>Source\Arcade\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPong.h">
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -6,13 +6,19 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"C:/Unreal 5/Arcade/Content/Maps/L_MainMenu.umap",
-				"C:/Unreal 5/Arcade/Content/GameModes/GM_MainMenu.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenuPawn.uasset",
-				"C:/Unreal 5/Arcade/Content/UI/WB_MainMenu.uasset",
 				"C:/Unreal 5/Arcade/Content/UI/retro.uasset",
 				"C:/Unreal 5/Arcade/Content/UI/retro_Font.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenu.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenuController.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_ArcadeBase.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/WB_Main.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/WB_Settings.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/WB_PingPong.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/WB_SelectGame.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_PingPong.uasset",
+				"C:/Unreal 5/Arcade/Content/UI/WB_MainMenu.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/GM_MainMenu.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/MainMenu/BP_MainMenuPawb.uasset"
 			]
 		}
