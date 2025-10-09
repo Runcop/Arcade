@@ -19,7 +19,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ACC_MainMenuController;
 
 // ********** Begin Class UCC_MainMenuWidget *******************************************************
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpdateSelectedGameText); \
+	DECLARE_FUNCTION(execOnBackToMainMenuClicked); \
+	DECLARE_FUNCTION(execOnBackClicked); \
+	DECLARE_FUNCTION(execOnNextClicked); \
+	DECLARE_FUNCTION(execOnSettingsClicked); \
+	DECLARE_FUNCTION(execOnStartClicked); \
+	DECLARE_FUNCTION(execOnQuitClicked); \
 	DECLARE_FUNCTION(execSetNavigationEnabled); \
 	DECLARE_FUNCTION(execPreviousSelectedGame); \
 	DECLARE_FUNCTION(execNextSelectedGame); \
@@ -28,7 +35,7 @@ class ACC_MainMenuController;
 
 ARCADE_API UClass* Z_Construct_UClass_UCC_MainMenuWidget_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCC_MainMenuWidget(); \
 	friend struct Z_Construct_UClass_UCC_MainMenuWidget_Statics; \
@@ -39,7 +46,7 @@ public: \
 	DECLARE_SERIALIZER(UCC_MainMenuWidget)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCC_MainMenuWidget(UCC_MainMenuWidget&&) = delete; \
 	UCC_MainMenuWidget(const UCC_MainMenuWidget&) = delete; \
@@ -49,13 +56,13 @@ public: \
 	NO_API virtual ~UCC_MainMenuWidget();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_12_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_11_PROLOG
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
