@@ -19,44 +19,40 @@ void UCC_MainMenuWidget::SetMainMenuController(ACC_MainMenuController* Controlle
 	MainMenuController = Controller;
 }
 
-int UCC_MainMenuWidget::NextSelectedGame()
-{
-	if (MainMenuController)
-	{
-		SelectedGame = (SelectedGame + 1) % MainMenuController->ArcadeCameraLocations.Num(); // Cycle through available games
-		
-		if (SelectedGame == (int)EArcadeMachine::PingPong)
-			MainMenuController->MoveCameraToArcade(EArcadeMachine::PingPong);
-		else if (SelectedGame == (int)EArcadeMachine::PacMan)
-			MainMenuController->MoveCameraToArcade(EArcadeMachine::PacMan);
-		else if (SelectedGame == (int)EArcadeMachine::SpaceInvaders)
-			MainMenuController->MoveCameraToArcade(EArcadeMachine::SpaceInvaders);
 
-		UpdateSelectedGameText();
-	}
-	return SelectedGame;
-}
+   
+
+    int UCC_MainMenuWidget::NextSelectedGame()
+    {
+					
+					if (!MainMenuController)
+					{
+						return SelectedGame; // guard clause
+					}
+					SelectedGame = (SelectedGame + 1) % MainMenuController->ArcadeCameraLocations.Num();// Wrap around
+
+					MainMenuController->MoveCameraToArcade(static_cast<EArcadeMachine>(SelectedGame));// Move camera to the selected arcade machine
+
+					UpdateSelectedGameText();// Update the displayed game text
+
+					return SelectedGame;// Return the new selected game index
+    }
+
 
 int UCC_MainMenuWidget::PreviousSelectedGame()
 {
-	if (MainMenuController && MainMenuController->IsCameraMoving())
+	
+	if (!MainMenuController)
 	{
-		return SelectedGame; // ignore while moving
+		return SelectedGame; // guard clause
 	}
-	if (MainMenuController)
-	{
-		SelectedGame = (SelectedGame - 1 + MainMenuController->ArcadeCameraLocations.Num()) % MainMenuController->ArcadeCameraLocations.Num(); // Cycle through available games
+	SelectedGame = (SelectedGame - 1 + MainMenuController->ArcadeCameraLocations.Num()) % MainMenuController->ArcadeCameraLocations.Num(); // Wrap around
 		
-		if (SelectedGame == (int)EArcadeMachine::PingPong)
-			MainMenuController->MoveCameraToArcade(EArcadeMachine::PingPong);
-		else if (SelectedGame == (int)EArcadeMachine::PacMan)
-			MainMenuController->MoveCameraToArcade(EArcadeMachine::PacMan);
-		else if (SelectedGame == (int)EArcadeMachine::SpaceInvaders)
-			MainMenuController->MoveCameraToArcade(EArcadeMachine::SpaceInvaders);
+	MainMenuController->MoveCameraToArcade(static_cast<EArcadeMachine>(SelectedGame)); // Move camera to the selected arcade machine
 
-		UpdateSelectedGameText();
-	}
-	return SelectedGame;
+	UpdateSelectedGameText(); // Update the displayed game text
+	
+	return SelectedGame; // Return the new selected game index
 }
 
 void UCC_MainMenuWidget::SetNavigationEnabled(bool bEnabled)
@@ -141,7 +137,7 @@ void UCC_MainMenuWidget::UpdateSelectedGameText()
 	{
 		case EArcadeMachine::PingPong:      Display = FText::FromString(TEXT("PingPong")); break;
 		case EArcadeMachine::PacMan:        Display = FText::FromString(TEXT("PacMan")); break;
-		case EArcadeMachine::SpaceInvaders: Display = FText::FromString(TEXT("SpaceInvaders")); break;
+		case EArcadeMachine::SpaceInvaders: Display = FText::FromString(TEXT("SpaceInvaders")); break;	
 		default:                            Display = FText::GetEmpty(); break;
 	}
 
