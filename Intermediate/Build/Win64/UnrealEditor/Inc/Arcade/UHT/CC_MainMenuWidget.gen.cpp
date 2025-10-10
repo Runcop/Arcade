@@ -32,7 +32,13 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Functions to change selected game\n" },
+#endif
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Functions to change selected game" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -474,7 +480,13 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SelectedGame_MetaData[] = {
 		{ "Category", "UI" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Currently selected game index\n" },
+#endif
 		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Currently selected game index" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Back_MetaData[] = {
 		{ "BindWidgetOptional", "" },
@@ -565,7 +577,7 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame, "NextSelectedGame" }, // 191623077
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame, "NextSelectedGame" }, // 2250146621
 		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked, "OnBackClicked" }, // 74646048
 		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked, "OnBackToMainMenuClicked" }, // 2628173438
 		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked, "OnNextClicked" }, // 1733443797
@@ -648,10 +660,10 @@ UCC_MainMenuWidget::~UCC_MainMenuWidget() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_MainMenuWidget, UCC_MainMenuWidget::StaticClass, TEXT("UCC_MainMenuWidget"), &Z_Registration_Info_UClass_UCC_MainMenuWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_MainMenuWidget), 3745890096U) },
+		{ Z_Construct_UClass_UCC_MainMenuWidget, UCC_MainMenuWidget::StaticClass, TEXT("UCC_MainMenuWidget"), &Z_Registration_Info_UClass_UCC_MainMenuWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_MainMenuWidget), 4246903140U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_3704622597(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_1761157977(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

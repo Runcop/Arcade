@@ -25,7 +25,8 @@ enum class EArcadeMachine : uint8
 {
 	PingPong  UMETA(DisplayName = "PingPong"),
 	PacMan  UMETA(DisplayName = "PacMan"),
-	SpaceInvaders UMETA(DisplayName = "SpaceInvaders")
+	SpaceInvaders UMETA(DisplayName = "SpaceInvaders"),
+	
 
 };
 

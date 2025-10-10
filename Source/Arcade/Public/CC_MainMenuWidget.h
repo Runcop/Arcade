@@ -25,17 +25,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI")
 	TSubclassOf<UCC_MainMenuWidget> MainMenuWidgetClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI")
-	int SelectedGame;
+	// Currently selected game index
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI") int SelectedGame;
+	// Functions to change selected game
 
-	UFUNCTION(BlueprintCallable, Category="UI")
-	int NextSelectedGame();
+	UFUNCTION(BlueprintCallable, Category="UI") int NextSelectedGame();
+	UFUNCTION(BlueprintCallable, Category="UI") int PreviousSelectedGame();
 
-	UFUNCTION(BlueprintCallable, Category="UI")
-	int PreviousSelectedGame();
-
-	UFUNCTION(BlueprintCallable, Category="UI")
-	void SetNavigationEnabled(bool bEnabled);
+	UFUNCTION(BlueprintCallable, Category="UI") void SetNavigationEnabled(bool bEnabled);
+	
 
 	// Buttons (match names in your Widget Blueprint)
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Back = nullptr;
