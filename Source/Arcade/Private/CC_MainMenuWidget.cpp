@@ -6,11 +6,15 @@
 #include "CC_MainMenuController.h"
 
 
+
+EArcadeMachine ArcadeMachine; // Global variable to hold the selected arcade machine
+
 UCC_MainMenuWidget::UCC_MainMenuWidget(const FObjectInitializer& ObjectInitializer)
 	: UUserWidget(ObjectInitializer) // Use the direct base class instead of Super
 {
 	// Constructor logic (if any) goes here
 
+	SelectedGame = -1; // Initialize to -1 so the first call to NextSelectedGame sets it to 0
 	
 }
 
@@ -20,22 +24,26 @@ void UCC_MainMenuWidget::SetMainMenuController(ACC_MainMenuController* Controlle
 }
 
 
+
+
+
    
 
     int UCC_MainMenuWidget::NextSelectedGame()
     {
 					
-					if (!MainMenuController)
-					{
-						return SelectedGame; // guard clause
-					}
-					SelectedGame = (SelectedGame + 1) % MainMenuController->ArcadeCameraLocations.Num();// Wrap around
+		if (!MainMenuController)
+		{
+			return SelectedGame; // guard clause
+		}
+		SelectedGame = (SelectedGame + 1) % MainMenuController->ArcadeCameraLocations.Num();// Wrap around
 
-					MainMenuController->MoveCameraToArcade(static_cast<EArcadeMachine>(SelectedGame));// Move camera to the selected arcade machine
+		MainMenuController->MoveCameraToArcade(static_cast<EArcadeMachine>(SelectedGame));// Move camera to the selected arcade machine
 
-					UpdateSelectedGameText();// Update the displayed game text
+		UpdateSelectedGameText();// Update the displayed game text
+		ArcadeMachine = SelectedArcadeMachine(SelectedGame); // Update the global variable with the selected arcade machine
 
-					return SelectedGame;// Return the new selected game index
+		return SelectedGame;// Return the new selected game index
     }
 
 
@@ -51,6 +59,7 @@ int UCC_MainMenuWidget::PreviousSelectedGame()
 	MainMenuController->MoveCameraToArcade(static_cast<EArcadeMachine>(SelectedGame)); // Move camera to the selected arcade machine
 
 	UpdateSelectedGameText(); // Update the displayed game text
+	ArcadeMachine = SelectedArcadeMachine(SelectedGame);// Update the global variable with the selected arcade machine
 	
 	return SelectedGame; // Return the new selected game index
 }
@@ -72,6 +81,7 @@ void UCC_MainMenuWidget::NativeConstruct()
 	if (BTN_NextArrow) BTN_NextArrow->OnClicked.AddDynamic(this, &UCC_MainMenuWidget::OnNextClicked);
 	if (BTN_BackArrow) BTN_BackArrow->OnClicked.AddDynamic(this, &UCC_MainMenuWidget::OnBackClicked);
 	if (BTN_Back)      BTN_Back->OnClicked.AddDynamic(this, &UCC_MainMenuWidget::OnBackToMainMenuClicked);
+	if (BTN_Play)      BTN_Play->OnClicked.AddDynamic(this, &UCC_MainMenuWidget::OnPlayClicked);
 
 	UpdateSelectedGameText();
 }
@@ -84,6 +94,7 @@ void UCC_MainMenuWidget::NativeDestruct()
 	if (BTN_NextArrow) BTN_NextArrow->OnClicked.RemoveDynamic(this, &UCC_MainMenuWidget::OnNextClicked);
 	if (BTN_BackArrow) BTN_BackArrow->OnClicked.RemoveDynamic(this, &UCC_MainMenuWidget::OnBackClicked);
 	if (BTN_Back)      BTN_Back->OnClicked.RemoveDynamic(this, &UCC_MainMenuWidget::OnBackToMainMenuClicked);
+	if (BTN_Play)      BTN_Play->OnClicked.RemoveDynamic(this, &UCC_MainMenuWidget::OnPlayClicked);
 
 	Super::NativeDestruct();
 }
@@ -128,6 +139,22 @@ void UCC_MainMenuWidget::OnBackToMainMenuClicked()
 	}
 }
 
+void UCC_MainMenuWidget::OnPlayClicked()
+{
+	
+		if (!MainMenuController)
+		{
+			return;
+		}
+		
+		MainMenuController->GameSelected(ArcadeMachine);
+
+
+
+					
+    
+}
+
 void UCC_MainMenuWidget::UpdateSelectedGameText()
 {
 	if (!TXT_GameSelected) return;
@@ -142,4 +169,15 @@ void UCC_MainMenuWidget::UpdateSelectedGameText()
 	}
 
 	TXT_GameSelected->SetText(Display);
+}
+EArcadeMachine UCC_MainMenuWidget::SelectedArcadeMachine(int Index) const	
+{
+	EArcadeMachine PickedMachine;// Declare the variable to hold the result
+	PickedMachine = static_cast<EArcadeMachine>(Index);// Cast the integer index to the EArcadeMachine enum
+	
+
+	return PickedMachine;// Return the corresponding enum value
+	
+
+	
 }

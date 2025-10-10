@@ -6,8 +6,9 @@
 #include "CC_ArcadeBase.h"
 #include "Components/ArrowComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Kismet/GameplayStatics.h"
 
-//Need to set up switching maps for each game
+
 
 ACC_MainMenuController::ACC_MainMenuController()
 {
@@ -70,6 +71,8 @@ void ACC_MainMenuController::ShowWidget(TSubclassOf<UCC_MainMenuWidget> NewWidge
 	}
 }
 
+
+
 void ACC_MainMenuController::RemoveCurrentWidget()
 {
 	if (CurrentWidgetInstance)
@@ -79,7 +82,7 @@ void ACC_MainMenuController::RemoveCurrentWidget()
 	}
 }
 
-void ACC_MainMenuController::GetAllArcades(TMap<EArcadeMachine, FTransform>& ArcadeMachines)
+void ACC_MainMenuController::GetAllArcades(UPARAM(ref)TMap<EArcadeMachine, FTransform>& ArcadeMachines)
 {
 	UWorld* World = GetWorld();
 	if (!World) return;
@@ -132,6 +135,7 @@ void ACC_MainMenuController::MoveCameraToArcade(EArcadeMachine MachineType)
 	}
 
 	CameraTimeline->PlayFromStart();
+	ArcadeLevel = MachineType;
 }
 
 void ACC_MainMenuController::MoveCameraToInitialLocation()
@@ -175,12 +179,23 @@ bool ACC_MainMenuController::IsCameraMoving() const
 	return (CameraTimeline && CameraTimeline->IsPlaying());
 }
 
-void ACC_MainMenuController::GameSelected(EArcadeMachine SelectedMachine)
+
+
+void ACC_MainMenuController::GameSelected(EArcadeMachine SelectedMachine)// Called from the widget when a game is selected
 {
-	// Now simply ensure camera is on selected machine (no zoom logic)
 	if (ArcadeMachine != SelectedMachine)
 	{
-		MoveCameraToArcade(SelectedMachine);
-		
+		return;
+	}
+	MoveCameraToArcade(SelectedMachine);
+
+	
+
+	switch (static_cast<EArcadeMachine>(SelectedMachine))// Open the corresponding level based on the selected arcade machine
+	{
+		case EArcadeMachine::PingPong:      UGameplayStatics::OpenLevel(this, FName("L_PingPong"), true); break;
+		case EArcadeMachine::PacMan:        UGameplayStatics::OpenLevel(this, FName("L_PacMan"), true); break;
+		case EArcadeMachine::SpaceInvaders: UGameplayStatics::OpenLevel(this, FName("L_SpaceInvaders"), true); break;
+		default:                             break;
 	}
 }
