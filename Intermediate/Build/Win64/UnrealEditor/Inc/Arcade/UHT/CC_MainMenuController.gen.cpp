@@ -554,6 +554,15 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 		{ "Category", "UI" },
 		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ArcadeLevel_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// The widget class to instantiate at start\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "The widget class to instantiate at start" },
+#endif
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentWidgetInstance_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
@@ -606,6 +615,8 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_StartingWidget;
+	static const UECodeGen_Private::FBytePropertyParams NewProp_ArcadeLevel_Underlying;
+	static const UECodeGen_Private::FEnumPropertyParams NewProp_ArcadeLevel;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentWidgetInstance;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InitialCameraLocation;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ArcadeCameraLocations_ValueProp;
@@ -639,6 +650,8 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_StartingWidget = { "StartingWidget", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, StartingWidget), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_MainMenuWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartingWidget_MetaData), NewProp_StartingWidget_MetaData) };
+const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeLevel_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeLevel = { "ArcadeLevel", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, ArcadeLevel), Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ArcadeLevel_MetaData), NewProp_ArcadeLevel_MetaData) }; // 563493015
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_CurrentWidgetInstance = { "CurrentWidgetInstance", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, CurrentWidgetInstance), Z_Construct_UClass_UCC_MainMenuWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentWidgetInstance_MetaData), NewProp_CurrentWidgetInstance_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_InitialCameraLocation = { "InitialCameraLocation", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, InitialCameraLocation), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitialCameraLocation_MetaData), NewProp_InitialCameraLocation_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeCameraLocations_ValueProp = { "ArcadeCameraLocations", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(0, nullptr) };
@@ -654,6 +667,8 @@ const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACC_MainMenuCont
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_PlayArcadeTransform = { "PlayArcadeTransform", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, PlayArcadeTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayArcadeTransform_MetaData), NewProp_PlayArcadeTransform_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_MainMenuController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_StartingWidget,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeLevel_Underlying,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeLevel,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_CurrentWidgetInstance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_InitialCameraLocation,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeCameraLocations_ValueProp,
@@ -708,10 +723,10 @@ struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuControll
 		{ EArcadeMachine_StaticEnum, TEXT("EArcadeMachine"), &Z_Registration_Info_UEnum_EArcadeMachine, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 563493015U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 2841568338U) },
+		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 2479610695U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_3953731240(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_2762948(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo));

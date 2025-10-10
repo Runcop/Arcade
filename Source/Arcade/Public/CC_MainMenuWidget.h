@@ -4,6 +4,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
+#include "CC_MainMenuController.h"
 #include "CC_MainMenuWidget.generated.h"
 
 class ACC_MainMenuController;
@@ -22,11 +23,22 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Controller")
 	void SetMainMenuController(ACC_MainMenuController* Controller);
 
+	UFUNCTION(BlueprintCallable, Category = "UI")
+	enum EArcadeMachine SelectedArcadeMachine(int Index) const;
+	
+		
+	
+	
+	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI")
 	TSubclassOf<UCC_MainMenuWidget> MainMenuWidgetClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+	TMap<EArcadeMachine, FTransform> ArcadeMachines;
+
 	// Currently selected game index
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="UI") int SelectedGame;
+	UPROPERTY() int SelectedGame;
 	// Functions to change selected game
 
 	UFUNCTION(BlueprintCallable, Category="UI") int NextSelectedGame();
@@ -42,6 +54,9 @@ public:
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Settings = nullptr;
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UButton* BTN_NextArrow = nullptr;
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UButton* BTN_BackArrow = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Play = nullptr;
+
+	
 
 	// Text to update on next/back
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_GameSelected = nullptr;
@@ -56,6 +71,7 @@ protected:
 	UFUNCTION() void OnNextClicked();
 	UFUNCTION() void OnBackClicked();
 	UFUNCTION() void OnBackToMainMenuClicked();
+	UFUNCTION() void OnPlayClicked();
 
 	// Update the onscreen game name
 	UFUNCTION(BlueprintCallable, Category="UI")

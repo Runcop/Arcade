@@ -17,10 +17,12 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 class ACC_MainMenuController;
+enum class EArcadeMachine : uint8;
 
 // ********** Begin Class UCC_MainMenuWidget *******************************************************
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdateSelectedGameText); \
+	DECLARE_FUNCTION(execOnPlayClicked); \
 	DECLARE_FUNCTION(execOnBackToMainMenuClicked); \
 	DECLARE_FUNCTION(execOnBackClicked); \
 	DECLARE_FUNCTION(execOnNextClicked); \
@@ -30,12 +32,13 @@ class ACC_MainMenuController;
 	DECLARE_FUNCTION(execSetNavigationEnabled); \
 	DECLARE_FUNCTION(execPreviousSelectedGame); \
 	DECLARE_FUNCTION(execNextSelectedGame); \
+	DECLARE_FUNCTION(execSelectedArcadeMachine); \
 	DECLARE_FUNCTION(execSetMainMenuController);
 
 
 ARCADE_API UClass* Z_Construct_UClass_UCC_MainMenuWidget_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCC_MainMenuWidget(); \
 	friend struct Z_Construct_UClass_UCC_MainMenuWidget_Statics; \
@@ -46,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UCC_MainMenuWidget)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCC_MainMenuWidget(UCC_MainMenuWidget&&) = delete; \
 	UCC_MainMenuWidget(const UCC_MainMenuWidget&) = delete; \
@@ -56,13 +59,13 @@ public: \
 	NO_API virtual ~UCC_MainMenuWidget();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_11_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_12_PROLOG
+#define FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

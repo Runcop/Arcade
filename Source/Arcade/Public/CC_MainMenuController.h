@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "Blueprint/UserWidget.h"
-#include "CC_MainMenuWidget.h"
 #include "Components/TimelineComponent.h"
 #include "CC_MainMenuController.generated.h"
 
@@ -14,6 +13,7 @@
 class UCC_MainMenuWidget;
 class UTimelineComponent; // forward-declare the type (do not declare a variable here)
 class UCurveFloat; // forward-declare the type (do not declare a variable here)
+
 
 
 
@@ -42,6 +42,9 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UI")
 	TSubclassOf<UCC_MainMenuWidget> StartingWidget; // The widget class to instantiate at start
+
+	UPROPERTY()
+	EArcadeMachine ArcadeLevel;
 protected:
 
 	virtual void BeginPlay() override;
@@ -51,7 +54,7 @@ protected:
 	UPROPERTY()
 	UCC_MainMenuWidget* CurrentWidgetInstance = nullptr; // Keep track of the current widget instance
 
-
+	
 	
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Location")
