@@ -14,7 +14,8 @@ UCC_MainMenuWidget::UCC_MainMenuWidget(const FObjectInitializer& ObjectInitializ
 {
 	// Constructor logic (if any) goes here
 
-	SelectedGame = -1; // Initialize to -1 so the first call to NextSelectedGame sets it to 0
+	
+	
 	
 }
 
@@ -109,7 +110,11 @@ void UCC_MainMenuWidget::OnStartClicked()
 	if (MainMenuController && WB_SelectGame)
 	{
 		MainMenuController->ShowWidget(WB_SelectGame);
+		SelectedGame = -1; // Initialize to -1 so the first call to NextSelectedGame sets it to 0
+		NextSelectedGame();
+		
 	}
+	
 }
 
 void UCC_MainMenuWidget::OnSettingsClicked()

@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeArcade_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x687172F6,
-				0xB6797601,
+				0x066F2BA5,
+				0xC969260F,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Arcade.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Arcade.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Arcade(Z_Construct_UPackage__Script_Arcade, TEXT("/Script/Arcade"), Z_Registration_Info_UPackage__Script_Arcade, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x687172F6, 0xB6797601));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Arcade(Z_Construct_UPackage__Script_Arcade, TEXT("/Script/Arcade"), Z_Registration_Info_UPackage__Script_Arcade, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x066F2BA5, 0xC969260F));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
