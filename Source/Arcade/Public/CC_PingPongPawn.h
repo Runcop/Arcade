@@ -4,7 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "InputActionValue.h"          // for FInputActionValue
 #include "CC_PingPongPawn.generated.h"
+
+class UBoxComponent;
+class UFloatingPawnMovement;
+class USpringArmComponent;
+class UCameraComponent;
 
 UCLASS()
 class ARCADE_API ACC_PingPongPawn : public APawn
@@ -23,7 +29,28 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	// Enhanced Input
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
+	class UInputMappingContext* PingPongMappingContext;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
+	class UInputAction* MoveAction;
+
+	
+
+private:
+	
+	UPROPERTY(VisibleAnywhere) UBoxComponent* CollisionBox;
+	UPROPERTY(VisibleAnywhere) UFloatingPawnMovement* Movement;
+	UPROPERTY(VisibleAnywhere) UStaticMeshComponent* Mesh;
+	UPROPERTY(VisibleAnywhere) USpringArmComponent* SpringArm;
+	UPROPERTY(VisibleAnywhere) UCameraComponent* Camera;
+
+	
+	void EnhancedMove(const FInputActionValue& Value);
+
 
 };
