@@ -37,6 +37,7 @@ void UCC_MainMenuWidget::SetMainMenuController(ACC_MainMenuController* Controlle
 		{
 			return SelectedGame; // guard clause
 		}
+
 		SelectedGame = (SelectedGame + 1) % MainMenuController->ArcadeCameraLocations.Num();// Wrap around
 
 		MainMenuController->MoveCameraToArcade(static_cast<EArcadeMachine>(SelectedGame));// Move camera to the selected arcade machine

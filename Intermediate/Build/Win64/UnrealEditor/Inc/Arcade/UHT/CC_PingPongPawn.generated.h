@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ACC_PingPongPawn *********************************************************
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PingPongPawn(); \
 	friend struct Z_Construct_UClass_ACC_PingPongPawn_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PingPongPawn)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PingPongPawn(ACC_PingPongPawn&&) = delete; \
 	ACC_PingPongPawn(const ACC_PingPongPawn&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ACC_PingPongPawn();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_9_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_12_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_15_PROLOG
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
