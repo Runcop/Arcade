@@ -54,8 +54,12 @@ private:
 
 public:
 
-	virtual void EventActorBeginOverlap(AActor* Actor);
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ball")
 	class TSubclassOf<class ACC_PingPongBall> BallToSpawn;
+
+
+
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+
+	
 };

@@ -13,6 +13,9 @@
 #include "CC_PingPongBall.h"
 #include "Kismet/KismetMathLibrary.h"
 
+
+
+
 // Sets default values
 ACC_PingPongPawn::ACC_PingPongPawn()
 {
@@ -79,13 +82,14 @@ void ACC_PingPongPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 {
-	const FVector2D MovementVector = Value.Get<FVector2D>();
-	const FRotator ControlRotation = GetControlRotation();
+	const FVector2D LocalMovementVector = Value.Get<FVector2D>();
+	const FRotator LocalControlRotation = GetControlRotation();
 
-	if (MovementVector.X > 0.05f || MovementVector.X < -0.05f)
+
+	if (LocalMovementVector.X > 0.05f || LocalMovementVector.X < -0.05f)
 	{
-		const FVector Direction = ControlRotation.RotateVector(FVector::RightVector); 
-		AddMovementInput(Direction, MovementVector.X);
+		const FVector Direction = LocalControlRotation.RotateVector(FVector::RightVector); 
+		AddMovementInput(Direction, LocalMovementVector.X);
 		
 	}
 
@@ -93,25 +97,41 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 
 
 
-void ACC_PingPongPawn::EventActorBeginOverlap(AActor* Actor)
+void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
 {
+	Super::NotifyActorBeginOverlap(OtherActor);
 	
-	ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(Actor);
-	if (!Ball)
-	{
+	
+
+	ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(OtherActor);
+		if (!Ball)
+		{
 		return;
-	}
+		}
 
 	// Assuming BallToSpawn is TSubclassOf<ACC_PingPongBall>
 	BallToSpawn = Ball->GetClass();
 
-	FVector PaddleLocation = Actor->GetActorLocation();
+	FVector PaddleLocation = OtherActor->GetActorLocation();
 	FVector BallLocation = Ball->GetActorLocation();
 	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(PaddleLocation, BallLocation);
-	FVector FowardDirection = UKismetMathLibrary::GetForwardVector(LookAt);
+	FVector ForwardDirection = UKismetMathLibrary::GetForwardVector(LookAt);
+
+	FVector ImpluseToAdd;
 
 	
 
+	FVector BallsVelocity = Ball->GetVelocity(); 
+	FVector PaddlesVelocity = GetVelocity();
 	
+
+	ImpluseToAdd = ImpluseToAdd + BallsVelocity + ForwardDirection + PaddlesVelocity;
+
+	ImpluseToAdd = ImpluseToAdd.GetClampedToSize(0.f, 4.f);
+	
+	
+	
+	Ball->AddImpulse(ImpluseToAdd);
+
 }
 

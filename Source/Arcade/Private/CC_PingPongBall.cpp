@@ -7,6 +7,7 @@
 #include "Components/SphereComponent.h"
 
 
+
 // Sets default values
 ACC_PingPongBall::ACC_PingPongBall()
 {
@@ -43,4 +44,15 @@ void ACC_PingPongBall::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
+
+void ACC_PingPongBall::AddImpulse(const FVector& ImpulseToAdd)
+{
+	if (Mesh)
+	{
+		Mesh->AddImpulse(ImpulseToAdd);
+	}
+}
+
+
+	
 
