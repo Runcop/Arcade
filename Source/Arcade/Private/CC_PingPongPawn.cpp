@@ -9,7 +9,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInput/Public/EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"  
-#include "InputActionValue.h"          
+#include "InputActionValue.h"    
+#include "CC_PingPongBall.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 ACC_PingPongPawn::ACC_PingPongPawn()
@@ -87,5 +89,29 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 		
 	}
 
+}
+
+
+
+void ACC_PingPongPawn::EventActorBeginOverlap(AActor* Actor)
+{
+	
+	ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(Actor);
+	if (!Ball)
+	{
+		return;
+	}
+
+	// Assuming BallToSpawn is TSubclassOf<ACC_PingPongBall>
+	BallToSpawn = Ball->GetClass();
+
+	FVector PaddleLocation = Actor->GetActorLocation();
+	FVector BallLocation = Ball->GetActorLocation();
+	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(PaddleLocation, BallLocation);
+	FVector FowardDirection = UKismetMathLibrary::GetForwardVector(LookAt);
+
+	
+
+	
 }
 

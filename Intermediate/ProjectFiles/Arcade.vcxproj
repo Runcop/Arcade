@@ -280,7 +280,13 @@
     <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuWidget.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingBallSpawner.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPong.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongBall.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongController.cpp">
@@ -294,7 +300,9 @@
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuController.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuPawn.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuWidget.h"/>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingBallSpawner.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPong.h"/>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongBall.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongController.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongPawn.h"/>
   </ItemGroup>

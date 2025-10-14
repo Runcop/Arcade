@@ -52,5 +52,10 @@ private:
 	
 	void EnhancedMove(const FInputActionValue& Value);
 
+public:
 
+	virtual void EventActorBeginOverlap(AActor* Actor);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ball")
+	class TSubclassOf<class ACC_PingPongBall> BallToSpawn;
 };
