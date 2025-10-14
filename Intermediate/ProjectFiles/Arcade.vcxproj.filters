@@ -60,7 +60,13 @@
     <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuWidget.cpp">
       <Filter>Source\Arcade\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingBallSpawner.cpp">
+      <Filter>Source\Arcade\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPong.cpp">
+      <Filter>Source\Arcade\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongBall.cpp">
       <Filter>Source\Arcade\Private</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongController.cpp">
@@ -87,7 +93,13 @@
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuWidget.h">
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingBallSpawner.h">
+      <Filter>Source\Arcade\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPong.h">
+      <Filter>Source\Arcade\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongBall.h">
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongController.h">
