@@ -26,6 +26,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void AddImpulse(const FVector& ImpulseToAdd);
+	
+
 	
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
