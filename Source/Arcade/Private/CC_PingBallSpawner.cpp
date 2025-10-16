@@ -3,6 +3,9 @@
 
 #include "CC_PingBallSpawner.h"
 #include "CC_PingPongBall.h"
+#include "CC_PingPong.h"
+
+
 
 // Sets default values
 ACC_PingBallSpawner::ACC_PingBallSpawner()
@@ -17,7 +20,16 @@ void ACC_PingBallSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SpawnBall(BallToSpawn);
+	SpawnBall();
+
+	if (UWorld* World = GetWorld())
+	{
+		if (ACC_PingPong* GameMode = Cast<ACC_PingPong>(World->GetAuthGameMode()))
+		{
+			GameMode->Spawner(this);
+
+		}
+	}
 	
 }
 
@@ -28,7 +40,7 @@ void ACC_PingBallSpawner::Tick(float DeltaTime)
 
 }
 
-void ACC_PingBallSpawner::SpawnBall(TSubclassOf<class ACC_PingPongBall> Ball)
+void ACC_PingBallSpawner::SpawnBall()
 {
 	
 	

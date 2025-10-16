@@ -16,7 +16,15 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class ACC_PingBallSpawner;
+
 // ********** Begin Class ACC_PingPong *************************************************************
+#define FID_Arcade_Source_Arcade_Public_CC_PingPong_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSpawner); \
+	DECLARE_FUNCTION(execTeamTwoScored); \
+	DECLARE_FUNCTION(execTeamOneScored);
+
+
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPong_NoRegister();
 
 #define FID_Arcade_Source_Arcade_Public_CC_PingPong_h_15_INCLASS_NO_PURE_DECLS \
@@ -46,6 +54,7 @@ public: \
 #define FID_Arcade_Source_Arcade_Public_CC_PingPong_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Arcade_Source_Arcade_Public_CC_PingPong_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Arcade_Source_Arcade_Public_CC_PingPong_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Arcade_Source_Arcade_Public_CC_PingPong_h_15_ENHANCED_CONSTRUCTORS \
 private: \

@@ -26,6 +26,8 @@
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/Inputs/MoveAction.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_PingSpawner.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_PongBall.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_Goal.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/Pong/UI/WB_PingPong.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/Inputs/MoveX.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/Inputs/EnhancedMove.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_PingPong.uasset",

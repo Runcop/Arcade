@@ -16,8 +16,6 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
-class ACC_PingPongBall;
-
 // ********** Begin Class ACC_PingBallSpawner ******************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PingBallSpawner_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execSpawnBall);
