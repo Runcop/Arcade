@@ -24,9 +24,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, Category = "Test")
-	TSubclassOf<class ACC_PingPongBall> BallToSpawn;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "BallToSpawn")
+	TSubclassOf<class ACC_PingPongBall> Ball;
 
 	UFUNCTION()
-	void SpawnBall(TSubclassOf<class ACC_PingPongBall> Ball);
+	void SpawnBall();
 };

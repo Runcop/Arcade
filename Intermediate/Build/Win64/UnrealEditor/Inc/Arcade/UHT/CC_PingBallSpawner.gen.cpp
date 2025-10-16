@@ -23,26 +23,14 @@ UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** Begin Class ACC_PingBallSpawner Function SpawnBall ***********************************
 struct Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics
 {
-	struct CC_PingBallSpawner_eventSpawnBall_Parms
-	{
-		TSubclassOf<ACC_PingPongBall> Ball;
-	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "ModuleRelativePath", "Public/CC_PingBallSpawner.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FClassPropertyParams NewProp_Ball;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x0014000000000080, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_PingBallSpawner_eventSpawnBall_Parms, Ball), Z_Construct_UClass_UClass, Z_Construct_UClass_ACC_PingPongBall_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::NewProp_Ball,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PingBallSpawner, nullptr, "SpawnBall", Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::CC_PingBallSpawner_eventSpawnBall_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::Function_MetaDataParams)},  };
-static_assert(sizeof(Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::CC_PingBallSpawner_eventSpawnBall_Parms) < MAX_uint16);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PingBallSpawner, nullptr, "SpawnBall", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -54,10 +42,9 @@ UFunction* Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall()
 }
 DEFINE_FUNCTION(ACC_PingBallSpawner::execSpawnBall)
 {
-	P_GET_OBJECT(UClass,Z_Param_Ball);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->SpawnBall(Z_Param_Ball);
+	P_THIS->SpawnBall();
 	P_NATIVE_END;
 }
 // ********** End Class ACC_PingBallSpawner Function SpawnBall *************************************
@@ -107,16 +94,16 @@ struct Z_Construct_UClass_ACC_PingBallSpawner_Statics
 		{ "IncludePath", "CC_PingBallSpawner.h" },
 		{ "ModuleRelativePath", "Public/CC_PingBallSpawner.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallToSpawn_MetaData[] = {
-		{ "Category", "Test" },
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Ball_MetaData[] = {
+		{ "Category", "BallToSpawn" },
 		{ "ModuleRelativePath", "Public/CC_PingBallSpawner.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FClassPropertyParams NewProp_BallToSpawn;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_Ball;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall, "SpawnBall" }, // 436051714
+		{ &Z_Construct_UFunction_ACC_PingBallSpawner_SpawnBall, "SpawnBall" }, // 3100189368
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -124,9 +111,9 @@ struct Z_Construct_UClass_ACC_PingBallSpawner_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingBallSpawner_Statics::NewProp_BallToSpawn = { "BallToSpawn", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingBallSpawner, BallToSpawn), Z_Construct_UClass_UClass, Z_Construct_UClass_ACC_PingPongBall_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallToSpawn_MetaData), NewProp_BallToSpawn_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingBallSpawner_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingBallSpawner, Ball), Z_Construct_UClass_UClass, Z_Construct_UClass_ACC_PingPongBall_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Ball_MetaData), NewProp_Ball_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingBallSpawner_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingBallSpawner_Statics::NewProp_BallToSpawn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingBallSpawner_Statics::NewProp_Ball,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PingBallSpawner_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_PingBallSpawner_Statics::DependentSingletons[])() = {
@@ -165,10 +152,10 @@ ACC_PingBallSpawner::~ACC_PingBallSpawner() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingBallSpawner_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingBallSpawner, ACC_PingBallSpawner::StaticClass, TEXT("ACC_PingBallSpawner"), &Z_Registration_Info_UClass_ACC_PingBallSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingBallSpawner), 1617068732U) },
+		{ Z_Construct_UClass_ACC_PingBallSpawner, ACC_PingBallSpawner::StaticClass, TEXT("ACC_PingBallSpawner"), &Z_Registration_Info_UClass_ACC_PingBallSpawner, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingBallSpawner), 4082257196U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingBallSpawner_h__Script_Arcade_111909414(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingBallSpawner_h__Script_Arcade_4183494499(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingBallSpawner_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingBallSpawner_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

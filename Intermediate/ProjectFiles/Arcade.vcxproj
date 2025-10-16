@@ -271,6 +271,9 @@
     <ClCompile Include="..\..\Source\Arcade\Private\CC_Gamemode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_GoalPingPong.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -297,6 +300,7 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_ArcadeBase.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_Gamemode.h"/>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_GoalPingPong.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuController.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuPawn.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuWidget.h"/>
