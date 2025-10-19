@@ -127,7 +127,7 @@ void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
 
 	ImpluseToAdd = ImpluseToAdd + BallsVelocity + ForwardDirection + PaddlesVelocity;
 
-	ImpluseToAdd = ImpluseToAdd.GetClampedToSize(0.f, 4.f);
+	ImpluseToAdd = ImpluseToAdd.GetClampedToSize(100.f, 250.f);
 	
 	
 	

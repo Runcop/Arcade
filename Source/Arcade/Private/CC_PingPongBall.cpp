@@ -5,6 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
+#include "CC_GoalPingPong.h"
 
 
 
@@ -15,19 +16,23 @@ ACC_PingPongBall::ACC_PingPongBall()
 	PrimaryActorTick.bCanEverTick = true;
 
 
-	RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("RootComponent"));
-
-	
-	
-
-	
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+	ProjectileMovement->bAutoActivate = false;
 
 	CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
-	CollisionSphere->SetupAttachment(RootComponent);
+	RootComponent = CollisionSphere;
+
+	CollisionSphere->SetSphereRadius(15.f);
+	CollisionSphere->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	CollisionSphere->SetCollisionProfileName(TEXT("PhysicsActor"));
+	CollisionSphere->SetGenerateOverlapEvents(true);
+	CollisionSphere->SetSimulatePhysics(true);
+	CollisionSphere->SetEnableGravity(false); // optional for arcade feel
+
 	
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(CollisionSphere);
+	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 }
 
@@ -35,6 +40,11 @@ ACC_PingPongBall::ACC_PingPongBall()
 void ACC_PingPongBall::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (CollisionSphere)
+	{
+		CollisionSphere->AddImpulse(StartingImpulse);
+	}
 	
 }
 
@@ -47,9 +57,23 @@ void ACC_PingPongBall::Tick(float DeltaTime)
 
 void ACC_PingPongBall::AddImpulse(const FVector& ImpulseToAdd)
 {
-	if (Mesh)
+	if (CollisionSphere)
 	{
-		Mesh->AddImpulse(ImpulseToAdd);
+		CollisionSphere->AddImpulse(ImpulseToAdd);
+	}
+}
+
+void ACC_PingPongBall::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	ACC_GoalPingPong* Goal = Cast<ACC_GoalPingPong>(OtherActor);
+
+	if (Goal)
+	{
+		Goal->GoalScored();
+		Goal = nullptr;
+		Destroy();
+
+
 	}
 }
 

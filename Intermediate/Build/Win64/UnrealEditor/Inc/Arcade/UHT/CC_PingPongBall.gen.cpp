@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeCC_PingPongBall() {}
 // ********** Begin Cross Module References ********************************************************
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongBall();
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongBall_NoRegister();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
@@ -61,6 +62,10 @@ struct Z_Construct_UClass_ACC_PingPongBall_Statics
 		{ "IncludePath", "CC_PingPongBall.h" },
 		{ "ModuleRelativePath", "Public/CC_PingPongBall.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartingImpulse_MetaData[] = {
+		{ "Category", "Impulse" },
+		{ "ModuleRelativePath", "Public/CC_PingPongBall.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[] = {
 		{ "Category", "Components" },
 		{ "EditInline", "true" },
@@ -77,6 +82,7 @@ struct Z_Construct_UClass_ACC_PingPongBall_Statics
 		{ "ModuleRelativePath", "Public/CC_PingPongBall.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_StartingImpulse;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Mesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CollisionSphere;
@@ -87,10 +93,12 @@ struct Z_Construct_UClass_ACC_PingPongBall_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_StartingImpulse = { "StartingImpulse", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongBall, StartingImpulse), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartingImpulse_MetaData), NewProp_StartingImpulse_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongBall, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh_MetaData), NewProp_Mesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongBall, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMovement_MetaData), NewProp_ProjectileMovement_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_CollisionSphere = { "CollisionSphere", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongBall, CollisionSphere), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionSphere_MetaData), NewProp_CollisionSphere_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingPongBall_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_StartingImpulse,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_Mesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_ProjectileMovement,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongBall_Statics::NewProp_CollisionSphere,
@@ -132,10 +140,10 @@ ACC_PingPongBall::~ACC_PingPongBall() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongBall_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongBall, ACC_PingPongBall::StaticClass, TEXT("ACC_PingPongBall"), &Z_Registration_Info_UClass_ACC_PingPongBall, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongBall), 1264020804U) },
+		{ Z_Construct_UClass_ACC_PingPongBall, ACC_PingPongBall::StaticClass, TEXT("ACC_PingPongBall"), &Z_Registration_Info_UClass_ACC_PingPongBall, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongBall), 1514156794U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongBall_h__Script_Arcade_1856653000(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongBall_h__Script_Arcade_388829581(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongBall_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongBall_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
