@@ -29,7 +29,8 @@ public:
 	void AddImpulse(const FVector& ImpulseToAdd);
 	
 
-	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Impulse")
+	FVector StartingImpulse;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	class UStaticMeshComponent* Mesh;
@@ -40,4 +41,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BluePrintReadOnly, Category = "Components")
 	class USphereComponent* CollisionSphere;
 	
+	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+
 };

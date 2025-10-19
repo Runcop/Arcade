@@ -19,6 +19,12 @@ ACC_GoalPingPong::ACC_GoalPingPong()
 
 	BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
 	BoxCollision->SetupAttachment(RootComponent);
+
+	// Ensure the box has actual size and overlaps enabled
+	BoxCollision->InitBoxExtent(FVector(50.f, 50.f, 50.f));
+	BoxCollision->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	BoxCollision->SetCollisionProfileName(TEXT("OverlapAllDynamic"));
+	BoxCollision->SetGenerateOverlapEvents(true);
 }
 
 // Called when the game starts or when spawned
@@ -35,21 +41,21 @@ void ACC_GoalPingPong::Tick(float DeltaTime)
 
 }
 
-void ACC_GoalPingPong::NotifyActorBeginOverlap(AActor* OtherActor)
+void ACC_GoalPingPong::NotifyActorBeginOverlap(AActor* OtherActor) 
 {
-	ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(OtherActor); //Checked if other actor is Ball
+	/*ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(OtherActor); //Check if overlapping actor is a ball
 
-	if (!Ball) //If not valid returns
+	if (!Ball) //Not a ball
 	{
-		return;
+		
 	}
-	else
+	else if (Ball) //Is a ball
 	{
-		OtherActor->Destroy();
+		Ball->Destroy();
 		Ball = nullptr;
 
 		GoalScored();
-	}
+	}*/
 	
 
 
