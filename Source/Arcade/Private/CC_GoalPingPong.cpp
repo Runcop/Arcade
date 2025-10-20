@@ -43,21 +43,6 @@ void ACC_GoalPingPong::Tick(float DeltaTime)
 
 void ACC_GoalPingPong::NotifyActorBeginOverlap(AActor* OtherActor) 
 {
-	/*ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(OtherActor); //Check if overlapping actor is a ball
-
-	if (!Ball) //Not a ball
-	{
-		
-	}
-	else if (Ball) //Is a ball
-	{
-		Ball->Destroy();
-		Ball = nullptr;
-
-		GoalScored();
-	}*/
-	
-
 
 }
 

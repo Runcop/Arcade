@@ -78,6 +78,9 @@
     <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongPawn.cpp">
       <Filter>Source\Arcade\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongWidget.cpp">
+      <Filter>Source\Arcade\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\Arcade\Public">
       <UniqueIdentifier>{2C0BE153-D7E9-37E4-8965-01D068FAAFE7}</UniqueIdentifier>
     </Filter>
@@ -112,6 +115,9 @@
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongPawn.h">
+      <Filter>Source\Arcade\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongWidget.h">
       <Filter>Source\Arcade\Public</Filter>
     </ClInclude>
   </ItemGroup>

@@ -65,7 +65,7 @@ void ACC_PingPongBall::AddImpulse(const FVector& ImpulseToAdd)
 
 void ACC_PingPongBall::NotifyActorBeginOverlap(AActor* OtherActor)
 {
-	ACC_GoalPingPong* Goal = Cast<ACC_GoalPingPong>(OtherActor);
+	ACC_GoalPingPong* Goal = Cast<ACC_GoalPingPong>(OtherActor); 
 
 	if (Goal)
 	{
