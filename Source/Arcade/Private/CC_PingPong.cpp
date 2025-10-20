@@ -3,6 +3,8 @@
 
 #include "CC_PingPong.h"
 #include "CC_PingBallSpawner.h"
+#include "CC_PingPongController.h"
+#include "CC_PingPongWidget.h"
 
 int TeamOneScore;
 int TeamTwoScore;
@@ -12,6 +14,11 @@ class ACC_PingBallSpawner* SpawnPoint;
 void ACC_PingPong::TeamOneScored()
 {
 	++TeamOneScore;
+	ACC_PingPongController* Controller;
+	Controller = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
+	Controller->CurrentInstance->UpdatePlayerOne(TeamOneScore);
+	
+	
 	SpawnPoint->SpawnBall();
 
 }
@@ -19,6 +26,12 @@ void ACC_PingPong::TeamOneScored()
 void ACC_PingPong::TeamTwoScored()
 {
 	++TeamTwoScore;
+
+
+	ACC_PingPongController* Controller;
+	Controller = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
+	Controller->CurrentInstance->UpdatePlayerTwo(TeamTwoScore);
+
 	SpawnPoint->SpawnBall();
 }
 
