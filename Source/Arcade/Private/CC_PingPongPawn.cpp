@@ -41,7 +41,7 @@ ACC_PingPongPawn::ACC_PingPongPawn()
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
 
-	// Constrain to X axis (e.g., side-to-side); adjust as needed:
+	
 	Movement->SetPlaneConstraintNormal(FVector(1, 0, 0)); // lock Y, move along X/Z
 	Movement->bConstrainToPlane = true;
 
@@ -109,7 +109,7 @@ void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
 		return;
 		}
 
-	// Assuming BallToSpawn is TSubclassOf<ACC_PingPongBall>
+	
 	BallToSpawn = Ball->GetClass();
 
 	FVector PaddleLocation = OtherActor->GetActorLocation();

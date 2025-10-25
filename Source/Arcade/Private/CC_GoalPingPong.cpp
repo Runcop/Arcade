@@ -6,6 +6,7 @@
 #include "CC_PingPongBall.h"
 #include "CC_PingPong.h"
 
+
 // Sets default values
 ACC_GoalPingPong::ACC_GoalPingPong()
 {

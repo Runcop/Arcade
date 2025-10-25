@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "NiagaraFunctionLibrary.h"
+#include "NiagaraComponent.h"
 #include "CC_PingPongBall.generated.h"
 
 
@@ -29,6 +31,7 @@ public:
 	void AddImpulse(const FVector& ImpulseToAdd);
 	
 
+
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Impulse")
 	FVector StartingImpulse;
 
@@ -43,4 +46,10 @@ public:
 	
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FX")
+	UNiagaraSystem* NS_Hit;
 };
