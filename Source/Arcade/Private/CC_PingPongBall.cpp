@@ -6,6 +6,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Components/SphereComponent.h"
 #include "CC_GoalPingPong.h"
+#include "Kismet/KismetMathLibrary.h"
+
 
 
 
@@ -13,11 +15,10 @@
 ACC_PingPongBall::ACC_PingPongBall()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
 
-	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
-	ProjectileMovement->bAutoActivate = false;
+	
 
 	CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
 	RootComponent = CollisionSphere;
@@ -25,9 +26,10 @@ ACC_PingPongBall::ACC_PingPongBall()
 	CollisionSphere->SetSphereRadius(15.f);
 	CollisionSphere->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	CollisionSphere->SetCollisionProfileName(TEXT("PhysicsActor"));
+	CollisionSphere->SetNotifyRigidBodyCollision(true); // Simulation Generates Hit Events
 	CollisionSphere->SetGenerateOverlapEvents(true);
 	CollisionSphere->SetSimulatePhysics(true);
-	CollisionSphere->SetEnableGravity(false); // optional for arcade feel
+	CollisionSphere->SetEnableGravity(false); 
 
 	
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
@@ -43,7 +45,11 @@ void ACC_PingPongBall::BeginPlay()
 
 	if (CollisionSphere)
 	{
-		CollisionSphere->AddImpulse(StartingImpulse);
+		CollisionSphere->AddImpulse(StartingImpulse); 
+
+
+
+		CollisionSphere->OnComponentHit.AddDynamic(this, &ACC_PingPongBall::OnHit); //Binds the OnHit function
 	}
 	
 }
@@ -76,6 +82,46 @@ void ACC_PingPongBall::NotifyActorBeginOverlap(AActor* OtherActor)
 
 	}
 }
+
+void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (!NS_Hit || !GetWorld())
+	{
+		return;
+	}
+
+	const FVector SpawnLocation = Hit.bBlockingHit ? Hit.ImpactPoint : Hit.Location;
+
+	UNiagaraFunctionLibrary::SpawnSystemAtLocation(
+		GetWorld(),
+		NS_Hit,
+		SpawnLocation,
+		FRotator::ZeroRotator,
+		FVector::OneVector,
+		/*bAutoDestroy*/ true
+
+		
+	);
+
+	if (OtherActor)
+	{
+		return;
+	}
+
+	FVector HitLocation = Hit.Location;
+	FVector BallLocation = this->GetActorLocation();
+	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
+	FVector ForwardVector = LookAt.Vector();
+	
+	FVector BallsVelocity = this->GetVelocity();
+	
+	FVector ImpulseToAdd = ForwardVector + BallsVelocity + 100;
+	ImpulseToAdd = ImpulseToAdd.GetClampedToSize(100.f, 250.f);
+
+	AddImpulse(ImpulseToAdd);
+
+}
+
 
 
 	
