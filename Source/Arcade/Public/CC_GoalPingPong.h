@@ -45,4 +45,5 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Team")
 	ETeams Team;
 
+
 };

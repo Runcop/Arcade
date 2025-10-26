@@ -7,6 +7,7 @@
 #include "Components/SphereComponent.h"
 #include "CC_GoalPingPong.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "CC_PingPong.h"
 
 
 
@@ -45,7 +46,7 @@ void ACC_PingPongBall::BeginPlay()
 
 	if (CollisionSphere)
 	{
-		CollisionSphere->AddImpulse(StartingImpulse); 
+		SpawnImpulse(StartingImpulse);
 
 
 
@@ -66,6 +67,26 @@ void ACC_PingPongBall::AddImpulse(const FVector& ImpulseToAdd)
 	if (CollisionSphere)
 	{
 		CollisionSphere->AddImpulse(ImpulseToAdd);
+	}
+}
+
+void ACC_PingPongBall::SpawnImpulse(const FVector& Impulse)
+{
+
+	if (CollisionSphere)
+	{
+		UWorld* World = GetWorld();
+		ACC_PingPong* GameMode = (ACC_PingPong*)World->GetAuthGameMode();
+
+		ETeams TeamLastScored = GameMode->GetLastScoredTeam();
+
+		switch (static_cast <ETeams> (TeamLastScored))
+		{
+			case ETeams::TeamOne: CollisionSphere->AddImpulse(Impulse); break;
+			case ETeams::TeamTwo: CollisionSphere->AddImpulse(Impulse *-1); break;
+			default: break;
+		}
+
 	}
 }
 

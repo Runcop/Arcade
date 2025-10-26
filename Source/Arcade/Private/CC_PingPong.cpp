@@ -5,10 +5,12 @@
 #include "CC_PingBallSpawner.h"
 #include "CC_PingPongController.h"
 #include "CC_PingPongWidget.h"
+#include "CC_GoalPingPong.h"
 
 int TeamOneScore;
 int TeamTwoScore;
 class ACC_PingBallSpawner* SpawnPoint;
+ETeams LastScoredTeam = ETeams::TeamOne;
 
 
 void ACC_PingPong::TeamOneScored()
@@ -45,4 +47,9 @@ void ACC_PingPong::Spawner(ACC_PingBallSpawner* Spawner)
 	
 	SpawnPoint = Spawner;
 
+}
+
+void ACC_PingPong::TeamLastScored(ETeams Team)
+{
+	LastScoredTeam = Team;
 }
