@@ -29,6 +29,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void AddImpulse(const FVector& ImpulseToAdd);
+
+	void SpawnImpulse(const FVector& Impulse);
 	
 
 

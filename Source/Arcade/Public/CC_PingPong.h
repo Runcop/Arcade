@@ -6,9 +6,12 @@
 #include "GameFramework/GameModeBase.h"
 #include "CC_PingPong.generated.h"
 
-/**
- * 
- */
+
+extern ETeams LastScoredTeam; //Declaring the LastScored Variable, Will Define in the CPP file.
+
+
+
+
 UCLASS()
 class ARCADE_API ACC_PingPong : public AGameModeBase
 {
@@ -16,6 +19,8 @@ class ARCADE_API ACC_PingPong : public AGameModeBase
 	
 
 public:
+
+	//TeamScore To add 
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score")
 	int TeamOneScore;
@@ -29,10 +34,22 @@ public:
 	UFUNCTION()
 	void TeamTwoScored();
 
+	//BallSpawner
+
 	UFUNCTION()
 	void Spawner(ACC_PingBallSpawner* Spawner);
 
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, Category = "Test")
 	TSubclassOf<class ACC_PingPongBall> Ball;
+
+	//Tracking Which Team scored last 
+	UFUNCTION()
+	void TeamLastScored(ETeams Team);
+
+	//Return the last team scored
+    UFUNCTION(BlueprintPure, Category = "Score")
+    ETeams GetLastScoredTeam() const { return LastScoredTeam;; }
+
+	
 };
 
