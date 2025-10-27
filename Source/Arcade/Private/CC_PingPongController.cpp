@@ -7,7 +7,7 @@
 #include "Components/TextBlock.h"
 #include "CC_PingPong.h"
 
-
+//need to change name of ping pong to "pong"
 
 void ACC_PingPongController::BeginPlay()
 {
@@ -26,9 +26,10 @@ void ACC_PingPongController::WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Wid
 	if (CurrentInstance)
 	{
 		CurrentInstance->RemoveFromParent();
-		CurrentInstance = nullptr;
+		
 	}
 	
+	CurrentInstance = nullptr;
 	CurrentInstance = CreateWidget<UCC_PingPongWidget>(this, Widget);
 
 	if(CurrentInstance)
@@ -36,6 +37,15 @@ void ACC_PingPongController::WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Wid
 		CurrentInstance->AddToViewport();
 		
 	}
+}
+
+void ACC_PingPongController::GameRestarted()
+{
+	
+	WidgetToDisplay(WB_PingPongGame);
+	this->SetShowMouseCursor(false);
+	this->SetPause(false);
+
 }
 
 

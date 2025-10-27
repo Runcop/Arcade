@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "CC_PingPongWidget.h"
 #include "CC_PingPong.generated.h"
 
 
@@ -28,6 +29,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Score")
 	int TeamTwoScore;
 
+	UPROPERTY()
+	ACC_PingBallSpawner* SpawnPoint = nullptr;
+	UPROPERTY()
+	bool GameOver;
+
+
+
+
 	UFUNCTION()
 	void TeamOneScored();
 
@@ -50,6 +59,19 @@ public:
     UFUNCTION(BlueprintPure, Category = "Score")
     ETeams GetLastScoredTeam() const { return LastScoredTeam;; }
 
-	
+
+	//WhichTeamHasWon
+
+
+	void CheckIfTeamWon(ETeams CheckTeam);
+	void Victory();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	TSubclassOf<UCC_PingPongWidget> WB_Victory;
+
+
+	//RestartGame
+
+	void ResetGame();
 };
 

@@ -37,6 +37,10 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "UI")
 	TSubclassOf<UCC_PingPongWidget> WB_PingPongGame;
 
+	void GameRestarted();
+
+	
+
 
 	
 
