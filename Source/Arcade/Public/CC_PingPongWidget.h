@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/TextBlock.h"
+#include "Components/Button.h"
 #include "CC_PingPongWidget.generated.h"
 
 
@@ -15,7 +16,26 @@ class ARCADE_API UCC_PingPongWidget : public UUserWidget
 	GENERATED_BODY()
 	
 
+protected:
+	void NativeConstruct() override;
+	void NativeDestruct() override;
+
+
+	UFUNCTION() void RetryGame();
+	UFUNCTION() void ExitToMainMenu();
+	
+
+
+
 public:
+
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Retry = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Back = nullptr;
+
+
+	UCC_PingPongWidget(const FObjectInitializer& ObjectInitializer);
+
+
 
 	
 
@@ -28,6 +48,7 @@ public:
 
 	UFUNCTION()
 	void UpdatePlayerTwo(int NewNumber);
+
 
 
 };

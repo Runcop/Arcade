@@ -17,14 +17,16 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UCC_PingPongWidget *******************************************************
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdatePlayerTwo); \
-	DECLARE_FUNCTION(execUpdatePlayerOne);
+	DECLARE_FUNCTION(execUpdatePlayerOne); \
+	DECLARE_FUNCTION(execExitToMainMenu); \
+	DECLARE_FUNCTION(execRetryGame);
 
 
 ARCADE_API UClass* Z_Construct_UClass_UCC_PingPongWidget_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCC_PingPongWidget(); \
 	friend struct Z_Construct_UClass_UCC_PingPongWidget_Statics; \
@@ -35,9 +37,7 @@ public: \
 	DECLARE_SERIALIZER(UCC_PingPongWidget)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UCC_PingPongWidget(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCC_PingPongWidget(UCC_PingPongWidget&&) = delete; \
 	UCC_PingPongWidget(const UCC_PingPongWidget&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~UCC_PingPongWidget();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_12_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_13_PROLOG
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
