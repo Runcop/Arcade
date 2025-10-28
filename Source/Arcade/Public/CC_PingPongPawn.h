@@ -61,5 +61,7 @@ public:
 
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
+	void ResetLocation();
+
 	
 };

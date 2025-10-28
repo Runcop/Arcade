@@ -57,8 +57,8 @@ void ACC_GoalPingPong::GoalScored()
 
 		switch (static_cast <ETeams> (Team))
 		{
-		case ETeams::TeamOne:   GameMode->TeamLastScored(ETeams::TeamOne);  GameMode->TeamOneScored(); break;
-		case ETeams::TeamTwo:   GameMode->TeamLastScored(ETeams::TeamTwo);  GameMode->TeamTwoScored(); break;
+		case ETeams::TeamOne:   GameMode->TeamLastScored(ETeams::TeamOne);  GameMode->TeamTwoScored(); break;
+		case ETeams::TeamTwo:   GameMode->TeamLastScored(ETeams::TeamTwo);  GameMode->TeamOneScored(); break;
 		default: break;
 		}
 	}
