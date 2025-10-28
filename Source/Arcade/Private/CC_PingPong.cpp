@@ -97,7 +97,7 @@ void ACC_PingPong::CheckIfTeamWon(ETeams CheckTeam)
 	switch (static_cast <ETeams> (TeamToCheck))
 	{
 	case ETeams::TeamOne: if (TeamOneScore >= VictoryNumber) { Victory(); }; break;
-	case ETeams::TeamTwo: if (TeamTwoScore >= VictoryNumber) { Victory(); }; break;
+	case ETeams::TeamTwo: if (TeamTwoScore >= VictoryNumber) { Lost(); }; break;
 	default: break;
 	}
 	
@@ -119,6 +119,25 @@ void ACC_PingPong::Victory()
 			Controller->SetShowMouseCursor(true);
 			Controller->SetPause(true); 
 			Controller->WidgetToDisplay(WB_Victory);
+		}
+	}
+}
+
+void ACC_PingPong::Lost()
+{
+	if (GameOver)
+	{
+		return;
+	}
+
+	if (UWorld* World = GetWorld())
+	{
+		if (ACC_PingPongController* Controller = GetPingPongController(World))
+		{
+			GameOver = true;
+			Controller->SetShowMouseCursor(true);
+			Controller->SetPause(true);
+			Controller->WidgetToDisplay(WB_Lost);
 		}
 	}
 }

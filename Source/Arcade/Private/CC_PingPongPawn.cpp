@@ -14,7 +14,7 @@
 #include "Kismet/KismetMathLibrary.h"
 
 
-
+static FVector InitialLocation ;
 
 // Sets default values
 ACC_PingPongPawn::ACC_PingPongPawn()
@@ -53,8 +53,8 @@ void ACC_PingPongPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
+	InitialLocation = GetActorLocation();
 
-	
 }
 
 // Called every frame
@@ -133,5 +133,10 @@ void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
 	
 	Ball->AddImpulse(ImpluseToAdd);
 
+}
+
+void ACC_PingPongPawn::ResetLocation()
+{
+	SetActorLocation(InitialLocation);
 }
 

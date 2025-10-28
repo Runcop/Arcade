@@ -65,9 +65,13 @@ public:
 
 	void CheckIfTeamWon(ETeams CheckTeam);
 	void Victory();
+	void Lost();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 	TSubclassOf<UCC_PingPongWidget> WB_Victory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	TSubclassOf<UCC_PingPongWidget> WB_Lost;
 
 
 	//RestartGame

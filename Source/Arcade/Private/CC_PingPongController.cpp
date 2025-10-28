@@ -6,6 +6,7 @@
 #include "CC_PingPongWidget.h"
 #include "Components/TextBlock.h"
 #include "CC_PingPong.h"
+#include "CC_PingPongPawn.h"
 
 //need to change name of ping pong to "pong"
 
@@ -43,8 +44,15 @@ void ACC_PingPongController::GameRestarted()
 {
 	
 	WidgetToDisplay(WB_PingPongGame);
-	this->SetShowMouseCursor(false);
-	this->SetPause(false);
+    APawn*  LocalPawn = GetPawn();
+	if (!LocalPawn) return;
+
+	if (ACC_PingPongPawn* PingPongPaddle = Cast<ACC_PingPongPawn>(LocalPawn))
+	{
+		PingPongPaddle->ResetLocation();
+		this->SetShowMouseCursor(false);
+		this->SetPause(false);
+	}
 
 }
 

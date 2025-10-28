@@ -32,6 +32,7 @@
 				"C:/Unreal 5/Arcade/Content/Ns/NS_Hit.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_PingPongPaddleAI.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/UI/WB_Victory.uasset",
+				"C:/Unreal 5/Arcade/Content/GameModes/Pong/UI/WB_Lost.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/UI/BP_PingPongGame.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/UI/WB_PingPong.uasset",
 				"C:/Unreal 5/Arcade/Content/GameModes/Pong/BP_PongBall.uasset",
