@@ -3,6 +3,10 @@
 #include "CC_PingBallSpawner.h"
 #include "CC_PingPongController.h"
 #include "CC_GoalPingPong.h"
+#include "Kismet/GameplayStatics.h"
+#include "CC_PingPongPawn.h"
+#include "CC_PongAIController.h"
+#include "EngineUtils.h"
 
 static int TeamOneScore = 0;
 static int TeamTwoScore = 0;
@@ -43,6 +47,7 @@ void ACC_PingPong::TeamOneScored()
 	if (!GameOver && SpawnPoint)
 	{
 		SpawnPoint->SpawnBall();
+
 	}
 }
 
@@ -68,6 +73,8 @@ void ACC_PingPong::TeamTwoScored()
 	if (!GameOver && SpawnPoint)
 	{
 		SpawnPoint->SpawnBall();
+
+
 	}
 }
 
@@ -135,6 +142,7 @@ void ACC_PingPong::Lost()
 		if (ACC_PingPongController* Controller = GetPingPongController(World))
 		{
 			GameOver = true;
+			ResetAllPaddles();
 			Controller->SetShowMouseCursor(true);
 			Controller->SetPause(true);
 			Controller->WidgetToDisplay(WB_Lost);
@@ -171,3 +179,30 @@ void ACC_PingPong::ResetGame()
 		}
 	}
 }
+
+void ACC_PingPong::ResetAllPaddles()
+{
+	UWorld* World = GetWorld(); 
+	if (!World)
+	{
+		return;
+	}
+
+	TArray<AActor*> FoundActors; 
+	UGameplayStatics::GetAllActorsOfClass(World, ACC_PingPongPawn::StaticClass(), FoundActors);// Find all paddle actors in the world
+
+	TArray<ACC_PingPongPawn*> Paddles; 
+	Paddles.Reserve(FoundActors.Num()); 
+
+	for (AActor* Actor : FoundActors) 
+	{
+		if (ACC_PingPongPawn* Pawn = Cast<ACC_PingPongPawn>(Actor))
+		{
+			Paddles.Add(Pawn);
+			Pawn->ResetLocation();
+		}
+		
+	}
+	
+}
+

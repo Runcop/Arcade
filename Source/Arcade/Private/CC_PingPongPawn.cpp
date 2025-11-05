@@ -12,9 +12,11 @@
 #include "InputActionValue.h"    
 #include "CC_PingPongBall.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "EngineUtils.h"
 
 
-static FVector InitialLocation ;
+
+
 
 // Sets default values
 ACC_PingPongPawn::ACC_PingPongPawn()
@@ -53,7 +55,7 @@ void ACC_PingPongPawn::BeginPlay()
 {
 	Super::BeginPlay();
 
-	InitialLocation = GetActorLocation();
+	StartingLocation = GetActorLocation();
 
 }
 
@@ -86,7 +88,7 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 	const FRotator LocalControlRotation = GetControlRotation();
 
 
-	if (LocalMovementVector.X > 0.05f || LocalMovementVector.X < -0.05f)
+	if (LocalMovementVector.X > 0.10f || LocalMovementVector.X < -0.10f)
 	{
 		const FVector Direction = LocalControlRotation.RotateVector(FVector::RightVector); 
 		AddMovementInput(Direction, LocalMovementVector.X);
@@ -97,7 +99,7 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 
 
 
-void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
+/*void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
 {
 	Super::NotifyActorBeginOverlap(OtherActor);
 	
@@ -125,18 +127,22 @@ void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
 	FVector PaddlesVelocity = GetVelocity();
 	
 
-	ImpluseToAdd = ImpluseToAdd + BallsVelocity + ForwardDirection + PaddlesVelocity;
+	ImpluseToAdd = ImpluseToAdd + BallsVelocity + ForwardDirection + PaddlesVelocity + 200;
 
-	ImpluseToAdd = ImpluseToAdd.GetClampedToSize(100.f, 250.f);
+	ImpluseToAdd = ImpluseToAdd.GetClampedToSize(100.f, 500.f);
 	
 	
 	
-	Ball->AddImpulse(ImpluseToAdd);
+	Ball->AddImpulse(FVector(0.0f, ImpluseToAdd.X, 0.0f));
 
-}
+}/**/
+
+
 
 void ACC_PingPongPawn::ResetLocation()
 {
-	SetActorLocation(InitialLocation);
+
+	SetActorLocation(StartingLocation);
+	
 }
 

@@ -77,5 +77,6 @@ public:
 	//RestartGame
 
 	void ResetGame();
+	void ResetAllPaddles();
 };
 
