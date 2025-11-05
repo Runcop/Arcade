@@ -49,7 +49,7 @@ void ACC_PingPongController::GameRestarted()
 
 	if (ACC_PingPongPawn* PingPongPaddle = Cast<ACC_PingPongPawn>(LocalPawn))
 	{
-		PingPongPaddle->ResetLocation();
+		
 		this->SetShowMouseCursor(false);
 		this->SetPause(false);
 	}

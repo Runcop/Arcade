@@ -40,7 +40,8 @@ public:
 	void GameRestarted();
 
 	
-
+	UPROPERTY()
+	AActor* BallActor = nullptr;
 
 	
 

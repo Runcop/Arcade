@@ -124,24 +124,34 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 		
 	);
 
-	if (OtherActor)
-	{
-		return;
-	}
 
+	if(OtherActor)
+	{ 
 	FVector HitLocation = Hit.Location;
 	FVector BallLocation = this->GetActorLocation();
 	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
 	FVector ForwardVector = LookAt.Vector();
 	
 	FVector BallsVelocity = this->GetVelocity();
-	
-	FVector ImpulseToAdd = ForwardVector + BallsVelocity + 100;
-	ImpulseToAdd = ImpulseToAdd.GetClampedToSize(100.f, 250.f);
-
+	FVector ImpulseToAdd = ForwardVector * 1500;
+	ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
 	AddImpulse(ImpulseToAdd);
+	}
+	else
+	{
+		/*FVector HitLocation = Hit.Location;
+		FVector BallLocation = this->GetActorLocation();
+		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
+		FVector ForwardVector = LookAt.Vector();
 
+		FVector BallsVelocity = this->GetVelocity();
+		FVector ImpulseToAdd = ForwardVector + BallsVelocity;
+		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 2000.f);
+		AddImpulse(ImpulseToAdd);
+		*/
+	}
 }
+
 
 
 

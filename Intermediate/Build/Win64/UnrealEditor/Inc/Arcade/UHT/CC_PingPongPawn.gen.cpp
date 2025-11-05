@@ -16,6 +16,7 @@ ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongBall_NoRegister();
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn();
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn_NoRegister();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
@@ -111,6 +112,10 @@ struct Z_Construct_UClass_ACC_PingPongPawn_Statics
 		{ "Category", "Ball" },
 		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartingLocation_MetaData[] = {
+		{ "Category", "Location" },
+		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PingPongMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
@@ -120,6 +125,7 @@ struct Z_Construct_UClass_ACC_PingPongPawn_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_BallToSpawn;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_StartingLocation;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -135,6 +141,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongPa
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongPawn, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpringArm_MetaData), NewProp_SpringArm_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongPawn, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Camera_MetaData), NewProp_Camera_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_BallToSpawn = { "BallToSpawn", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongPawn, BallToSpawn), Z_Construct_UClass_UClass, Z_Construct_UClass_ACC_PingPongBall_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallToSpawn_MetaData), NewProp_BallToSpawn_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_StartingLocation = { "StartingLocation", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongPawn, StartingLocation), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StartingLocation_MetaData), NewProp_StartingLocation_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingPongPawn_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_PingPongMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_MoveAction,
@@ -144,6 +151,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_SpringArm,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_Camera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_BallToSpawn,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongPawn_Statics::NewProp_StartingLocation,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PingPongPawn_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_PingPongPawn_Statics::DependentSingletons[])() = {
@@ -182,10 +190,10 @@ ACC_PingPongPawn::~ACC_PingPongPawn() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongPawn, ACC_PingPongPawn::StaticClass, TEXT("ACC_PingPongPawn"), &Z_Registration_Info_UClass_ACC_PingPongPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongPawn), 2417466019U) },
+		{ Z_Construct_UClass_ACC_PingPongPawn, ACC_PingPongPawn::StaticClass, TEXT("ACC_PingPongPawn"), &Z_Registration_Info_UClass_ACC_PingPongPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongPawn), 277288335U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_3356930414(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_2576823009(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
