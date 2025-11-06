@@ -146,7 +146,7 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 	else
 	{
 		FVector BallsVelocity = this->GetVelocity();
-		FVector ImpulseToAdd = BallsVelocity;
+		FVector ImpulseToAdd = BallsVelocity*1500;
 		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
 		AddImpulse(ImpulseToAdd);
 

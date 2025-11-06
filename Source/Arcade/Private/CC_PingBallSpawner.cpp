@@ -12,6 +12,7 @@
 static FTimerHandle Timer;
 static FTimerHandle UpdateTimer;
 static ACC_PingPongController* Controller;
+static ACC_PingPong* GameMode;
 
 // Sets default values
 ACC_PingBallSpawner::ACC_PingBallSpawner()
@@ -32,7 +33,8 @@ void ACC_PingBallSpawner::BeginPlay()
 
 	if (UWorld* World = GetWorld())
 	{
-		if (ACC_PingPong* GameMode = Cast<ACC_PingPong>(World->GetAuthGameMode()))
+		GameMode = Cast<ACC_PingPong>(World->GetAuthGameMode());
+		if (GameMode)
 		{
 			GameMode->Spawner(this);
 
@@ -75,6 +77,10 @@ void ACC_PingBallSpawner::SpawnBall()
 			UCC_PingPongWidget* Widget = Controller->CurrentInstance;
 			Widget->HideTimer(true);
 			World->GetTimerManager().ClearTimer(UpdateTimer);
+			GameMode->StopAllMovement(false);
+			
+			
+
 		}
 	}
 

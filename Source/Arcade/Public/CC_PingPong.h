@@ -34,6 +34,8 @@ public:
 	UPROPERTY()
 	bool GameOver;
 
+	bool StopMovement = true;
+
 
 
 
@@ -78,5 +80,6 @@ public:
 
 	void ResetGame();
 	void ResetAllPaddles();
+	void StopAllMovement(bool Stop);
 };
 
