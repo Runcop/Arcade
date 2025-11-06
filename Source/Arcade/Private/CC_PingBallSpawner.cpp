@@ -57,8 +57,6 @@ void ACC_PingBallSpawner::Tick(float DeltaTime)
 void ACC_PingBallSpawner::SpawnBall()
 {
 	
-	
-
 
 
 	{
