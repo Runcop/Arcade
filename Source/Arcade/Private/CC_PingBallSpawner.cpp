@@ -10,6 +10,7 @@
 #include "CC_PingPongController.h"
 
 static FTimerHandle Timer;
+static FTimerHandle UpdateTimer;
 static ACC_PingPongController* Controller;
 
 // Sets default values
@@ -26,7 +27,8 @@ void ACC_PingBallSpawner::BeginPlay()
 	Super::BeginPlay();
 
 	Controller = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
-	SpawnBallTimer(3);
+	Controller->Spawner = this;
+	
 
 	if (UWorld* World = GetWorld())
 	{
@@ -38,6 +40,7 @@ void ACC_PingBallSpawner::BeginPlay()
 	}
 	
 	
+	
 }
 
 // Called every frame
@@ -45,12 +48,7 @@ void ACC_PingBallSpawner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (GetWorld()->GetTimerManager().IsTimerActive(Timer))
-	{
-		Controller->CurrentInstance->UpdateTimer(GetWorld()->GetTimerManager().GetTimerRemaining(Timer));
-
-
-	}
+	
 
 }
 
@@ -72,7 +70,11 @@ void ACC_PingBallSpawner::SpawnBall()
 			
 			World->SpawnActor<ACC_PingPongBall>(Ball, SpawnLocation, SpawnRotation, SpawnParams);
 
+
 			World->GetTimerManager().ClearTimer(Timer);
+			UCC_PingPongWidget* Widget = Controller->CurrentInstance;
+			Widget->HideTimer(true);
+			World->GetTimerManager().ClearTimer(UpdateTimer);
 		}
 	}
 
@@ -83,12 +85,27 @@ void ACC_PingBallSpawner::SpawnBallTimer(int Time)
 {
 	UWorld* World = GetWorld();
 	
-	if (World)
+	if (World && Controller)
 	{
 		
 		World->GetTimerManager().SetTimer(Timer, this, &ACC_PingBallSpawner::SpawnBall, Time, false);
+		
+		UCC_PingPongWidget* Widget = Controller->CurrentInstance;
+
+		
+		World->GetTimerManager().SetTimer(UpdateTimer, this, &ACC_PingBallSpawner::UpdateTime, 1, true);
+
+		
+
 
 		
 		
 	}
+}
+void ACC_PingBallSpawner::UpdateTime()
+{
+	UCC_PingPongWidget* Widget = Controller->CurrentInstance;
+	int Time = GetWorld()->GetTimerManager().GetTimerRemaining(Timer);
+	Widget->UpdateTimer(Time);
+	Widget->HideTimer(false);
 }
