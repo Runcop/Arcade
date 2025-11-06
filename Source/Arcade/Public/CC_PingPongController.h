@@ -39,6 +39,7 @@ public:
 
 	void GameRestarted();
 
+	void StartTimer(int Number);
 	
 	UPROPERTY()
 	AActor* BallActor = nullptr;

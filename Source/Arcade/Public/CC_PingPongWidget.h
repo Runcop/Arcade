@@ -41,7 +41,9 @@ public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_TeamOne = nullptr;
 
-	UPROPERTY(meta = (BingWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_TeamTwo = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_TeamTwo = nullptr;
+
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_TimeLeft = nullptr;
 
 	UFUNCTION()
 	void UpdatePlayerOne(int NewNumber);
@@ -49,6 +51,7 @@ public:
 	UFUNCTION()
 	void UpdatePlayerTwo(int NewNumber);
 
+	void UpdateTimer(int Number);
 
-
+	void HideTimer();
 };

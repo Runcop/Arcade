@@ -19,7 +19,7 @@ protected:
 
 private:
 	ACC_PingPongBall* BallActor = nullptr; // Reference to the ball actor
-	float MoveSpeed = 1200.f;               // Speed at which the AI paddle moves
+	float MoveSpeed = 1500.f;               // Speed at which the AI paddle moves
 	
 	UFUNCTION()
 	void OnBallDestroyed(AActor* DestroyedActor);

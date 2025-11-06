@@ -8,6 +8,7 @@
 #include "CC_GoalPingPong.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "CC_PingPong.h"
+#include "CC_PingPongPawn.h"
 
 
 
@@ -102,6 +103,9 @@ void ACC_PingPongBall::NotifyActorBeginOverlap(AActor* OtherActor)
 
 
 	}
+	
+
+
 }
 
 void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
@@ -124,7 +128,7 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 		
 	);
 
-
+	
 	if(OtherActor)
 	{ 
 	FVector HitLocation = Hit.Location;
@@ -137,19 +141,10 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 	ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
 	AddImpulse(ImpulseToAdd);
 	}
-	else
-	{
-		/*FVector HitLocation = Hit.Location;
-		FVector BallLocation = this->GetActorLocation();
-		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
-		FVector ForwardVector = LookAt.Vector();
+	
 
-		FVector BallsVelocity = this->GetVelocity();
-		FVector ImpulseToAdd = ForwardVector + BallsVelocity;
-		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 2000.f);
-		AddImpulse(ImpulseToAdd);
-		*/
-	}
+
+
 }
 
 
