@@ -129,17 +129,28 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 	);
 
 	
-	if(OtherActor)
+	if(ACC_PingPongPawn* Paddle = Cast<ACC_PingPongPawn>(OtherActor))
 	{ 
 	FVector HitLocation = Hit.Location;
 	FVector BallLocation = this->GetActorLocation();
 	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
 	FVector ForwardVector = LookAt.Vector();
 	
-	FVector BallsVelocity = this->GetVelocity();
+	
 	FVector ImpulseToAdd = ForwardVector * 1500;
 	ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
 	AddImpulse(ImpulseToAdd);
+
+	UE_LOG(LogTemp, Warning, TEXT("Paddle"));
+	}
+	else
+	{
+		FVector BallsVelocity = this->GetVelocity();
+		FVector ImpulseToAdd = BallsVelocity;
+		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
+		AddImpulse(ImpulseToAdd);
+
+		UE_LOG(LogTemp, Warning, TEXT("Impulse"));
 	}
 	
 
