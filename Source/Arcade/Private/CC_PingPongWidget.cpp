@@ -5,6 +5,7 @@
 #include "CC_PingPongController.h"
 #include "Kismet/GameplayStatics.h"
 #include "CC_PingPong.h"
+#include "CC_PingBallSpawner.h"
 
 
 
@@ -87,6 +88,29 @@ void UCC_PingPongWidget::UpdatePlayerTwo(int NewNumber)
 	
 }
 
+void UCC_PingPongWidget::UpdateTimer(int Number)
+{
 
+
+	if (TXT_TimeLeft)
+	{
+
+		TXT_TimeLeft->SetVisibility(ESlateVisibility::Visible);
+		int TimeLeft = Number;
+		FText TimeDisplay;
+		TimeDisplay = FText::AsNumber(TimeLeft);
+		TXT_TimeLeft->SetText(TimeDisplay);
+
+	}
+}
+
+void UCC_PingPongWidget::HideTimer()
+{
+	if (TXT_TimeLeft)
+	{
+		
+		TXT_TimeLeft->SetVisibility(ESlateVisibility::Hidden);
+	}
+}
 
 

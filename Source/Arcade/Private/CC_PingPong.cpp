@@ -46,7 +46,7 @@ void ACC_PingPong::TeamOneScored()
 
 	if (!GameOver && SpawnPoint)
 	{
-		SpawnPoint->SpawnBall();
+		SpawnPoint->SpawnBallTimer(3);
 
 	}
 }
@@ -72,7 +72,7 @@ void ACC_PingPong::TeamTwoScored()
 
 	if (!GameOver && SpawnPoint)
 	{
-		SpawnPoint->SpawnBall();
+		SpawnPoint->SpawnBallTimer(3);
 
 
 	}
@@ -174,7 +174,7 @@ void ACC_PingPong::ResetGame()
 			// Safely spawn a new ball if we have a valid spawn point.
 			if (SpawnPoint)
 			{
-				SpawnPoint->SpawnBall();
+				SpawnPoint->SpawnBallTimer(3);
 			}
 		}
 	}

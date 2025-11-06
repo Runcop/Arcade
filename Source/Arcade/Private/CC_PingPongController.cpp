@@ -7,6 +7,7 @@
 #include "Components/TextBlock.h"
 #include "CC_PingPong.h"
 #include "CC_PingPongPawn.h"
+#include "TimerManager.h"
 
 //need to change name of ping pong to "pong"
 
@@ -54,6 +55,11 @@ void ACC_PingPongController::GameRestarted()
 		this->SetPause(false);
 	}
 
+}
+
+void ACC_PingPongController::StartTimer(int Number)
+{
+	CurrentInstance->UpdateTimer(Number);
 }
 
 

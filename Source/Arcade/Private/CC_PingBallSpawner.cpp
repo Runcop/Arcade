@@ -6,8 +6,11 @@
 #include "CC_PingPong.h"
 #include "CC_PongAIController.h"
 #include "EngineUtils.h"
+#include "TimerManager.h"
+#include "CC_PingPongController.h"
 
-
+static FTimerHandle Timer;
+static ACC_PingPongController* Controller;
 
 // Sets default values
 ACC_PingBallSpawner::ACC_PingBallSpawner()
@@ -22,7 +25,8 @@ void ACC_PingBallSpawner::BeginPlay()
 {
 	Super::BeginPlay();
 
-	SpawnBall();
+	Controller = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
+	SpawnBallTimer(3);
 
 	if (UWorld* World = GetWorld())
 	{
@@ -33,6 +37,7 @@ void ACC_PingBallSpawner::BeginPlay()
 		}
 	}
 	
+	
 }
 
 // Called every frame
@@ -40,21 +45,52 @@ void ACC_PingBallSpawner::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (GetWorld()->GetTimerManager().IsTimerActive(Timer))
+	{
+		Controller->CurrentInstance->UpdateTimer(GetWorld()->GetTimerManager().GetTimerRemaining(Timer));
+
+
+	}
+
 }
 
 void ACC_PingBallSpawner::SpawnBall()
 {
 	
 	
-	UWorld* World = GetWorld();
-	if (World && Ball)
+
+
+
 	{
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Owner = this;
-		SpawnParams.Instigator = GetInstigator();
-		FVector SpawnLocation = GetActorLocation();
-		FRotator SpawnRotation = GetActorRotation();
-		// Spawn the ball
-		World->SpawnActor<ACC_PingPongBall>(Ball, SpawnLocation, SpawnRotation, SpawnParams);
+		UWorld* World = GetWorld();
+		if (World && Ball)
+		{
+			FActorSpawnParameters SpawnParams;
+			SpawnParams.Owner = this;
+			SpawnParams.Instigator = GetInstigator();
+			const FVector SpawnLocation = GetActorLocation();
+			const FRotator SpawnRotation = GetActorRotation();
+
+			
+			World->SpawnActor<ACC_PingPongBall>(Ball, SpawnLocation, SpawnRotation, SpawnParams);
+
+			World->GetTimerManager().ClearTimer(Timer);
+		}
+	}
+
+	
+}
+
+void ACC_PingBallSpawner::SpawnBallTimer(int Time)
+{
+	UWorld* World = GetWorld();
+	
+	if (World)
+	{
+		
+		World->GetTimerManager().SetTimer(Timer, this, &ACC_PingBallSpawner::SpawnBall, Time, false);
+
+		
+		
 	}
 }
