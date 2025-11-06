@@ -13,6 +13,7 @@
 #include "CC_PingPongBall.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "EngineUtils.h"
+#include "CC_PingPong.h"
 
 
 
@@ -86,14 +87,21 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 {
 	const FVector2D LocalMovementVector = Value.Get<FVector2D>();
 	const FRotator LocalControlRotation = GetControlRotation();
-
-
-	if (LocalMovementVector.X > 0.10f || LocalMovementVector.X < -0.10f)
+	if (UWorld* World = GetWorld())
 	{
-		const FVector Direction = LocalControlRotation.RotateVector(FVector::RightVector); 
-		AddMovementInput(Direction, LocalMovementVector.X);
+		ACC_PingPong* GameMode = Cast<ACC_PingPong>(World->GetAuthGameMode());
+		bool GameEnded = GameMode->StopMovement;
 		
+
+		if (LocalMovementVector.X > 0.10f && !GameEnded || LocalMovementVector.X < -0.10f && !GameEnded)
+		{
+			const FVector Direction = LocalControlRotation.RotateVector(FVector::RightVector);
+			AddMovementInput(Direction, LocalMovementVector.X);
+
+		}
 	}
+	
+	
 
 }
 
@@ -142,6 +150,7 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 void ACC_PingPongPawn::ResetLocation()
 {
 
+	Movement->StopMovementImmediately();
 	SetActorLocation(StartingLocation);
 	
 }

@@ -65,7 +65,7 @@ void ACC_PongAIController::SetBall(ACC_PingPongBall* NewBall)
 	// Bind to know when it dies
 	if (IsValid(BallActor))
 	{
-		BallActor->OnDestroyed.AddDynamic(this, &ACC_PongAIController::OnBallDestroyed);
+		BallActor->OnDestroyed.AddUniqueDynamic(this, &ACC_PongAIController::OnBallDestroyed);
 	}
 }
 

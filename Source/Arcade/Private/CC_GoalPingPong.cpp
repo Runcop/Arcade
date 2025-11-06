@@ -53,7 +53,9 @@ void ACC_GoalPingPong::GoalScored()
 	{
 		ACC_PingPong* GameMode = (ACC_PingPong*)World->GetAuthGameMode();
 
+		GameMode->StopAllMovement(true);
 		GameMode->ResetAllPaddles();
+		
 
 		switch (static_cast <ETeams> (Team))
 		{

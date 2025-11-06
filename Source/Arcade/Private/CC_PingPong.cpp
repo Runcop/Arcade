@@ -15,7 +15,9 @@ static ACC_PingBallSpawner* SpawnPoint = nullptr;
 
 
 const int VictoryNumber = 10;
-static bool GameOver = false;
+extern bool GameOver = true;
+extern bool StopMovement = true;
+
 
 namespace
 {
@@ -41,6 +43,7 @@ void ACC_PingPong::TeamOneScored()
 			Controller->CurrentInstance->UpdatePlayerOne(TeamOneScore);
 		}
 	}
+
 
 	CheckIfTeamWon(ETeams::TeamOne);
 
@@ -123,6 +126,8 @@ void ACC_PingPong::Victory()
 		if (ACC_PingPongController* Controller = GetPingPongController(World))
 		{
 			GameOver = true;
+			StopAllMovement(true);
+			ResetAllPaddles();
 			Controller->SetShowMouseCursor(true);
 			Controller->SetPause(true); 
 			Controller->WidgetToDisplay(WB_Victory);
@@ -142,6 +147,7 @@ void ACC_PingPong::Lost()
 		if (ACC_PingPongController* Controller = GetPingPongController(World))
 		{
 			GameOver = true;
+			StopAllMovement(true);
 			ResetAllPaddles();
 			Controller->SetShowMouseCursor(true);
 			Controller->SetPause(true);
@@ -160,6 +166,7 @@ void ACC_PingPong::ResetGame()
 			TeamTwoScore = 0;
 			::LastScoredTeam = ETeams::TeamOne;
 			GameOver = false;
+			
 
 			
 			Controller->GameRestarted();
@@ -194,15 +201,24 @@ void ACC_PingPong::ResetAllPaddles()
 	TArray<ACC_PingPongPawn*> Paddles; 
 	Paddles.Reserve(FoundActors.Num()); 
 
+
 	for (AActor* Actor : FoundActors) 
 	{
 		if (ACC_PingPongPawn* Pawn = Cast<ACC_PingPongPawn>(Actor))
 		{
 			Paddles.Add(Pawn);
+			
 			Pawn->ResetLocation();
+			
 		}
 		
 	}
 	
+}
+
+void ACC_PingPong::StopAllMovement(bool Stop)
+{
+
+	StopMovement = Stop;
 }
 

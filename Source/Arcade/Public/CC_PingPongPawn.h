@@ -59,9 +59,11 @@ public:
 
 
 
+
 	//virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
 
 	void ResetLocation();
+	
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Location")
 	FVector StartingLocation;
