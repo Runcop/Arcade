@@ -6,6 +6,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Components/TextBlock.h"
 #include "Components/Button.h"
+#include "Components/VerticalBox.h"
 #include "CC_PingPongWidget.generated.h"
 
 
@@ -45,6 +46,8 @@ public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_TimeLeft = nullptr;
 
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UVerticalBox* VB_GameStarting = nullptr;
+
 	UFUNCTION()
 	void UpdatePlayerOne(int NewNumber);
 
@@ -53,5 +56,5 @@ public:
 
 	void UpdateTimer(int Number);
 
-	void HideTimer();
+	void HideTimer(bool hide);
 };

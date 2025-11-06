@@ -44,6 +44,8 @@ public:
 	UPROPERTY()
 	AActor* BallActor = nullptr;
 
+	UPROPERTY()
+	AActor* Spawner = nullptr;
 	
 
 	

@@ -30,4 +30,5 @@ public:
 	UFUNCTION()
 	void SpawnBall();
 	void SpawnBallTimer(const int Time);
+	void UpdateTime();
 };

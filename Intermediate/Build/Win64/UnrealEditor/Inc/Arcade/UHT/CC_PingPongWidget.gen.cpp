@@ -17,6 +17,7 @@ ARCADE_API UClass* Z_Construct_UClass_UCC_PingPongWidget_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UButton_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserWidget();
+UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
 
@@ -241,12 +242,19 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VB_GameStarting_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_PingPongWidget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Retry;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Back;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_TeamOne;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_TeamTwo;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_TimeLeft;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_VB_GameStarting;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -266,12 +274,14 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWi
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamOne = { "TXT_TeamOne", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, TXT_TeamOne), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_TeamOne_MetaData), NewProp_TXT_TeamOne_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamTwo = { "TXT_TeamTwo", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, TXT_TeamTwo), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_TeamTwo_MetaData), NewProp_TXT_TeamTwo_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TimeLeft = { "TXT_TimeLeft", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, TXT_TimeLeft), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_TimeLeft_MetaData), NewProp_TXT_TimeLeft_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_VB_GameStarting = { "VB_GameStarting", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, VB_GameStarting), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VB_GameStarting_MetaData), NewProp_VB_GameStarting_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCC_PingPongWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Retry,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Back,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamOne,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamTwo,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TimeLeft,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_VB_GameStarting,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCC_PingPongWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UCC_PingPongWidget_Statics::DependentSingletons[])() = {
@@ -310,10 +320,10 @@ UCC_PingPongWidget::~UCC_PingPongWidget() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 79886227U) },
+		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 247174849U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_3753721904(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_15522751(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

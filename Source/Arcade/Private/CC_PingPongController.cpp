@@ -7,6 +7,7 @@
 #include "Components/TextBlock.h"
 #include "CC_PingPong.h"
 #include "CC_PingPongPawn.h"
+#include "CC_PingBallSpawner.h"
 #include "TimerManager.h"
 
 //need to change name of ping pong to "pong"
@@ -16,6 +17,14 @@ void ACC_PingPongController::BeginPlay()
 
 	
 	WidgetToDisplay(WB_PingPongGame);
+
+
+	if (ACC_PingBallSpawner* BallSpawner = Cast<ACC_PingBallSpawner>(Spawner))
+	{
+		BallSpawner->SpawnBallTimer(3);
+	}
+	
+	
 	
 }
 

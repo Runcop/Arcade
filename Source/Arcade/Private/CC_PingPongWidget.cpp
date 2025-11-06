@@ -91,25 +91,30 @@ void UCC_PingPongWidget::UpdatePlayerTwo(int NewNumber)
 void UCC_PingPongWidget::UpdateTimer(int Number)
 {
 
-
+	
 	if (TXT_TimeLeft)
 	{
-
-		TXT_TimeLeft->SetVisibility(ESlateVisibility::Visible);
+		
+		
 		int TimeLeft = Number;
 		FText TimeDisplay;
 		TimeDisplay = FText::AsNumber(TimeLeft);
 		TXT_TimeLeft->SetText(TimeDisplay);
 
 	}
+	
 }
 
-void UCC_PingPongWidget::HideTimer()
+void UCC_PingPongWidget::HideTimer(bool hide)
 {
-	if (TXT_TimeLeft)
+	if (VB_GameStarting && hide)
 	{
 		
-		TXT_TimeLeft->SetVisibility(ESlateVisibility::Hidden);
+		VB_GameStarting->SetVisibility(ESlateVisibility::Hidden);
+	}
+	else if (VB_GameStarting && !hide)
+	{
+		VB_GameStarting->SetVisibility(ESlateVisibility::Visible);
 	}
 }
 
