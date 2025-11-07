@@ -106,47 +106,6 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 }
 
 
-
-/*void ACC_PingPongPawn::NotifyActorBeginOverlap(AActor* OtherActor)
-{
-	Super::NotifyActorBeginOverlap(OtherActor);
-	
-	
-
-	ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(OtherActor);
-		if (!Ball)
-		{
-		return;
-		}
-
-	
-	BallToSpawn = Ball->GetClass();
-
-	FVector PaddleLocation = OtherActor->GetActorLocation();
-	FVector BallLocation = Ball->GetActorLocation();
-	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(PaddleLocation, BallLocation);
-	FVector ForwardDirection = UKismetMathLibrary::GetForwardVector(LookAt);
-
-	FVector ImpluseToAdd;
-
-	
-
-	FVector BallsVelocity = Ball->GetVelocity(); 
-	FVector PaddlesVelocity = GetVelocity();
-	
-
-	ImpluseToAdd = ImpluseToAdd + BallsVelocity + ForwardDirection + PaddlesVelocity + 200;
-
-	ImpluseToAdd = ImpluseToAdd.GetClampedToSize(100.f, 500.f);
-	
-	
-	
-	Ball->AddImpulse(FVector(0.0f, ImpluseToAdd.X, 0.0f));
-
-}/**/
-
-
-
 void ACC_PingPongPawn::ResetLocation()
 {
 

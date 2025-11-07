@@ -23,8 +23,12 @@ private:
 	
 	UFUNCTION()
 	void OnBallDestroyed(AActor* DestroyedActor);
+	void Movement();
 
 public:
 	void GetBall();                // Fallback search
 	void SetBall(ACC_PingPongBall* NewBall); // Direct assignment from spawner
+
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "AI Reaction")
+	float ReactionTime;
 };
