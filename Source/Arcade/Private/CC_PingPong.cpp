@@ -16,7 +16,7 @@ static ACC_PingBallSpawner* SpawnPoint = nullptr;
 
 const int VictoryNumber = 10;
 extern bool GameOver = true;
-extern bool StopMovement = true;
+extern bool StopMovement;
 
 
 namespace

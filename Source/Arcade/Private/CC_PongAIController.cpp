@@ -7,49 +7,22 @@
 #include "GameFramework/PawnMovementComponent.h"
 #include "CC_PingPongBall.h"
 #include "Templates/Tuple.h"
+#include "TimerManager.h"
+
+FTimerHandle ReactionTimer;
 
 void ACC_PongAIController::BeginPlay()
 {
 	Super::BeginPlay();
 	GetBall();
+	Movement();
 }
 
 void ACC_PongAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	// If we lost the ball reference, try to reacquire
-	if (!GetPawn())
-	{
-		return;
-	}
-
-	if (!IsValid(BallActor))
-	{
-		GetBall();
-		if (!IsValid(BallActor))
-		{
-			return;
-		}
-	}
-
-	const FVector PaddleLocation = GetPawn()->GetActorLocation();
-	const FVector BallLocation = BallActor->GetActorLocation();
-
-	float Direction = 0.f;
-
-	if (BallLocation.Y > PaddleLocation.Y + 10.f)
-	{
-		Direction = 1.f;
-	}
-	else if (BallLocation.Y < PaddleLocation.Y - 10.f)
-	{
-		Direction = -1.f;
-	}
-
-	FVector NewLocation = PaddleLocation;
-	NewLocation.Y += Direction * MoveSpeed * DeltaTime;
-	GetPawn()->SetActorLocation(NewLocation);
+	
 }
 
 void ACC_PongAIController::SetBall(ACC_PingPongBall* NewBall)
@@ -74,6 +47,63 @@ void ACC_PongAIController::OnBallDestroyed(AActor* /*DestroyedActor*/)
 	BallActor = nullptr;
 	// Try to get the new one immediately (it may already be spawned)
 	GetBall();
+}
+
+void ACC_PongAIController::Movement()
+{
+	UWorld* World = GetWorld();
+	
+	if (!World-> GetTimerManager().IsTimerActive(ReactionTimer))
+	{
+		
+		World->GetTimerManager().SetTimer(ReactionTimer,this, &ACC_PongAIController::Movement, ReactionTime, true);
+
+		UE_LOG(LogTemp, Warning, TEXT("TimerStarted"));
+	}
+	
+	
+		
+		// If we lost the pawn, bail
+		APawn* const ControlledPawn = GetPawn();
+		if (!ControlledPawn)
+		{
+			return;
+		}
+
+		// Ensure we have a valid ball
+		if (!IsValid(BallActor))
+		{
+			GetBall();
+			if (!IsValid(BallActor))
+			{
+				return;
+			}
+		}
+		
+		const FVector PaddleLocation = ControlledPawn->GetActorLocation();
+		const FVector BallLocation = BallActor->GetActorLocation();
+
+		float Direction = 0.f;
+
+		if (BallLocation.Y > PaddleLocation.Y + 10.f)
+		{
+			Direction = 1.f;
+		}
+		else if (BallLocation.Y < PaddleLocation.Y - 10.f)
+		{
+			Direction = -1.f;
+		}
+
+
+		if (FMath::Abs(Direction) > KINDA_SMALL_NUMBER)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("TimerPlaying"));
+			ControlledPawn->AddMovementInput(FVector::YAxisVector, Direction);
+		}
+	
+
+	
+
 }
 
 void ACC_PongAIController::GetBall()

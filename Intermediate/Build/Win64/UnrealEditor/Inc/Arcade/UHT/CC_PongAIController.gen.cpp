@@ -113,7 +113,19 @@ struct Z_Construct_UClass_ACC_PongAIController_Statics
 		{ "IncludePath", "CC_PongAIController.h" },
 		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReactionTime_MetaData[] = {
+		{ "Category", "AI Reaction" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Direct assignment from spawner\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Direct assignment from spawner" },
+#endif
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReactionTime;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACC_PongAIController_OnBallDestroyed, "OnBallDestroyed" }, // 3148065419
@@ -124,6 +136,11 @@ struct Z_Construct_UClass_ACC_PongAIController_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACC_PongAIController_Statics::NewProp_ReactionTime = { "ReactionTime", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PongAIController, ReactionTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReactionTime_MetaData), NewProp_ReactionTime_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PongAIController_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PongAIController_Statics::NewProp_ReactionTime,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PongAIController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_PongAIController_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AAIController,
 	(UObject* (*)())Z_Construct_UPackage__Script_Arcade,
@@ -135,11 +152,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ACC_PongAIController_St
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_ACC_PongAIController_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PongAIController_Statics::PropPointers),
 	0,
 	0x009003A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PongAIController_Statics::Class_MetaDataParams), Z_Construct_UClass_ACC_PongAIController_Statics::Class_MetaDataParams)
@@ -161,10 +178,10 @@ ACC_PongAIController::~ACC_PongAIController() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PongAIController, ACC_PongAIController::StaticClass, TEXT("ACC_PongAIController"), &Z_Registration_Info_UClass_ACC_PongAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PongAIController), 2134760034U) },
+		{ Z_Construct_UClass_ACC_PongAIController, ACC_PongAIController::StaticClass, TEXT("ACC_PongAIController"), &Z_Registration_Info_UClass_ACC_PongAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PongAIController), 1567389911U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_2235502391(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_884360678(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
