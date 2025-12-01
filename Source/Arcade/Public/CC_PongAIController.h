@@ -31,4 +31,7 @@ public:
 
 	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "AI Reaction")
 	float ReactionTime;
+	UPROPERTY(EditAnywhere,BlueprintReadOnly, Category = "AI Reaction")
+	float ReactionDistance;
+	
 };

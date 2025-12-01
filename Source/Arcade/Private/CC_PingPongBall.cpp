@@ -53,6 +53,8 @@ void ACC_PingPongBall::BeginPlay()
 
 		CollisionSphere->OnComponentHit.AddDynamic(this, &ACC_PingPongBall::OnHit); //Binds the OnHit function
 	}
+
+
 	
 }
 
@@ -129,33 +131,53 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 	);
 
 	
-	if(ACC_PingPongPawn* Paddle = Cast<ACC_PingPongPawn>(OtherActor))
-	{ 
-	FVector HitLocation = Hit.Location;
-	FVector BallLocation = this->GetActorLocation();
-	FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
-	FVector ForwardVector = LookAt.Vector();
-	
-	
-	FVector ImpulseToAdd = ForwardVector * 1500;
-	ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
-	AddImpulse(ImpulseToAdd);
+	if (ACC_PingPongPawn* Paddle = Cast<ACC_PingPongPawn>(OtherActor))
+	{
+		FVector HitLocation = Hit.Location; //Poing of Contact
+		FVector PaddlesLocation = Paddle->GetActorLocation();
+		FVector BallLocation = this->GetActorLocation();
 
-	UE_LOG(LogTemp, Warning, TEXT("Paddle"));
+		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
+		FVector ForwardVector = LookAt.Vector();
+
+		FVector Origin;
+		FVector BoxExtent;
+		Paddle->GetActorBounds(false, Origin, BoxExtent);
+
+		float PaddleHeight = BoxExtent.Y * 2.0f;
+
+
+		float VerticalOffset = (HitLocation.Y - PaddlesLocation.Y) / (PaddleHeight * 0.5f);
+
+		VerticalOffset = FMath::Clamp(VerticalOffset, -1.0f, 1.0f);
+
+		float HorizontalDirection = (BallLocation.X > PaddlesLocation.X) ? 1.0f : -1.0f;
+
+		FVector NewDirection = FVector(ForwardVector.X, VerticalOffset, 0.0f);
+
+		NewDirection.Normalize();
+
+		FVector BallsVelocity = NewDirection * 2000;
+
+		AddImpulse(BallsVelocity);
+
+		UE_LOG(LogTemp, Warning, TEXT("BallsVelocity: %s"), *BallsVelocity.ToString());
 	}
+
+
 	else
 	{
 		FVector BallsVelocity = this->GetVelocity();
 		FVector ImpulseToAdd = FVector(BallsVelocity.X *1500, 500.f , 0.0f);
 
 		//FVector ImpulseToAdd = BallsVelocity*1500;
-		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(1500.f, 1500.f);
+		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(2000.f, 2000.f);
 		AddImpulse(ImpulseToAdd);
 
 		UE_LOG(LogTemp, Warning, TEXT("Impulse"));
 	}
 	
-
+	
 
 
 }

@@ -123,8 +123,13 @@ struct Z_Construct_UClass_ACC_PongAIController_Statics
 		{ "ToolTip", "Direct assignment from spawner" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReactionDistance_MetaData[] = {
+		{ "Category", "AI Reaction" },
+		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReactionTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReactionDistance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -137,8 +142,10 @@ struct Z_Construct_UClass_ACC_PongAIController_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACC_PongAIController_Statics::NewProp_ReactionTime = { "ReactionTime", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PongAIController, ReactionTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReactionTime_MetaData), NewProp_ReactionTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACC_PongAIController_Statics::NewProp_ReactionDistance = { "ReactionDistance", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PongAIController, ReactionDistance), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReactionDistance_MetaData), NewProp_ReactionDistance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PongAIController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PongAIController_Statics::NewProp_ReactionTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PongAIController_Statics::NewProp_ReactionDistance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PongAIController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_PongAIController_Statics::DependentSingletons[])() = {
@@ -178,10 +185,10 @@ ACC_PongAIController::~ACC_PongAIController() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PongAIController, ACC_PongAIController::StaticClass, TEXT("ACC_PongAIController"), &Z_Registration_Info_UClass_ACC_PongAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PongAIController), 1567389911U) },
+		{ Z_Construct_UClass_ACC_PongAIController, ACC_PongAIController::StaticClass, TEXT("ACC_PongAIController"), &Z_Registration_Info_UClass_ACC_PongAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PongAIController), 613230443U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_884360678(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_3903584923(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

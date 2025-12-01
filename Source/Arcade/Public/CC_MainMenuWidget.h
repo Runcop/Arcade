@@ -41,8 +41,8 @@ public:
 	UPROPERTY() int SelectedGame;
 	// Functions to change selected game
 
-	UFUNCTION(BlueprintCallable, Category="UI") int NextSelectedGame();
-	UFUNCTION(BlueprintCallable, Category="UI") int PreviousSelectedGame();
+	UFUNCTION(BlueprintCallable, Category = "UI") int NextSelectedGame(); 
+	UFUNCTION(BlueprintCallable, Category = "UI") int PreviousSelectedGame(); 
 
 	UFUNCTION(BlueprintCallable, Category="UI") void SetNavigationEnabled(bool bEnabled);
 	
