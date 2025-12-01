@@ -153,11 +153,15 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 		float HorizontalDirection = (BallLocation.X > PaddlesLocation.X) ? 1.0f : -1.0f;
 
-		FVector NewDirection = FVector(ForwardVector.X, VerticalOffset, 0.0f);
+		FVector NewDirection = FVector(HorizontalDirection, VerticalOffset, 0.0f);
 
 		NewDirection.Normalize();
 
-		FVector BallsVelocity = NewDirection * 2000;
+
+		
+		FVector BallsVelocity = NewDirection;
+
+		BallsVelocity = FVector(BallsVelocity.X * 2500, BallsVelocity.Y * 4000, 0.0f);
 
 		AddImpulse(BallsVelocity);
 
@@ -167,14 +171,16 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 	else
 	{
-		FVector BallsVelocity = this->GetVelocity();
-		FVector ImpulseToAdd = FVector(BallsVelocity.X *1500, 500.f , 0.0f);
+		FVector HitLocation = Hit.Location; //Poing of Contact
+		FVector BallLocation = this->GetActorLocation();
 
-		//FVector ImpulseToAdd = BallsVelocity*1500;
-		ImpulseToAdd = ImpulseToAdd.GetClampedToSize(2000.f, 2000.f);
-		AddImpulse(ImpulseToAdd);
+		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
+		FVector ForwardVector = LookAt.Vector();
+		FVector ReflectionVector = FVector::VectorPlaneProject(ForwardVector, Hit.Normal) * 2000;
+		AddImpulse(ReflectionVector);
 
-		UE_LOG(LogTemp, Warning, TEXT("Impulse"));
+
+
 	}
 	
 	
