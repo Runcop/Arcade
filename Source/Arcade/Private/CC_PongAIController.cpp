@@ -22,6 +22,8 @@ void ACC_PongAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+
+	
 	
 }
 
@@ -85,19 +87,19 @@ void ACC_PongAIController::Movement()
 
 		float Direction = 0.f;
 
-		if (BallLocation.Y > PaddleLocation.Y + 10.f)
+		if (BallLocation.Y > PaddleLocation.Y + ReactionDistance)
 		{
 			Direction = 1.f;
 		}
-		else if (BallLocation.Y < PaddleLocation.Y - 10.f)
+		else if (BallLocation.Y < PaddleLocation.Y - ReactionDistance)
 		{
 			Direction = -1.f;
 		}
 
 
-		if (FMath::Abs(Direction) > KINDA_SMALL_NUMBER)
+		if (FMath::Abs(Direction) > KINDA_SMALL_NUMBER) // Adding Input, Lowers the jittering
 		{
-			UE_LOG(LogTemp, Warning, TEXT("TimerPlaying"));
+			
 			ControlledPawn->AddMovementInput(FVector::YAxisVector, Direction);
 		}
 	
