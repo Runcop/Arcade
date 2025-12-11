@@ -16,11 +16,11 @@
 // Sets default values
 ACC_PingPongBall::ACC_PingPongBall()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
 
 
-	
+
 
 	CollisionSphere = CreateDefaultSubobject<USphereComponent>(TEXT("CollisionSphere"));
 	RootComponent = CollisionSphere;
@@ -31,9 +31,9 @@ ACC_PingPongBall::ACC_PingPongBall()
 	CollisionSphere->SetNotifyRigidBodyCollision(true); // Simulation Generates Hit Events
 	CollisionSphere->SetGenerateOverlapEvents(true);
 	CollisionSphere->SetSimulatePhysics(true);
-	CollisionSphere->SetEnableGravity(false); 
+	CollisionSphere->SetEnableGravity(false);
 
-	
+
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(CollisionSphere);
 	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
@@ -55,7 +55,7 @@ void ACC_PingPongBall::BeginPlay()
 	}
 
 
-	
+
 }
 
 // Called every frame
@@ -85,9 +85,9 @@ void ACC_PingPongBall::SpawnImpulse(const FVector& Impulse)
 
 		switch (static_cast <ETeams> (TeamLastScored))
 		{
-			case ETeams::TeamOne: CollisionSphere->AddImpulse(Impulse); break;
-			case ETeams::TeamTwo: CollisionSphere->AddImpulse(Impulse *-1); break;
-			default: break;
+		case ETeams::TeamOne: CollisionSphere->AddImpulse(Impulse); break;
+		case ETeams::TeamTwo: CollisionSphere->AddImpulse(Impulse * -1); break;
+		default: break;
 		}
 
 	}
@@ -95,7 +95,7 @@ void ACC_PingPongBall::SpawnImpulse(const FVector& Impulse)
 
 void ACC_PingPongBall::NotifyActorBeginOverlap(AActor* OtherActor)
 {
-	ACC_GoalPingPong* Goal = Cast<ACC_GoalPingPong>(OtherActor); 
+	ACC_GoalPingPong* Goal = Cast<ACC_GoalPingPong>(OtherActor);
 
 	if (Goal)
 	{
@@ -105,7 +105,7 @@ void ACC_PingPongBall::NotifyActorBeginOverlap(AActor* OtherActor)
 
 
 	}
-	
+
 
 
 }
@@ -127,10 +127,10 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 		FVector::OneVector,
 		/*bAutoDestroy*/ true
 
-		
+
 	);
 
-	
+
 	if (ACC_PingPongPawn* Paddle = Cast<ACC_PingPongPawn>(OtherActor))
 	{
 		FVector HitLocation = Hit.Location; //Poing of Contact
@@ -153,15 +153,15 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 		float HorizontalDirection = (BallLocation.X > PaddlesLocation.X) ? 1.0f : -1.0f;
 
-		FVector NewDirection = FVector(HorizontalDirection, VerticalOffset, 0.0f);
+		FVector NewDirection = FVector(ForwardVector.X, VerticalOffset, 0.0f);
 
 		NewDirection.Normalize();
 
 
-		
+
 		FVector BallsVelocity = NewDirection;
 
-		BallsVelocity = FVector(BallsVelocity.X * 2500, BallsVelocity.Y * 4000, 0.0f);
+		BallsVelocity = FVector(BallsVelocity.X * 3500, BallsVelocity.Y * 6000, 0.0f);
 
 		AddImpulse(BallsVelocity);
 
@@ -171,19 +171,13 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 	else
 	{
-		FVector HitLocation = Hit.Location; //Poing of Contact
-		FVector BallLocation = this->GetActorLocation();
 
-		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
-		FVector ForwardVector = LookAt.Vector();
-		FVector ReflectionVector = FVector::VectorPlaneProject(ForwardVector, Hit.Normal) * 2000;
-		AddImpulse(ReflectionVector);
 
 
 
 	}
-	
-	
+
+
 
 
 }

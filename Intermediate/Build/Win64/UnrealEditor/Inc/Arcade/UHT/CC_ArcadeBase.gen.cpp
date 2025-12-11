@@ -17,6 +17,7 @@ ARCADE_API UClass* Z_Construct_UClass_ACC_ArcadeBase_NoRegister();
 ARCADE_API UEnum* Z_Construct_UEnum_Arcade_EArcadeMachine();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UArrowComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
@@ -130,12 +131,18 @@ struct Z_Construct_UClass_ACC_ArcadeBase_Statics
 		{ "Category", "Arcade" },
 		{ "ModuleRelativePath", "Public/CC_ArcadeBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[] = {
+		{ "Category", "CC_ArcadeBase" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_ArcadeBase.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReferencePoint;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DirectionArrow;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ArcadeGame_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ArcadeGame;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -152,12 +159,14 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_ArcadeBase
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_DirectionArrow = { "DirectionArrow", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_ArcadeBase, DirectionArrow), Z_Construct_UClass_UArrowComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DirectionArrow_MetaData), NewProp_DirectionArrow_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_ArcadeGame_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_ArcadeGame = { "ArcadeGame", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_ArcadeBase, ArcadeGame), Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ArcadeGame_MetaData), NewProp_ArcadeGame_MetaData) }; // 563493015
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x0010000000080009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_ArcadeBase, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Camera_MetaData), NewProp_Camera_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_ArcadeBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_StaticMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_ReferencePoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_DirectionArrow,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_ArcadeGame_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_ArcadeGame,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_ArcadeBase_Statics::NewProp_Camera,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_ArcadeBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_ArcadeBase_Statics::DependentSingletons[])() = {
@@ -196,10 +205,10 @@ ACC_ArcadeBase::~ACC_ArcadeBase() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_ArcadeBase_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_ArcadeBase, ACC_ArcadeBase::StaticClass, TEXT("ACC_ArcadeBase"), &Z_Registration_Info_UClass_ACC_ArcadeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_ArcadeBase), 793495854U) },
+		{ Z_Construct_UClass_ACC_ArcadeBase, ACC_ArcadeBase::StaticClass, TEXT("ACC_ArcadeBase"), &Z_Registration_Info_UClass_ACC_ArcadeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_ArcadeBase), 476223965U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_ArcadeBase_h__Script_Arcade_3283003472(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_ArcadeBase_h__Script_Arcade_2742786811(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_ArcadeBase_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_ArcadeBase_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -12,8 +12,12 @@
 #include "InputActionValue.h"    
 #include "CC_PingPongBall.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Kismet/GameplayStatics.h"
 #include "EngineUtils.h"
 #include "CC_PingPong.h"
+#include "CC_MainCameraPong.h"
+
+
 
 
 
@@ -38,7 +42,7 @@ ACC_PingPongPawn::ACC_PingPongPawn()
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->SetupAttachment(RootComponent);
-	SpringArm->TargetArmLength = 800.f;
+	SpringArm->TargetArmLength = 1300.f;
 	SpringArm->SetRelativeRotation(FRotator(-45.f, 0.f, 0.f));
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
@@ -57,6 +61,8 @@ void ACC_PingPongPawn::BeginPlay()
 	Super::BeginPlay();
 
 	StartingLocation = GetActorLocation();
+
+	SwitchingCamera();
 
 }
 
@@ -79,7 +85,10 @@ void ACC_PingPongPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 			
 			EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ACC_PingPongPawn::EnhancedMove);
 		}
+		
 	}
+
+
 
 }
 
@@ -105,6 +114,17 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 
 }
 
+void ACC_PingPongPawn::SwitchingCamera()
+{
+
+	APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this,0);
+
+	
+
+	PlayerController->SetViewTargetWithBlend(MainCamera, 2.f);
+
+	
+}
 
 void ACC_PingPongPawn::ResetLocation()
 {

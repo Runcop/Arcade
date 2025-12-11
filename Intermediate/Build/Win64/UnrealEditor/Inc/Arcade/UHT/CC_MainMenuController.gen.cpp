@@ -18,6 +18,7 @@ ARCADE_API UClass* Z_Construct_UClass_UCC_MainMenuWidget_NoRegister();
 ARCADE_API UEnum* Z_Construct_UEnum_Arcade_EArcadeMachine();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTimelineComponent_NoRegister();
@@ -496,6 +497,36 @@ DEFINE_FUNCTION(ACC_MainMenuController::execShowWidget)
 }
 // ********** End Class ACC_MainMenuController Function ShowWidget *********************************
 
+// ********** Begin Class ACC_MainMenuController Function TimerGameSelected ************************
+struct Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Camera" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_MainMenuController, nullptr, "TimerGameSelected", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_MainMenuController::execTimerGameSelected)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->TimerGameSelected();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_MainMenuController Function TimerGameSelected **************************
+
 // ********** Begin Class ACC_MainMenuController ***************************************************
 void ACC_MainMenuController::StaticRegisterNativesACC_MainMenuController()
 {
@@ -510,6 +541,7 @@ void ACC_MainMenuController::StaticRegisterNativesACC_MainMenuController()
 		{ "OnCameraTimelineFinished", &ACC_MainMenuController::execOnCameraTimelineFinished },
 		{ "RemoveCurrentWidget", &ACC_MainMenuController::execRemoveCurrentWidget },
 		{ "ShowWidget", &ACC_MainMenuController::execShowWidget },
+		{ "TimerGameSelected", &ACC_MainMenuController::execTimerGameSelected },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -613,6 +645,9 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayArcadeTransform_MetaData[] = {
 		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ZoomInto_MetaData[] = {
+		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_StartingWidget;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ArcadeLevel_Underlying;
@@ -630,6 +665,7 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ArcadeMachine_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ArcadeMachine;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_PlayArcadeTransform;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ZoomInto;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -642,6 +678,7 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 		{ &Z_Construct_UFunction_ACC_MainMenuController_OnCameraTimelineFinished, "OnCameraTimelineFinished" }, // 4109926130
 		{ &Z_Construct_UFunction_ACC_MainMenuController_RemoveCurrentWidget, "RemoveCurrentWidget" }, // 2462180618
 		{ &Z_Construct_UFunction_ACC_MainMenuController_ShowWidget, "ShowWidget" }, // 114719920
+		{ &Z_Construct_UFunction_ACC_MainMenuController_TimerGameSelected, "TimerGameSelected" }, // 1236723801
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -665,6 +702,7 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_MainMenuCo
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeMachine_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeMachine = { "ArcadeMachine", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, ArcadeMachine), Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ArcadeMachine_MetaData), NewProp_ArcadeMachine_MetaData) }; // 563493015
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_PlayArcadeTransform = { "PlayArcadeTransform", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, PlayArcadeTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayArcadeTransform_MetaData), NewProp_PlayArcadeTransform_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ZoomInto = { "ZoomInto", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, ZoomInto), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ZoomInto_MetaData), NewProp_ZoomInto_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_MainMenuController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_StartingWidget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeLevel_Underlying,
@@ -682,6 +720,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_MainM
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeMachine_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeMachine,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_PlayArcadeTransform,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ZoomInto,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_MainMenuController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_MainMenuController_Statics::DependentSingletons[])() = {
@@ -723,10 +762,10 @@ struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuControll
 		{ EArcadeMachine_StaticEnum, TEXT("EArcadeMachine"), &Z_Registration_Info_UEnum_EArcadeMachine, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 563493015U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 2479610695U) },
+		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 3619190307U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_2762948(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_1587818900(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo));

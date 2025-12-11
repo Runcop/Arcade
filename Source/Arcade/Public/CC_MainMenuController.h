@@ -124,24 +124,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Camera") // Function to check if camera is moving
 	bool IsCameraMoving() const;
 
+	UPROPERTY()
+	AActor* ZoomInto;
 
 
-
-
-
-
-
-
-
-
-
-
-	
 
 	public:
 		// Call when player confirms the selected machine
 		UFUNCTION(BlueprintCallable, Category = "Camera")
 		void GameSelected(EArcadeMachine SelectedMachine);
+
+		UFUNCTION(BlueprintCallable, Category = "Camera")
+		void TimerGameSelected();
 
 		// Updated helper
 		

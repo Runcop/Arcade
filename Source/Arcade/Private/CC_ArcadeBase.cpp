@@ -5,6 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/ArrowComponent.h"
 #include "CC_MainMenuController.h"
+#include "Camera/CameraComponent.h"
 
 
 // Sets default values
@@ -24,6 +25,9 @@ ACC_ArcadeBase::ACC_ArcadeBase()
 
 	DirectionArrow = CreateDefaultSubobject<UArrowComponent>(TEXT("DirectionArrow"));
 	DirectionArrow->SetupAttachment(StaticMesh);
+
+	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	Camera->SetupAttachment(StaticMesh);
 	
 
 }
