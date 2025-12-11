@@ -7,7 +7,10 @@
 #include "Components/ArrowComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "TimerManager.h"
 
+static FTimerHandle Timer;
+EArcadeMachine GlobalSelectedMachine;
 
 
 ACC_MainMenuController::ACC_MainMenuController()
@@ -189,13 +192,58 @@ void ACC_MainMenuController::GameSelected(EArcadeMachine SelectedMachine)// Call
 	}
 	MoveCameraToArcade(SelectedMachine);
 
-	
 
-	switch (static_cast<EArcadeMachine>(SelectedMachine))// Open the corresponding level based on the selected arcade machine
+	if (UWorld* World = GetWorld())
 	{
-		case EArcadeMachine::PingPong:      UGameplayStatics::OpenLevel(this, FName("L_PingPong"), true); break;
-		case EArcadeMachine::PacMan:        UGameplayStatics::OpenLevel(this, FName("L_PacMan"), true); break;
-		case EArcadeMachine::SpaceInvaders: UGameplayStatics::OpenLevel(this, FName("L_SpaceInvaders"), true); break;
-		default:                             break;
+
+
+
+		for (TActorIterator<ACC_ArcadeBase> It(World); It; ++It)
+		{
+			ACC_ArcadeBase* Arcade = *It;
+			if (Arcade)
+			{
+				EArcadeMachine MachineType = Arcade->GetArcadeMachineType();
+
+				if (MachineType == SelectedMachine)
+				{
+					ZoomInto = Arcade;
+					break;
+				}
+			}
+
+		}
+
+
+	}
+
+	if (ZoomInto)
+	{
+		if (UWorld* World = GetWorld())
+		{
+			bool LoopActive = true;
+			float Time = 2;
+			GlobalSelectedMachine = SelectedMachine;
+			this->SetViewTargetWithBlend(ZoomInto, Time);
+			World->GetTimerManager().SetTimer(Timer, this, &ACC_MainMenuController::TimerGameSelected, Time, false);
+			APlayerController* Controller = this;
+		}
+
+	
+		
+	}
+
+
+	
+}
+
+void ACC_MainMenuController::TimerGameSelected()
+{
+	switch (static_cast<EArcadeMachine>(GlobalSelectedMachine))// Open the corresponding level based on the selected arcade machine
+	{
+	case EArcadeMachine::PingPong:      UGameplayStatics::OpenLevel(this, FName("L_PingPong"), true); break;
+	case EArcadeMachine::PacMan:        UGameplayStatics::OpenLevel(this, FName("L_PacMan"), true); break;
+	case EArcadeMachine::SpaceInvaders: UGameplayStatics::OpenLevel(this, FName("L_SpaceInvaders"), true); break;
+	default:                             break;
 	}
 }

@@ -81,7 +81,63 @@ void ACC_PongAIController::Movement()
 				return;
 			}
 		}
+		const FVector PaddleLocation = ControlledPawn->GetActorLocation(); 
+		const FVector BallLocation = BallActor->GetActorLocation(); 
+		const FVector BallVelocity = BallActor->GetVelocity(); 
+
 		
+		float TargetY = PaddleLocation.Y;
+
+		
+		float DistToPaddleX = PaddleLocation.X - BallLocation.X;
+
+		
+		bool bIsIncoming = (DistToPaddleX * BallVelocity.X) > 0.f;
+
+		// prediction logic
+		if (bIsIncoming && FMath::Abs(BallVelocity.X) > 10.f)
+		{
+
+			
+			float TimeToImpact = DistToPaddleX / BallVelocity.X;
+
+
+			
+			TargetY = BallLocation.Y + (BallVelocity.Y * TimeToImpact);
+
+			
+		}
+
+		else {
+
+			
+			TargetY = PaddleLocation.Y;
+		}
+
+
+		float Direction = 0.f; 
+
+		
+		if (TargetY > PaddleLocation.Y + ReactionDistance)
+		{
+			Direction = 2.f; 
+		}
+
+		
+		else if (TargetY < PaddleLocation.Y - ReactionDistance)
+		{
+			Direction = -2.f; 
+		}
+
+		
+		if (FMath::Abs(Direction) > KINDA_SMALL_NUMBER)
+		{
+			
+			ControlledPawn->AddMovementInput(FVector::YAxisVector, Direction);
+		}
+
+
+		/*
 		const FVector PaddleLocation = ControlledPawn->GetActorLocation();
 		const FVector BallLocation = BallActor->GetActorLocation();
 
@@ -103,7 +159,7 @@ void ACC_PongAIController::Movement()
 			ControlledPawn->AddMovementInput(FVector::YAxisVector, Direction);
 		}
 	
-
+	*/
 	
 
 }

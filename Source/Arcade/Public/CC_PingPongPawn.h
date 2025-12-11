@@ -38,6 +38,8 @@ public:
 	class UInputMappingContext* PingPongMappingContext;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
 	class UInputAction* MoveAction;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Enhanced Input")
+	class UInputAction* SwitchCamera;
 
 	
 
@@ -51,11 +53,15 @@ private:
 
 	
 	void EnhancedMove(const FInputActionValue& Value);
+	void SwitchingCamera();
 
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Ball")
 	class TSubclassOf<class ACC_PingPongBall> BallToSpawn;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "MainCamera")
+	class AActor* MainCamera;
 
 
 

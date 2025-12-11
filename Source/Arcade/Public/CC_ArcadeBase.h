@@ -40,6 +40,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Arcade")
 	EArcadeMachine ArcadeGame;
 
+	UPROPERTY(EditAnywhere)
+	class UCameraComponent* Camera;
+
 	UFUNCTION(BlueprintCallable, Category = "Arcade")
 	EArcadeMachine GetArcadeMachineType();
 

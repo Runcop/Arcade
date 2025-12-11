@@ -22,6 +22,7 @@ enum class EArcadeMachine : uint8;
 
 // ********** Begin Class ACC_MainMenuController ***************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execTimerGameSelected); \
 	DECLARE_FUNCTION(execGameSelected); \
 	DECLARE_FUNCTION(execIsCameraMoving); \
 	DECLARE_FUNCTION(execOnCameraTimelineFinished); \
