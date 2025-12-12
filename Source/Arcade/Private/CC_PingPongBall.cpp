@@ -11,7 +11,7 @@
 #include "CC_PingPongPawn.h"
 
 
-
+AActor* LastHitPaddle;
 
 // Sets default values
 ACC_PingPongBall::ACC_PingPongBall()
@@ -47,6 +47,7 @@ void ACC_PingPongBall::BeginPlay()
 
 	if (CollisionSphere)
 	{
+		
 		SpawnImpulse(StartingImpulse);
 
 
@@ -136,8 +137,9 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 		FVector HitLocation = Hit.Location; //Poing of Contact
 		FVector PaddlesLocation = Paddle->GetActorLocation();
 		FVector BallLocation = this->GetActorLocation();
+		LastHitPaddle = OtherActor;
 
-		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(HitLocation, BallLocation);
+		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(PaddlesLocation, BallLocation);
 		FVector ForwardVector = LookAt.Vector();
 
 		FVector Origin;
@@ -149,7 +151,7 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 		float VerticalOffset = (HitLocation.Y - PaddlesLocation.Y) / (PaddleHeight * 0.5f);
 
-		VerticalOffset = FMath::Clamp(VerticalOffset, -1.0f, 1.0f);
+		VerticalOffset = FMath::Clamp(VerticalOffset, -0.15f, 0.15f);
 
 		float HorizontalDirection = (BallLocation.X > PaddlesLocation.X) ? 1.0f : -1.0f;
 
@@ -161,16 +163,32 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 		FVector BallsVelocity = NewDirection;
 
-		BallsVelocity = FVector(BallsVelocity.X * 3500, BallsVelocity.Y * 6000, 0.0f);
+		BallsVelocity = FVector(BallsVelocity.X * 4500, BallsVelocity.Y * 6000, 0.0f);
 
 		AddImpulse(BallsVelocity);
 
-		UE_LOG(LogTemp, Warning, TEXT("BallsVelocity: %s"), *BallsVelocity.ToString());
+		UE_LOG(LogTemp, Warning, TEXT("VerticalOffset: %f"), VerticalOffset);
 	}
 
 
 	else
 	{
+		FVector BallLocation = GetActorLocation();
+		FVector PaddleLocation = LastHitPaddle->GetActorLocation();
+
+		FVector Direction = FVector(BallLocation.X - PaddleLocation.X);
+
+		Direction = FVector(Direction.X, 0.0f, 0.0f);
+
+		Direction.Normalize();
+
+		Direction = FVector(Direction.X * 2000, 0.0f, 0.0f);
+
+
+
+		AddImpulse(Direction);
+
+
 
 
 

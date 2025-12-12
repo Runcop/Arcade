@@ -43,6 +43,8 @@ public:
 
 	
 
+	
+
 private:
 	
 	UPROPERTY(VisibleAnywhere) UBoxComponent* CollisionBox;
