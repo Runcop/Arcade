@@ -23,6 +23,7 @@
 
 
 
+
 // Sets default values
 ACC_PingPongPawn::ACC_PingPongPawn()
 {
@@ -53,6 +54,11 @@ ACC_PingPongPawn::ACC_PingPongPawn()
 	Movement->bConstrainToPlane = true;
 
 	bUseControllerRotationYaw = false;
+
+
+	
+
+	
 }
 
 // Called when the game starts or when spawned

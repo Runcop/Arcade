@@ -14,7 +14,7 @@ static ACC_PingBallSpawner* SpawnPoint = nullptr;
  ETeams LastScoredTeam = ETeams::TeamOne;
 
 
-const int VictoryNumber = 10;
+const int VictoryNumber = 5;
 extern bool GameOver = true;
 extern bool StopMovement;
 

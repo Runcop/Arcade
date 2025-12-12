@@ -221,11 +221,14 @@ void ACC_MainMenuController::GameSelected(EArcadeMachine SelectedMachine)// Call
 	{
 		if (UWorld* World = GetWorld())
 		{
-			bool LoopActive = true;
+			
 			float Time = 2;
 			GlobalSelectedMachine = SelectedMachine;
+			CurrentWidgetInstance->RemoveFromViewport();
+			CurrentWidgetInstance = nullptr;
 			this->SetViewTargetWithBlend(ZoomInto, Time);
 			World->GetTimerManager().SetTimer(Timer, this, &ACC_MainMenuController::TimerGameSelected, Time, false);
+			
 			APlayerController* Controller = this;
 		}
 
