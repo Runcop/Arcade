@@ -104,8 +104,8 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 	const FRotator LocalControlRotation = GetControlRotation();
 	if (UWorld* World = GetWorld())
 	{
-		ACC_PingPong* GameMode = Cast<ACC_PingPong>(World->GetAuthGameMode());
-		bool GameEnded = GameMode->StopMovement;
+		ACC_PingPong* PongGameMode = Cast<ACC_PingPong>(World->GetAuthGameMode());
+		bool GameEnded = PongGameMode->StopMovement;
 		
 
 		if (LocalMovementVector.X > 0.10f && !GameEnded || LocalMovementVector.X < -0.10f && !GameEnded)

@@ -36,11 +36,11 @@ void ACC_PingPong::TeamOneScored()
 
 	++TeamOneScore;
 
-	if (ACC_PingPongController* Controller = GetPingPongController(GetWorld()))
+	if (ACC_PingPongController* PlayerController = GetPingPongController(GetWorld()))
 	{
-		if (Controller->CurrentInstance)
+		if (PlayerController->CurrentInstance)
 		{
-			Controller->CurrentInstance->UpdatePlayerOne(TeamOneScore);
+			PlayerController->CurrentInstance->UpdatePlayerOne(TeamOneScore);
 		}
 	}
 
@@ -63,11 +63,11 @@ void ACC_PingPong::TeamTwoScored()
 
 	++TeamTwoScore;
 
-	if (ACC_PingPongController* Controller = GetPingPongController(GetWorld()))
+	if (ACC_PingPongController* PlayerController = GetPingPongController(GetWorld()))
 	{
-		if (Controller->CurrentInstance)
+		if (PlayerController->CurrentInstance)
 		{
-			Controller->CurrentInstance->UpdatePlayerTwo(TeamTwoScore);
+			PlayerController->CurrentInstance->UpdatePlayerTwo(TeamTwoScore);
 		}
 	}
 
@@ -123,14 +123,14 @@ void ACC_PingPong::Victory()
 
 	if (UWorld* World = GetWorld())
 	{
-		if (ACC_PingPongController* Controller = GetPingPongController(World))
+		if (ACC_PingPongController* PlayerController = GetPingPongController(World))
 		{
 			GameOver = true;
 			StopAllMovement(true);
 			ResetAllPaddles();
-			Controller->SetShowMouseCursor(true);
-			Controller->SetPause(true); 
-			Controller->WidgetToDisplay(WB_Victory);
+			PlayerController->SetShowMouseCursor(true);
+			PlayerController->SetPause(true);
+			PlayerController->WidgetToDisplay(WB_Victory);
 		}
 	}
 }
@@ -144,14 +144,14 @@ void ACC_PingPong::Lost()
 
 	if (UWorld* World = GetWorld())
 	{
-		if (ACC_PingPongController* Controller = GetPingPongController(World))
+		if (ACC_PingPongController* PlayerController = GetPingPongController(World))
 		{
 			GameOver = true;
 			StopAllMovement(true);
 			ResetAllPaddles();
-			Controller->SetShowMouseCursor(true);
-			Controller->SetPause(true);
-			Controller->WidgetToDisplay(WB_Lost);
+			PlayerController->SetShowMouseCursor(true);
+			PlayerController->SetPause(true);
+			PlayerController->WidgetToDisplay(WB_Lost);
 		}
 	}
 }
@@ -160,7 +160,7 @@ void ACC_PingPong::ResetGame()
 {
 	if (UWorld* World = GetWorld())
 	{
-		if (ACC_PingPongController* Controller = GetPingPongController(World))
+		if (ACC_PingPongController* PlayerController = GetPingPongController(World))
 		{
 			TeamOneScore = 0;
 			TeamTwoScore = 0;
@@ -169,13 +169,13 @@ void ACC_PingPong::ResetGame()
 			
 
 			
-			Controller->GameRestarted();
+			PlayerController->GameRestarted();
 
 			
-			if (Controller->CurrentInstance)
+			if (PlayerController->CurrentInstance)
 			{
-				Controller->CurrentInstance->UpdatePlayerOne(TeamOneScore);
-				Controller->CurrentInstance->UpdatePlayerTwo(TeamTwoScore);
+				PlayerController->CurrentInstance->UpdatePlayerOne(TeamOneScore);
+				PlayerController->CurrentInstance->UpdatePlayerTwo(TeamTwoScore);
 			}
 
 			// Safely spawn a new ball if we have a valid spawn point.

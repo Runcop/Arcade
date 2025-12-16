@@ -167,7 +167,7 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 		AddImpulse(BallsVelocity);
 
-		UE_LOG(LogTemp, Warning, TEXT("VerticalOffset: %f"), VerticalOffset);
+		
 	}
 
 
@@ -188,16 +188,20 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 		AddImpulse(Direction);
 
-
-
-
-
-
 	}
 
 
 
 
 }
+
+AActor* ACC_PingPongBall::LastPaddleHit()
+{
+
+		return (LastHitPaddle);
+
+}
+
+
 
 
