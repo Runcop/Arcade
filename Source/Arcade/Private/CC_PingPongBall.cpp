@@ -55,8 +55,6 @@ void ACC_PingPongBall::BeginPlay()
 		CollisionSphere->OnComponentHit.AddDynamic(this, &ACC_PingPongBall::OnHit); //Binds the OnHit function
 	}
 
-
-
 }
 
 // Called every frame
