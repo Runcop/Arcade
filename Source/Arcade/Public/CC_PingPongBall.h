@@ -54,4 +54,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FX")
 	UNiagaraSystem* NS_Hit;
+
+	UFUNCTION()
+	AActor* LastPaddleHit();
+
+	
 };

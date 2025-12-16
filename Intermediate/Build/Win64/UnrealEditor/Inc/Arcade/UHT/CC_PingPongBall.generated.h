@@ -22,6 +22,7 @@ struct FHitResult;
 
 // ********** Begin Class ACC_PingPongBall *********************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PingPongBall_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execLastPaddleHit); \
 	DECLARE_FUNCTION(execOnHit);
 
 

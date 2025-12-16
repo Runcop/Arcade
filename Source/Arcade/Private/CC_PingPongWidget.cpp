@@ -42,9 +42,9 @@ void UCC_PingPongWidget::RetryGame()//RestartTheGame
 {
 	if (UWorld* World = GetWorld())
 	{
-		ACC_PingPong* GameMode = (ACC_PingPong*)World->GetAuthGameMode();
+		ACC_PingPong* PongGameMode = (ACC_PingPong*)World->GetAuthGameMode();
 
-		GameMode->ResetGame();
+		PongGameMode->ResetGame();
 	}
 }
 

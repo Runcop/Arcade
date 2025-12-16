@@ -9,7 +9,7 @@
 #include "TimerManager.h"
 #include "CC_PingPongController.h"
 
-static FTimerHandle Timer;
+static FTimerHandle GlobalTimer;
 static FTimerHandle UpdateTimer;
 static ACC_PingPongController* Controller;
 static ACC_PingPong* GameMode;
@@ -73,7 +73,7 @@ void ACC_PingBallSpawner::SpawnBall()
 			World->SpawnActor<ACC_PingPongBall>(Ball, SpawnLocation, SpawnRotation, SpawnParams);
 
 
-			World->GetTimerManager().ClearTimer(Timer);
+			World->GetTimerManager().ClearTimer(GlobalTimer);
 			UCC_PingPongWidget* Widget = Controller->CurrentInstance;
 			Widget->HideTimer(true);
 			World->GetTimerManager().ClearTimer(UpdateTimer);
@@ -94,7 +94,7 @@ void ACC_PingBallSpawner::SpawnBallTimer(int Time)
 	if (World && Controller)
 	{
 		
-		World->GetTimerManager().SetTimer(Timer, this, &ACC_PingBallSpawner::SpawnBall, Time, false);
+		World->GetTimerManager().SetTimer(GlobalTimer, this, &ACC_PingBallSpawner::SpawnBall, Time, false);
 		
 		UCC_PingPongWidget* Widget = Controller->CurrentInstance;
 
@@ -111,7 +111,7 @@ void ACC_PingBallSpawner::SpawnBallTimer(int Time)
 void ACC_PingBallSpawner::UpdateTime()
 {
 	UCC_PingPongWidget* Widget = Controller->CurrentInstance;
-	int Time = GetWorld()->GetTimerManager().GetTimerRemaining(Timer);
+	int Time = GetWorld()->GetTimerManager().GetTimerRemaining(GlobalTimer);
 	Widget->UpdateTimer(Time);
 	Widget->HideTimer(false);
 }
