@@ -15,7 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	ACC_PickupPong();
 
-
+	UPROPERTY()
+	class ACC_PickupSpawner* PickUpSpawner;
 	
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Mesh")
@@ -30,6 +31,9 @@ public:
 	UFUNCTION()
 	void GivenBoon(ACC_PingPongBall* Ball);
 
+	UFUNCTION()
+	void PickedUp();
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Boost")
 	int Boost;
 
@@ -42,6 +46,8 @@ protected:
 
 	// Syntax is correct. Providing an inline body ensures IntelliSense/compilers find the definition.
 	virtual void NotifyActorBeginOverlap(AActor* OtherActor) override;
+
+	virtual void Destroyed() override;
 	
 
 public:	

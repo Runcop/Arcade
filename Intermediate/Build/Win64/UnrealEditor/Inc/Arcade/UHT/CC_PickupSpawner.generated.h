@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ACC_PickupSpawner ********************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PickupSpawner_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execStartRespawnTimer); \
 	DECLARE_FUNCTION(execSpawningPickup);
 
 

@@ -6,6 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "CC_PingPongBall.h"
 #include "GameFramework\RotatingMovementComponent.h"
+#include "CC_PickupSpawner.h"
 
 // Sets default values
 ACC_PickupPong::ACC_PickupPong()
@@ -34,6 +35,8 @@ ACC_PickupPong::ACC_PickupPong()
 void ACC_PickupPong::BeginPlay()
 {
 	Super::BeginPlay();
+
+	
 	
 }
 
@@ -82,5 +85,36 @@ void ACC_PickupPong::GivenBoon(ACC_PingPongBall* Ball) //Boost Logic
 	}
 
 }
+
+void ACC_PickupPong::PickedUp()
+{
+	if (PickUpSpawner)
+	{
+		ACC_PickupSpawner* OwningSpawner = PickUpSpawner;
+
+		OwningSpawner->SpawningPickup();
+
+		OwningSpawner = nullptr;
+		PickUpSpawner = nullptr;
+	}
+}
+
+void ACC_PickupPong::Destroyed()
+{
+	Super::Destroyed();
+
+	if (PickUpSpawner)
+	{
+		ACC_PickupSpawner* OwningSpawner = PickUpSpawner;
+		
+		if (OwningSpawner)
+		{
+			OwningSpawner->StartRespawnTimer();
+			PickUpSpawner = nullptr;
+		}
+	}
+}
+
+
 
 

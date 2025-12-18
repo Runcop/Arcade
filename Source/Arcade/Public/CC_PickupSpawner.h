@@ -19,6 +19,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collision")
 	class UBoxComponent* BoxCollision;
 
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Time")
+	int RespawnTime;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -32,5 +35,9 @@ public:
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Spawner")
 	TSubclassOf<class ACC_PickupPong> Pickup;
+
+	UFUNCTION()
+	void StartRespawnTimer();
+
 
 };
