@@ -31,11 +31,12 @@ public:
 	UFUNCTION()
 	void GivenBoon(ACC_PingPongBall* Ball);
 
-	UFUNCTION()
-	void PickedUp();
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Boost")
 	int Boost;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "LifeSpan")
+	float LifeSpanPickup;
 
 
 

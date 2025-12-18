@@ -16,7 +16,13 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+struct FInputActionValue;
+
 // ********** Begin Class ACC_PingPongPawn *********************************************************
+#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execBoostInput);
+
+
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn_NoRegister();
 
 #define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
@@ -44,6 +50,7 @@ public: \
 #define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
 	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
 private: \

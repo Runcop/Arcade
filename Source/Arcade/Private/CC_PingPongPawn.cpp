@@ -19,6 +19,7 @@
 
 
 
+static FVector2D GlobalDirection;
 
 
 
@@ -113,6 +114,9 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 			const FVector Direction = LocalControlRotation.RotateVector(FVector::RightVector);
 			AddMovementInput(Direction, LocalMovementVector.X);
 
+			GlobalDirection = LocalMovementVector;
+
+
 		}
 	}
 	
@@ -139,4 +143,15 @@ void ACC_PingPongPawn::ResetLocation()
 	SetActorLocation(StartingLocation);
 	
 }
+
+void ACC_PingPongPawn::BoostInput(const FInputActionValue& Value)
+{
+
+	
+}
+
+	
+	
+
+	
 

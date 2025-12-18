@@ -66,8 +66,9 @@ public:
 	class AActor* MainCamera;
 
 
-
-
+	UFUNCTION()
+	
+	void BoostInput(const FInputActionValue& Value);
 	
 
 	void ResetLocation();

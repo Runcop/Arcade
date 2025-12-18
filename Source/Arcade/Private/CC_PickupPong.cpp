@@ -36,6 +36,7 @@ void ACC_PickupPong::BeginPlay()
 {
 	Super::BeginPlay();
 
+	 
 	
 	
 }
@@ -63,41 +64,41 @@ void ACC_PickupPong::GivenBoon(ACC_PingPongBall* Ball) //Boost Logic
 {
 	if (Ball)
 	{
-		FVector BallLocation = Ball->GetActorLocation();
-		AActor* Paddle = Ball->LastPaddleHit();
-
-		if (Paddle)
+		float TimeAlive = GetLifeSpan();
+		if (TimeAlive <= LifeSpanPickup)
 		{
-			FVector PaddleLocation = Paddle->GetActorLocation();
+			FVector BallLocation = Ball->GetActorLocation();
+			if (Ball->LastPaddleHit())
+			{
+				AActor* Paddle = Ball->LastPaddleHit();
+				if (Paddle)
+				{
+					FVector PaddleLocation = Paddle->GetActorLocation();
 
 
-			FVector Direction = FVector(BallLocation.X - PaddleLocation.X);
-			Direction = FVector(Direction.X, 0.0f, 0.0f);
+					FVector Direction = FVector(BallLocation.X - PaddleLocation.X);
+					Direction = FVector(Direction.X, 0.0f, 0.0f);
 
-			Direction.Normalize();
-			Direction = Direction * Boost;
+					Direction.Normalize();
+					Direction = Direction * Boost;
 
-			Ball->AddImpulse(Direction);
+					Ball->AddImpulse(Direction);
 
-			Destroy();
+					Destroy();
+				}
+			}
+			
+
+		
 		}
+		
 		
 	}
 
 }
 
-void ACC_PickupPong::PickedUp()
-{
-	if (PickUpSpawner)
-	{
-		ACC_PickupSpawner* OwningSpawner = PickUpSpawner;
 
-		OwningSpawner->SpawningPickup();
 
-		OwningSpawner = nullptr;
-		PickUpSpawner = nullptr;
-	}
-}
 
 void ACC_PickupPong::Destroyed()
 {

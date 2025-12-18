@@ -20,7 +20,6 @@ class ACC_PingPongBall;
 
 // ********** Begin Class ACC_PickupPong ***********************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PickupPong_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execPickedUp); \
 	DECLARE_FUNCTION(execGivenBoon);
 
 

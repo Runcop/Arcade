@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "CC_PingPongPawn.h"
+#include "InputActionValue.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -26,12 +27,63 @@ ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
+ENHANCEDINPUT_API UScriptStruct* Z_Construct_UScriptStruct_FInputActionValue();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin Class ACC_PingPongPawn Function BoostInput *************************************
+struct Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics
+{
+	struct CC_PingPongPawn_eventBoostInput_Parms
+	{
+		FInputActionValue Value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_PingPongPawn_eventBoostInput_Parms, Value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Value_MetaData), NewProp_Value_MetaData) }; // 203218767
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PingPongPawn, nullptr, "BoostInput", Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::CC_PingPongPawn_eventBoostInput_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::CC_PingPongPawn_eventBoostInput_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ACC_PingPongPawn_BoostInput()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PingPongPawn::execBoostInput)
+{
+	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BoostInput(Z_Param_Out_Value);
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PingPongPawn Function BoostInput ***************************************
 
 // ********** Begin Class ACC_PingPongPawn *********************************************************
 void ACC_PingPongPawn::StaticRegisterNativesACC_PingPongPawn()
 {
+	UClass* Class = ACC_PingPongPawn::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BoostInput", &ACC_PingPongPawn::execBoostInput },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 FClassRegistrationInfo Z_Registration_Info_UClass_ACC_PingPongPawn;
 UClass* ACC_PingPongPawn::GetPrivateStaticClass()
@@ -139,6 +191,10 @@ struct Z_Construct_UClass_ACC_PingPongPawn_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_StartingLocation;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACC_PingPongPawn_BoostInput, "BoostInput" }, // 3550475421
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACC_PingPongPawn>::IsAbstract,
 	};
@@ -179,11 +235,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ACC_PingPongPawn_Static
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ACC_PingPongPawn_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PingPongPawn_Statics::PropPointers),
 	0,
 	0x009001A4u,
@@ -205,10 +261,10 @@ ACC_PingPongPawn::~ACC_PingPongPawn() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongPawn, ACC_PingPongPawn::StaticClass, TEXT("ACC_PingPongPawn"), &Z_Registration_Info_UClass_ACC_PingPongPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongPawn), 3600054947U) },
+		{ Z_Construct_UClass_ACC_PingPongPawn, ACC_PingPongPawn::StaticClass, TEXT("ACC_PingPongPawn"), &Z_Registration_Info_UClass_ACC_PingPongPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongPawn), 712715288U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_229753465(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_2054027970(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
