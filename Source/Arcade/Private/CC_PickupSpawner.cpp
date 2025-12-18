@@ -52,7 +52,11 @@ void ACC_PickupSpawner::SpawningPickup()// Spawn Logic
 	FRotator SpawnRotation = FRotator::ZeroRotator;
 	ACC_PickupPong* SpawnedActor = GetWorld()->SpawnActor<ACC_PickupPong>(Pickup, SpawnLocation, SpawnRotation);
 
-	SpawnedActor->PickUpSpawner = this;
+	if (SpawnedActor)
+	{
+		SpawnedActor->PickUpSpawner = this;
+	}
+	
 }
 
 void ACC_PickupSpawner::StartRespawnTimer()
