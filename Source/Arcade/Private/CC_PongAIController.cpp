@@ -137,30 +137,6 @@ void ACC_PongAIController::Movement()
 		}
 
 
-		/*
-		const FVector PaddleLocation = ControlledPawn->GetActorLocation();
-		const FVector BallLocation = BallActor->GetActorLocation();
-
-		float Direction = 0.f;
-
-		if (BallLocation.Y > PaddleLocation.Y + ReactionDistance)
-		{
-			Direction = 1.f;
-		}
-		else if (BallLocation.Y < PaddleLocation.Y - ReactionDistance)
-		{
-			Direction = -1.f;
-		}
-
-
-		if (FMath::Abs(Direction) > KINDA_SMALL_NUMBER) // Adding Input, Lowers the jittering
-		{
-			
-			ControlledPawn->AddMovementInput(FVector::YAxisVector, Direction);
-		}
-	
-	*/
-	
 
 }
 

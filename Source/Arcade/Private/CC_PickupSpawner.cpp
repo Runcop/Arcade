@@ -4,6 +4,10 @@
 #include "CC_PickupSpawner.h"
 #include "Components/BoxComponent.h"
 #include "CC_PickupPong.h"
+#include "TimerManager.h"
+
+
+
 
 // Sets default values
 ACC_PickupSpawner::ACC_PickupSpawner()
@@ -36,6 +40,7 @@ void ACC_PickupSpawner::Tick(float DeltaTime)
 
 void ACC_PickupSpawner::SpawningPickup()// Spawn Logic
 {
+	
 	FVector Origin;
 	FVector BoxExtent;
 
@@ -45,9 +50,22 @@ void ACC_PickupSpawner::SpawningPickup()// Spawn Logic
 	float SpawnY = FMath::FRandRange(Origin.Y - BoxExtent.Y, Origin.Y + BoxExtent.Y);
 	FVector SpawnLocation = FVector(SpawnX, SpawnY, Origin.Z);
 	FRotator SpawnRotation = FRotator::ZeroRotator;
-	GetWorld()->SpawnActor<ACC_PickupPong>(Pickup, SpawnLocation, SpawnRotation);
-	
-	
+	ACC_PickupPong* SpawnedActor = GetWorld()->SpawnActor<ACC_PickupPong>(Pickup, SpawnLocation, SpawnRotation);
 
+	SpawnedActor->PickUpSpawner = this;
 }
 
+void ACC_PickupSpawner::StartRespawnTimer()
+{
+
+	FTimerHandle RespawnTimer;
+
+	if (UWorld* World = GetWorld())
+	{
+		World->GetTimerManager().SetTimer(RespawnTimer, this, &ACC_PickupSpawner::SpawningPickup, RespawnTime, false);
+
+	}
+
+
+
+}
