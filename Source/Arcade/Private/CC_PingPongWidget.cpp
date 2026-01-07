@@ -27,9 +27,9 @@ void UCC_PingPongWidget::NativeConstruct()
 	Super::NativeConstruct();
 	
 	if (BTN_Retry)BTN_Retry->OnClicked.AddDynamic(this, &UCC_PingPongWidget::RetryGame);
-	if (BTN_Back)BTN_Back->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ExitToMainMenu);
 	if (BTN_Resume)BTN_Resume->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ResumeButton);
 	if (BTN_MainMenu)BTN_MainMenu->OnClicked.AddDynamic(this, &UCC_PingPongWidget::MainMenuButton);
+	if (BTN_Play)BTN_Play->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ControlPlay);
 	
 }
 
@@ -51,10 +51,7 @@ void UCC_PingPongWidget::RetryGame()//RestartTheGame
 	}
 }
 
-void UCC_PingPongWidget::ExitToMainMenu() //ExitToMainMenu
-{
-	UGameplayStatics::OpenLevel(this, FName("L_MainMenu"), true);
-}
+
 
 void UCC_PingPongWidget::UpdatePlayerOne(int NewNumber)
 {
@@ -142,6 +139,18 @@ void UCC_PingPongWidget::ResumeButton()
 void UCC_PingPongWidget::MainMenuButton()
 {
 	UGameplayStatics::OpenLevel(this, FName("L_MainMenu"), true);
+}
+
+void UCC_PingPongWidget::ControlPlay()
+{
+	if (APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		if (ACC_PingPongController* PingPongController = Cast<ACC_PingPongController>(PlayerController))
+		{
+			PingPongController->GameStarting();
+		}
+
+	}
 }
 
 
