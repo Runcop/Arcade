@@ -15,17 +15,10 @@
 void ACC_PingPongController::BeginPlay()
 {
 
-	
-	WidgetToDisplay(WB_PingPongGame);
+	WidgetToDisplay(WB_Controls);
+	SetPause(true);
+	SetShowMouseCursor(true);
 
-
-	if (ACC_PingBallSpawner* BallSpawner = Cast<ACC_PingBallSpawner>(Spawner))
-	{
-		BallSpawner->SpawnBallTimer(3);
-	}
-	
-	
-	
 }
 
 ACC_PingPongController::ACC_PingPongController()
@@ -48,6 +41,17 @@ void ACC_PingPongController::WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Wid
 		CurrentInstance->AddToViewport();
 		CurrentInstance->SetFocus();
 		
+	}
+}
+
+void ACC_PingPongController::GameStarting()
+{
+	WidgetToDisplay(WB_PingPongGame); 
+	SetPause(false);
+	SetShowMouseCursor(false);
+	if (ACC_PingBallSpawner* BallSpawner = Cast<ACC_PingBallSpawner>(Spawner))
+	{
+		BallSpawner->SpawnBallTimer(3);
 	}
 }
 

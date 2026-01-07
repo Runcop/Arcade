@@ -21,8 +21,8 @@ UMG_API UClass* Z_Construct_UClass_UVerticalBox_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
 
-// ********** Begin Class UCC_PingPongWidget Function ExitToMainMenu *******************************
-struct Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu_Statics
+// ********** Begin Class UCC_PingPongWidget Function ControlPlay **********************************
+struct Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -31,24 +31,24 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "ExitToMainMenu", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "ControlPlay", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(UCC_PingPongWidget::execExitToMainMenu)
+DEFINE_FUNCTION(UCC_PingPongWidget::execControlPlay)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->ExitToMainMenu();
+	P_THIS->ControlPlay();
 	P_NATIVE_END;
 }
-// ********** End Class UCC_PingPongWidget Function ExitToMainMenu *********************************
+// ********** End Class UCC_PingPongWidget Function ControlPlay ************************************
 
 // ********** Begin Class UCC_PingPongWidget Function MainMenuButton *******************************
 struct Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics
@@ -60,7 +60,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "MainMenuButton", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "MainMenuButton", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -89,7 +89,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "ResumeButton", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "ResumeButton", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics::Function_MetaDataParams)},  };
 UFunction* Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -226,7 +226,7 @@ void UCC_PingPongWidget::StaticRegisterNativesUCC_PingPongWidget()
 {
 	UClass* Class = UCC_PingPongWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "ExitToMainMenu", &UCC_PingPongWidget::execExitToMainMenu },
+		{ "ControlPlay", &UCC_PingPongWidget::execControlPlay },
 		{ "MainMenuButton", &UCC_PingPongWidget::execMainMenuButton },
 		{ "ResumeButton", &UCC_PingPongWidget::execResumeButton },
 		{ "RetryGame", &UCC_PingPongWidget::execRetryGame },
@@ -278,12 +278,6 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Back_MetaData[] = {
-		{ "BindWidgetOptional", "" },
-		{ "Category", "CC_PingPongWidget" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Resume_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
@@ -291,6 +285,12 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_MainMenu_MetaData[] = {
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_PingPongWidget" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Play_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
@@ -322,9 +322,9 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Retry;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Back;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Resume;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_MainMenu;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Play;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_TeamOne;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_TeamTwo;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_TimeLeft;
@@ -332,9 +332,9 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_ExitToMainMenu, "ExitToMainMenu" }, // 1391279454
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton, "MainMenuButton" }, // 2980885947
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton, "ResumeButton" }, // 349612922
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay, "ControlPlay" }, // 1370221539
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton, "MainMenuButton" }, // 2576158399
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton, "ResumeButton" }, // 1394973339
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_RetryGame, "RetryGame" }, // 684563458
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerOne, "UpdatePlayerOne" }, // 3212026349
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerTwo, "UpdatePlayerTwo" }, // 4226744526
@@ -346,18 +346,18 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Retry = { "BTN_Retry", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, BTN_Retry), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Retry_MetaData), NewProp_BTN_Retry_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Back = { "BTN_Back", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, BTN_Back), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Back_MetaData), NewProp_BTN_Back_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Resume = { "BTN_Resume", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, BTN_Resume), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Resume_MetaData), NewProp_BTN_Resume_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_MainMenu = { "BTN_MainMenu", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, BTN_MainMenu), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_MainMenu_MetaData), NewProp_BTN_MainMenu_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Play = { "BTN_Play", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, BTN_Play), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Play_MetaData), NewProp_BTN_Play_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamOne = { "TXT_TeamOne", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, TXT_TeamOne), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_TeamOne_MetaData), NewProp_TXT_TeamOne_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamTwo = { "TXT_TeamTwo", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, TXT_TeamTwo), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_TeamTwo_MetaData), NewProp_TXT_TeamTwo_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TimeLeft = { "TXT_TimeLeft", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, TXT_TimeLeft), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_TimeLeft_MetaData), NewProp_TXT_TimeLeft_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_VB_GameStarting = { "VB_GameStarting", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PingPongWidget, VB_GameStarting), Z_Construct_UClass_UVerticalBox_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VB_GameStarting_MetaData), NewProp_VB_GameStarting_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCC_PingPongWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Retry,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Back,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Resume,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_MainMenu,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_BTN_Play,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamOne,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TeamTwo,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PingPongWidget_Statics::NewProp_TXT_TimeLeft,
@@ -400,10 +400,10 @@ UCC_PingPongWidget::~UCC_PingPongWidget() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 352040789U) },
+		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 3692183504U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_1783090544(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_637693441(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -55,6 +55,7 @@ public:
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UButton* BTN_NextArrow = nullptr;
 	UPROPERTY(meta=(BindWidgetOptional), BlueprintReadOnly) UButton* BTN_BackArrow = nullptr;
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Play = nullptr;
+	
 
 	
 

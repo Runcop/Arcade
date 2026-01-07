@@ -23,7 +23,9 @@ protected:
 
 
 	UFUNCTION() void RetryGame();
-	UFUNCTION() void ExitToMainMenu();
+	UFUNCTION() void ResumeButton();
+	UFUNCTION() void MainMenuButton();
+	UFUNCTION() void ControlPlay();
 	
 
 
@@ -31,9 +33,9 @@ protected:
 public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Retry = nullptr;
-	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Back = nullptr;
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Resume = nullptr;
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_MainMenu = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Play = nullptr;
 
 
 	UCC_PingPongWidget(const FObjectInitializer& ObjectInitializer);
@@ -61,8 +63,5 @@ public:
 	void UpdateTimer(int Number);
 
 	void HideTimer(bool hide);
-	UFUNCTION()
-	void ResumeButton();
-	UFUNCTION()
-	void MainMenuButton();
+	
 };

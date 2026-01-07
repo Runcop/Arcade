@@ -76,6 +76,35 @@ UEnum* Z_Construct_UEnum_Arcade_EPlayer()
 }
 // ********** End Enum EPlayer *********************************************************************
 
+// ********** Begin Class ACC_PingPongController Function GameStarting *****************************
+struct Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PingPongController, nullptr, "GameStarting", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_PingPongController_GameStarting()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PingPongController::execGameStarting)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameStarting();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PingPongController Function GameStarting *******************************
+
 // ********** Begin Class ACC_PingPongController Function WidgetToDisplay **************************
 struct Z_Construct_UFunction_ACC_PingPongController_WidgetToDisplay_Statics
 {
@@ -123,6 +152,7 @@ void ACC_PingPongController::StaticRegisterNativesACC_PingPongController()
 {
 	UClass* Class = ACC_PingPongController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "GameStarting", &ACC_PingPongController::execGameStarting },
 		{ "WidgetToDisplay", &ACC_PingPongController::execWidgetToDisplay },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -180,6 +210,10 @@ struct Z_Construct_UClass_ACC_PingPongController_Statics
 		{ "Category", "UI" },
 		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Controls_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallActor_MetaData[] = {
 		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
 	};
@@ -191,11 +225,13 @@ struct Z_Construct_UClass_ACC_PingPongController_Statics
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_PingPongGame;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_Pause;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_Resume;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_Controls;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BallActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Spawner;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACC_PingPongController_GameStarting, "GameStarting" }, // 1082726697
 		{ &Z_Construct_UFunction_ACC_PingPongController_WidgetToDisplay, "WidgetToDisplay" }, // 3547729752
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -208,6 +244,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongCo
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_PingPongGame = { "WB_PingPongGame", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongController, WB_PingPongGame), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PingPongWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_PingPongGame_MetaData), NewProp_WB_PingPongGame_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_Pause = { "WB_Pause", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongController, WB_Pause), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PingPongWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_Pause_MetaData), NewProp_WB_Pause_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_Resume = { "WB_Resume", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongController, WB_Resume), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PingPongWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_Resume_MetaData), NewProp_WB_Resume_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_Controls = { "WB_Controls", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongController, WB_Controls), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PingPongWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_Controls_MetaData), NewProp_WB_Controls_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_BallActor = { "BallActor", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongController, BallActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BallActor_MetaData), NewProp_BallActor_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_Spawner = { "Spawner", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPongController, Spawner), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Spawner_MetaData), NewProp_Spawner_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingPongController_Statics::PropPointers[] = {
@@ -215,6 +252,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_PingPongGame,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_Pause,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_Resume,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_WB_Controls,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_BallActor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPongController_Statics::NewProp_Spawner,
 };
@@ -258,10 +296,10 @@ struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongControll
 		{ EPlayer_StaticEnum, TEXT("EPlayer"), &Z_Registration_Info_UEnum_EPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 609858780U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongController, ACC_PingPongController::StaticClass, TEXT("ACC_PingPongController"), &Z_Registration_Info_UClass_ACC_PingPongController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongController), 261358997U) },
+		{ Z_Construct_UClass_ACC_PingPongController, ACC_PingPongController::StaticClass, TEXT("ACC_PingPongController"), &Z_Registration_Info_UClass_ACC_PingPongController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongController), 3047259592U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_2235191172(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_2745455891(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo));

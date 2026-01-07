@@ -20,6 +20,7 @@ class UCC_PingPongWidget;
 
 // ********** Begin Class ACC_PingPongController ***************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PingPongController_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGameStarting); \
 	DECLARE_FUNCTION(execWidgetToDisplay);
 
 

@@ -28,8 +28,8 @@ public:
 
 	ACC_PingPongController();
 
-	UFUNCTION()
-	void WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Widget);
+	UFUNCTION()void WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Widget);
+	UFUNCTION()void GameStarting();
 
 	UPROPERTY()
 	UCC_PingPongWidget* CurrentInstance;
@@ -40,6 +40,8 @@ public:
 	TSubclassOf<UCC_PingPongWidget> WB_Pause;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 	TSubclassOf<UCC_PingPongWidget> WB_Resume;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+	TSubclassOf<UCC_PingPongWidget> WB_Controls;
 
 
 	void GameRestarted();
