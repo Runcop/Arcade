@@ -16,6 +16,7 @@
 #include "EngineUtils.h"
 #include "CC_PingPong.h"
 #include "CC_MainCameraPong.h"
+#include "CC_PingPongController.h"
 
 
 
@@ -87,16 +88,14 @@ void ACC_PingPongPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent))
 	{
-		if (MoveAction)
+		if (MoveAction || Pause)
 		{
 			
 			EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ACC_PingPongPawn::EnhancedMove);
+			EnhancedInputComponent->BindAction(Pause, ETriggerEvent::Triggered, this, &ACC_PingPongPawn::PauseEvent);
 		}
 		
 	}
-
-
-
 }
 
 void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
@@ -108,7 +107,6 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 		ACC_PingPong* PongGameMode = Cast<ACC_PingPong>(World->GetAuthGameMode());
 		bool GameEnded = PongGameMode->StopMovement;
 		
-
 		if (LocalMovementVector.X > 0.10f && !GameEnded || LocalMovementVector.X < -0.10f && !GameEnded)
 		{
 			const FVector Direction = LocalControlRotation.RotateVector(FVector::RightVector);
@@ -116,12 +114,8 @@ void ACC_PingPongPawn::EnhancedMove(const FInputActionValue& Value)
 
 			GlobalDirection = LocalMovementVector;
 
-
 		}
 	}
-	
-	
-
 }
 
 void ACC_PingPongPawn::SwitchingCamera()
@@ -135,6 +129,23 @@ void ACC_PingPongPawn::SwitchingCamera()
 
 	
 }
+
+void ACC_PingPongPawn::PauseEvent()
+{
+	if (APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		if (ACC_PingPongController* PongPlayerController = Cast<ACC_PingPongController>(PlayerController))
+		{
+			PongPlayerController->WidgetToDisplay(PongPlayerController->WB_Pause);
+			PongPlayerController->SetShowMouseCursor(true);
+			PlayerController->SetPause(true);
+		}
+	}
+	
+}
+
+
+
 
 void ACC_PingPongPawn::ResetLocation()
 {

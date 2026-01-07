@@ -40,6 +40,8 @@ public:
 	class UInputAction* MoveAction;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Enhanced Input")
 	class UInputAction* SwitchCamera;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Enhanced Input")
+	class UInputAction* Pause;
 
 	
 
@@ -56,6 +58,9 @@ private:
 	
 	void EnhancedMove(const FInputActionValue& Value);
 	void SwitchingCamera();
+	UFUNCTION()
+	void PauseEvent();
+	
 
 public:
 
@@ -64,6 +69,7 @@ public:
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "MainCamera")
 	class AActor* MainCamera;
+	
 
 
 	UFUNCTION()

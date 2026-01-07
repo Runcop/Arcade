@@ -20,7 +20,8 @@ struct FInputActionValue;
 
 // ********** Begin Class ACC_PingPongPawn *********************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execBoostInput);
+	DECLARE_FUNCTION(execBoostInput); \
+	DECLARE_FUNCTION(execPauseEvent);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn_NoRegister();

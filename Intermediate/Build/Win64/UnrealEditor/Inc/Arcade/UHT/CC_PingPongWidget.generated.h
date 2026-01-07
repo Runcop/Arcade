@@ -18,6 +18,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UCC_PingPongWidget *******************************************************
 #define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execMainMenuButton); \
+	DECLARE_FUNCTION(execResumeButton); \
 	DECLARE_FUNCTION(execUpdatePlayerTwo); \
 	DECLARE_FUNCTION(execUpdatePlayerOne); \
 	DECLARE_FUNCTION(execExitToMainMenu); \
