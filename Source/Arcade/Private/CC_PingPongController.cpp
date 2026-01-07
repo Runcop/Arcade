@@ -46,6 +46,7 @@ void ACC_PingPongController::WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Wid
 	if(CurrentInstance)
 	{
 		CurrentInstance->AddToViewport();
+		CurrentInstance->SetFocus();
 		
 	}
 }

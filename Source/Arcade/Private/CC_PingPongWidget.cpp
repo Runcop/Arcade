@@ -6,6 +6,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "CC_PingPong.h"
 #include "CC_PingBallSpawner.h"
+#include "CC_PingPongController.h"
 
 
 
@@ -27,6 +28,8 @@ void UCC_PingPongWidget::NativeConstruct()
 	
 	if (BTN_Retry)BTN_Retry->OnClicked.AddDynamic(this, &UCC_PingPongWidget::RetryGame);
 	if (BTN_Back)BTN_Back->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ExitToMainMenu);
+	if (BTN_Resume)BTN_Resume->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ResumeButton);
+	if (BTN_MainMenu)BTN_MainMenu->OnClicked.AddDynamic(this, &UCC_PingPongWidget::MainMenuButton);
 	
 }
 
@@ -116,6 +119,29 @@ void UCC_PingPongWidget::HideTimer(bool hide)
 	{
 		VB_GameStarting->SetVisibility(ESlateVisibility::Visible);
 	}
+}
+
+void UCC_PingPongWidget::ResumeButton()
+{
+	if (APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0))
+	{
+		if (ACC_PingPongController* PingPongController = Cast<ACC_PingPongController>(PlayerController))
+		{
+			PingPongController->WidgetToDisplay(PingPongController->WB_Resume);
+			PlayerController->SetPause(false);
+			PlayerController->SetShowMouseCursor(false);
+		}
+
+	}
+	
+	
+	
+
+}
+
+void UCC_PingPongWidget::MainMenuButton()
+{
+	UGameplayStatics::OpenLevel(this, FName("L_MainMenu"), true);
 }
 
 

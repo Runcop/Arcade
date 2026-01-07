@@ -32,6 +32,8 @@ public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Retry = nullptr;
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Back = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Resume = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_MainMenu = nullptr;
 
 
 	UCC_PingPongWidget(const FObjectInitializer& ObjectInitializer);
@@ -48,6 +50,8 @@ public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UVerticalBox* VB_GameStarting = nullptr;
 
+
+
 	UFUNCTION()
 	void UpdatePlayerOne(int NewNumber);
 
@@ -57,4 +61,8 @@ public:
 	void UpdateTimer(int Number);
 
 	void HideTimer(bool hide);
+	UFUNCTION()
+	void ResumeButton();
+	UFUNCTION()
+	void MainMenuButton();
 };
