@@ -58,5 +58,9 @@ public:
 	UFUNCTION()
 	AActor* LastPaddleHit();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	USoundBase* HitPaddleSound;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	USoundBase* HitWallSound;
 	
 };

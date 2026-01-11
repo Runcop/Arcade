@@ -21,6 +21,7 @@ COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FTransform();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTimelineComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
@@ -648,6 +649,24 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ZoomInto_MetaData[] = {
 		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Music_MetaData[] = {
+		{ "Category", "Sound" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Updated helper\n" },
+#endif
+		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Updated helper" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MusicVolume_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MusicPitch_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/CC_MainMenuController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_StartingWidget;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_ArcadeLevel_Underlying;
@@ -666,6 +685,9 @@ struct Z_Construct_UClass_ACC_MainMenuController_Statics
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_ArcadeMachine;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_PlayArcadeTransform;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ZoomInto;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Music;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MusicVolume;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MusicPitch;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -703,6 +725,9 @@ const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACC_MainMenuCont
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeMachine = { "ArcadeMachine", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, ArcadeMachine), Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ArcadeMachine_MetaData), NewProp_ArcadeMachine_MetaData) }; // 563493015
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_PlayArcadeTransform = { "PlayArcadeTransform", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, PlayArcadeTransform), Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayArcadeTransform_MetaData), NewProp_PlayArcadeTransform_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ZoomInto = { "ZoomInto", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, ZoomInto), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ZoomInto_MetaData), NewProp_ZoomInto_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_Music = { "Music", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, Music), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Music_MetaData), NewProp_Music_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_MusicVolume = { "MusicVolume", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, MusicVolume), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MusicVolume_MetaData), NewProp_MusicVolume_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_MusicPitch = { "MusicPitch", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_MainMenuController, MusicPitch), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MusicPitch_MetaData), NewProp_MusicPitch_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_MainMenuController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_StartingWidget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeLevel_Underlying,
@@ -721,6 +746,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_MainM
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ArcadeMachine,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_PlayArcadeTransform,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_ZoomInto,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_Music,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_MusicVolume,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_MainMenuController_Statics::NewProp_MusicPitch,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_MainMenuController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_MainMenuController_Statics::DependentSingletons[])() = {
@@ -762,10 +790,10 @@ struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuControll
 		{ EArcadeMachine_StaticEnum, TEXT("EArcadeMachine"), &Z_Registration_Info_UEnum_EArcadeMachine, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 563493015U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 3619190307U) },
+		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 3544761968U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_1587818900(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_1073707803(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo));

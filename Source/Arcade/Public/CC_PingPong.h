@@ -36,6 +36,12 @@ public:
 
 	bool StopMovement = true;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	USoundBase* GameOverSound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	USoundBase* VictorySound;
+
 
 
 

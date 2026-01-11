@@ -8,6 +8,7 @@
 #include "CC_PongAIController.h"
 #include "EngineUtils.h"
 
+
 static int TeamOneScore = 0;
 static int TeamTwoScore = 0;
 static ACC_PingBallSpawner* SpawnPoint = nullptr;
@@ -131,6 +132,8 @@ void ACC_PingPong::Victory()
 			PlayerController->SetShowMouseCursor(true);
 			PlayerController->SetPause(true);
 			PlayerController->WidgetToDisplay(WB_Victory);
+			PlayerController->ChangePlay(false);
+			PlayerController->MusicToPlay(VictorySound);
 		}
 	}
 }
@@ -139,19 +142,22 @@ void ACC_PingPong::Lost()
 {
 	if (GameOver)
 	{
-		return;
+		return; 
 	}
 
 	if (UWorld* World = GetWorld())
 	{
 		if (ACC_PingPongController* PlayerController = GetPingPongController(World))
 		{
+			PlayerController->ChangePlay(false);
 			GameOver = true;
 			StopAllMovement(true);
 			ResetAllPaddles();
 			PlayerController->SetShowMouseCursor(true);
 			PlayerController->SetPause(true);
 			PlayerController->WidgetToDisplay(WB_Lost);
+			FVector Null = FVector();
+			PlayerController->SoundToPlay(GameOverSound, false,Null);
 		}
 	}
 }
@@ -166,10 +172,12 @@ void ACC_PingPong::ResetGame()
 			TeamTwoScore = 0;
 			::LastScoredTeam = ETeams::TeamOne;
 			GameOver = false;
+			PlayerController->MusicToPlay(PlayerController->Music);
 			
 
 			
 			PlayerController->GameRestarted();
+			
 
 			
 			if (PlayerController->CurrentInstance)

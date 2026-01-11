@@ -132,13 +132,19 @@ void ACC_PingPongPawn::SwitchingCamera()
 
 void ACC_PingPongPawn::PauseEvent()
 {
+	
 	if (APlayerController* PlayerController = UGameplayStatics::GetPlayerController(this, 0))
 	{
+		
 		if (ACC_PingPongController* PongPlayerController = Cast<ACC_PingPongController>(PlayerController))
 		{
-			PongPlayerController->WidgetToDisplay(PongPlayerController->WB_Pause);
-			PongPlayerController->SetShowMouseCursor(true);
-			PlayerController->SetPause(true);
+			if (PongPlayerController->PressedPlay)
+			{
+				PongPlayerController->WidgetToDisplay(PongPlayerController->WB_Pause);
+				PongPlayerController->SetShowMouseCursor(true);
+				PlayerController->SetPause(true);
+			}
+			
 		}
 	}
 	

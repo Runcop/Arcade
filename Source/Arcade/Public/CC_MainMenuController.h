@@ -138,5 +138,9 @@ public:
 		void TimerGameSelected();
 
 		// Updated helper
+
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound") USoundBase* Music;
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound") float MusicVolume;
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound") float MusicPitch;
 		
 };

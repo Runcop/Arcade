@@ -9,6 +9,8 @@
 #include "CC_PingPongPawn.h"
 #include "CC_PingBallSpawner.h"
 #include "TimerManager.h"
+#include "Kismet/GameplayStatics.h"
+#include "Components/AudioComponent.h" // Add this include at the top of your file
 
 //need to change name of ping pong to "pong"
 
@@ -19,6 +21,9 @@ void ACC_PingPongController::BeginPlay()
 	SetPause(true);
 	SetShowMouseCursor(true);
 
+	
+	MusicToPlay(Music);
+	
 }
 
 ACC_PingPongController::ACC_PingPongController()
@@ -52,6 +57,7 @@ void ACC_PingPongController::GameStarting()
 	if (ACC_PingBallSpawner* BallSpawner = Cast<ACC_PingBallSpawner>(Spawner))
 	{
 		BallSpawner->SpawnBallTimer(3);
+		ChangePlay(true);
 	}
 }
 
@@ -67,6 +73,7 @@ void ACC_PingPongController::GameRestarted()
 		
 		this->SetShowMouseCursor(false);
 		this->SetPause(false);
+		ChangePlay(true);
 	}
 
 }
@@ -76,10 +83,48 @@ void ACC_PingPongController::StartTimer(int Number)
 	CurrentInstance->UpdateTimer(Number);
 }
 
+void ACC_PingPongController::SoundToPlay(USoundBase* Sound, bool LocalSound, FVector Location )
+{
+
+	if (LocalSound)
+	{
+		ClientPlaySoundAtLocation(Sound, Location, 1.f, 1.f);
+	}
+	else
+	{
+		ClientPlaySound(Sound, 1.f, 1.f);
+	}
+	
+}
+
+void ACC_PingPongController::MusicToPlay(USoundBase* LocalMusic)
+{
+	if (CurrentMusicInstance)
+	{
+		CurrentMusicInstance->Stop();
+
+		
+	
+	}
+	else
+	{
+		CurrentMusicInstance = UGameplayStatics::SpawnSound2D(this, LocalMusic, MusicVolume);
+	}
+
+}
+
+void ACC_PingPongController::ChangePlay(bool Playing)
+{
+	PressedPlay = Playing;
+}
+
+
 
 	
 
 	
+
+
 
 
 

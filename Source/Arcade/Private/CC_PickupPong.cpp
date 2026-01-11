@@ -7,6 +7,7 @@
 #include "CC_PingPongBall.h"
 #include "GameFramework\RotatingMovementComponent.h"
 #include "CC_PickupSpawner.h"
+#include "CC_PingPongController.h"
 
 // Sets default values
 ACC_PickupPong::ACC_PickupPong()
@@ -54,6 +55,7 @@ void ACC_PickupPong::NotifyActorBeginOverlap(AActor* OtherActor)
 
 	if (ACC_PingPongBall* Ball = Cast<ACC_PingPongBall>(OtherActor))
 	{
+
 		GivenBoon(Ball);
 
 	}
@@ -83,7 +85,8 @@ void ACC_PickupPong::GivenBoon(ACC_PingPongBall* Ball) //Boost Logic
 					Direction = Direction * Boost;
 
 					Ball->AddImpulse(Direction);
-
+					ACC_PingPongController* Controller = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
+					Controller->SoundToPlay(PickUpSound, true, GetActorLocation());
 					Destroy();
 				}
 			}
