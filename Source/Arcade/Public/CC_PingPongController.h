@@ -30,6 +30,9 @@ public:
 
 	UFUNCTION()void WidgetToDisplay(TSubclassOf<UCC_PingPongWidget> Widget);
 	UFUNCTION()void GameStarting();
+	UFUNCTION()void SoundToPlay(USoundBase* Sound, bool LocalSound, FVector Location);
+	UFUNCTION()void MusicToPlay(USoundBase* LocalMusic);
+	UFUNCTION()void ChangePlay(bool Playing);
 
 	UPROPERTY()
 	UCC_PingPongWidget* CurrentInstance;
@@ -53,6 +56,15 @@ public:
 
 	UPROPERTY()
 	AActor* Spawner = nullptr;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sounds")USoundBase* Music;
+	
+	UPROPERTY()UAudioComponent* CurrentMusicInstance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sounds")
+	float MusicVolume;
+
+	bool PressedPlay = false;
 	
 
 	

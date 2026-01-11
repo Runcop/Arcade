@@ -5,6 +5,7 @@
 #include "Components/BoxComponent.h"
 #include "CC_PingPongBall.h"
 #include "CC_PingPong.h"
+#include "CC_PingPongController.h"
 
 
 // Sets default values
@@ -55,6 +56,9 @@ void ACC_GoalPingPong::GoalScored()
 
 		GameMode->StopAllMovement(true);
 		GameMode->ResetAllPaddles();
+
+		ACC_PingPongController* Controller = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
+		Controller->SoundToPlay(GoalScoredSound, true, GetActorLocation());
 		
 
 		switch (static_cast <ETeams> (Team))

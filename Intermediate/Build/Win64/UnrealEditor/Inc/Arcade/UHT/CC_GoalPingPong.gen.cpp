@@ -17,6 +17,7 @@ ARCADE_API UClass* Z_Construct_UClass_ACC_GoalPingPong_NoRegister();
 ARCADE_API UEnum* Z_Construct_UEnum_Arcade_ETeams();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
 
@@ -157,10 +158,15 @@ struct Z_Construct_UClass_ACC_GoalPingPong_Statics
 		{ "Category", "Team" },
 		{ "ModuleRelativePath", "Public/CC_GoalPingPong.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GoalScoredSound_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/CC_GoalPingPong.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxCollision;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_Team_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_Team;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GoalScoredSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -175,10 +181,12 @@ struct Z_Construct_UClass_ACC_GoalPingPong_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_BoxCollision = { "BoxCollision", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_GoalPingPong, BoxCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxCollision_MetaData), NewProp_BoxCollision_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_Team_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_Team = { "Team", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_GoalPingPong, Team), Z_Construct_UEnum_Arcade_ETeams, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Team_MetaData), NewProp_Team_MetaData) }; // 982420193
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_GoalScoredSound = { "GoalScoredSound", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_GoalPingPong, GoalScoredSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GoalScoredSound_MetaData), NewProp_GoalScoredSound_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_GoalPingPong_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_BoxCollision,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_Team_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_Team,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_GoalPingPong_Statics::NewProp_GoalScoredSound,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_GoalPingPong_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_GoalPingPong_Statics::DependentSingletons[])() = {
@@ -220,10 +228,10 @@ struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__
 		{ ETeams_StaticEnum, TEXT("ETeams"), &Z_Registration_Info_UEnum_ETeams, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 982420193U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_GoalPingPong, ACC_GoalPingPong::StaticClass, TEXT("ACC_GoalPingPong"), &Z_Registration_Info_UClass_ACC_GoalPingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_GoalPingPong), 1678323857U) },
+		{ Z_Construct_UClass_ACC_GoalPingPong, ACC_GoalPingPong::StaticClass, TEXT("ACC_GoalPingPong"), &Z_Registration_Info_UClass_ACC_GoalPingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_GoalPingPong), 430557420U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__Script_Arcade_4085291806(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__Script_Arcade_1573471327(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_GoalPingPong_h__Script_Arcade_Statics::EnumInfo));

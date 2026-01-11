@@ -20,6 +20,7 @@ ARCADE_API UClass* Z_Construct_UClass_UCC_PingPongWidget_NoRegister();
 ARCADE_API UEnum* Z_Construct_UEnum_Arcade_ETeams();
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
 
@@ -308,6 +309,14 @@ struct Z_Construct_UClass_ACC_PingPong_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameOver_MetaData[] = {
 		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameOverSound_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VictorySound_MetaData[] = {
+		{ "Category", "Sound" },
+		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Ball_MetaData[] = {
 		{ "Category", "Test" },
 		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
@@ -326,6 +335,8 @@ struct Z_Construct_UClass_ACC_PingPong_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpawnPoint;
 	static void NewProp_GameOver_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_GameOver;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GameOverSound;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_VictorySound;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_Ball;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_Victory;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_Lost;
@@ -352,6 +363,8 @@ void Z_Construct_UClass_ACC_PingPong_Statics::NewProp_GameOver_SetBit(void* Obj)
 	((ACC_PingPong*)Obj)->GameOver = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACC_PingPong_Statics::NewProp_GameOver = { "GameOver", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACC_PingPong), &Z_Construct_UClass_ACC_PingPong_Statics::NewProp_GameOver_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameOver_MetaData), NewProp_GameOver_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPong_Statics::NewProp_GameOverSound = { "GameOverSound", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPong, GameOverSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GameOverSound_MetaData), NewProp_GameOverSound_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PingPong_Statics::NewProp_VictorySound = { "VictorySound", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPong, VictorySound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_VictorySound_MetaData), NewProp_VictorySound_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPong_Statics::NewProp_Ball = { "Ball", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPong, Ball), Z_Construct_UClass_UClass, Z_Construct_UClass_ACC_PingPongBall_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Ball_MetaData), NewProp_Ball_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPong_Statics::NewProp_WB_Victory = { "WB_Victory", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPong, WB_Victory), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PingPongWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_Victory_MetaData), NewProp_WB_Victory_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PingPong_Statics::NewProp_WB_Lost = { "WB_Lost", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PingPong, WB_Lost), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PingPongWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_Lost_MetaData), NewProp_WB_Lost_MetaData) };
@@ -360,6 +373,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PingP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_TeamTwoScore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_SpawnPoint,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_GameOver,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_GameOverSound,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_VictorySound,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_Ball,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_WB_Victory,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PingPong_Statics::NewProp_WB_Lost,
@@ -402,10 +417,10 @@ ACC_PingPong::~ACC_PingPong() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPong, ACC_PingPong::StaticClass, TEXT("ACC_PingPong"), &Z_Registration_Info_UClass_ACC_PingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPong), 2461385801U) },
+		{ Z_Construct_UClass_ACC_PingPong, ACC_PingPong::StaticClass, TEXT("ACC_PingPong"), &Z_Registration_Info_UClass_ACC_PingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPong), 1178215926U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_347582182(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_52184435(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

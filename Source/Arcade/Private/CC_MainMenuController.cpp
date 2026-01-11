@@ -28,6 +28,8 @@ void ACC_MainMenuController::BeginPlay()
 {
 	Super::BeginPlay();
 
+	ClientPlaySound(Music, MusicVolume, MusicPitch);
+
 	if (CameraTimeline && CameraCurve)
 	{
 		FOnTimelineFloat Update;

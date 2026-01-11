@@ -45,5 +45,8 @@ public:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Team")
 	ETeams Team;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	USoundBase* GoalScoredSound;
+
 
 };

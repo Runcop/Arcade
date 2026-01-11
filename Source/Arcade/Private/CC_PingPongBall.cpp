@@ -9,6 +9,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "CC_PingPong.h"
 #include "CC_PingPongPawn.h"
+#include "CC_PingPongController.h"
 
 
 AActor* LastHitPaddle;
@@ -128,15 +129,19 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 
 
 	);
-
+	ACC_PingPongController* PlayerController = Cast<ACC_PingPongController>(GetWorld()->GetFirstPlayerController());
 
 	if (ACC_PingPongPawn* Paddle = Cast<ACC_PingPongPawn>(OtherActor))
 	{
+		
+
+		
+
 		FVector HitLocation = Hit.Location; //Poing of Contact
 		FVector PaddlesLocation = Paddle->GetActorLocation();
 		FVector BallLocation = this->GetActorLocation();
 		LastHitPaddle = OtherActor;
-
+		PlayerController->SoundToPlay(HitPaddleSound, true, HitLocation);
 		FRotator LookAt = UKismetMathLibrary::FindLookAtRotation(PaddlesLocation, BallLocation);
 		FVector ForwardVector = LookAt.Vector();
 
@@ -175,7 +180,7 @@ void ACC_PingPongBall::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherAct
 		FVector PaddleLocation = LastHitPaddle->GetActorLocation();
 
 		FVector Direction = FVector(BallLocation.X - PaddleLocation.X);
-
+		PlayerController->SoundToPlay(HitWallSound, true, Hit.Location);
 		Direction = FVector(Direction.X, 0.0f, 0.0f);
 
 		Direction.Normalize();
