@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_Gamemode.h"
+#include "MainMenu/CC_Gamemode.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -59,8 +59,8 @@ struct Z_Construct_UClass_ACC_Gamemode_Statics
 		{ "Comment", "/**\n * \n */" },
 #endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "CC_Gamemode.h" },
-		{ "ModuleRelativePath", "Public/CC_Gamemode.h" },
+		{ "IncludePath", "MainMenu/CC_Gamemode.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_Gamemode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif // WITH_METADATA
@@ -104,14 +104,14 @@ ACC_Gamemode::~ACC_Gamemode() {}
 // ********** End Class ACC_Gamemode ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_Gamemode_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_Gamemode_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_Gamemode, ACC_Gamemode::StaticClass, TEXT("ACC_Gamemode"), &Z_Registration_Info_UClass_ACC_Gamemode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_Gamemode), 3447380159U) },
+		{ Z_Construct_UClass_ACC_Gamemode, ACC_Gamemode::StaticClass, TEXT("ACC_Gamemode"), &Z_Registration_Info_UClass_ACC_Gamemode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_Gamemode), 3235443595U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_Gamemode_h__Script_Arcade_1717083452(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_Gamemode_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_Gamemode_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_Gamemode_h__Script_Arcade_1552277761(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_Gamemode_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_Gamemode_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

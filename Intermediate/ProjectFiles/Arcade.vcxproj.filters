@@ -45,104 +45,152 @@
     <Filter Include="Source\Arcade\Private">
       <UniqueIdentifier>{AC86043F-5CB9-308D-9F99-461FE15E5D2C}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_ArcadeBase.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <Filter Include="Source\Arcade\Private\MainMenu">
+      <UniqueIdentifier>{93ADCB14-92CA-37EE-8C04-619D50EC2FAC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\MainMenu\CC_ArcadeBase.cpp">
+      <Filter>Source\Arcade\Private\MainMenu</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_Gamemode.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\MainMenu\CC_Gamemode.cpp">
+      <Filter>Source\Arcade\Private\MainMenu</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_GoalPingPong.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\MainMenu\CC_MainMenuController.cpp">
+      <Filter>Source\Arcade\Private\MainMenu</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_MainCameraPong.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\MainMenu\CC_MainMenuPawn.cpp">
+      <Filter>Source\Arcade\Private\MainMenu</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuController.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\MainMenu\CC_MainMenuWidget.cpp">
+      <Filter>Source\Arcade\Private\MainMenu</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuPawn.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <Filter Include="Source\Arcade\Private\PacMan">
+      <UniqueIdentifier>{71AD3275-DAA5-38A6-A561-3967AABA5D22}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_GridSystem.cpp">
+      <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_MainMenuWidget.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PacManController.cpp">
+      <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PickupPong.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PacManGM.cpp">
+      <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PickupSpawner.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PawnPacMan.cpp">
+      <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingBallSpawner.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_WidgetPacMan.cpp">
+      <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPong.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <Filter Include="Source\Arcade\Private\Pong">
+      <UniqueIdentifier>{DAE7A2F8-2884-317F-9058-ACAA13FA207C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_GoalPingPong.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongBall.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_MainCameraPong.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongController.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PickupPong.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongPawn.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PickupSpawner.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PingPongWidget.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PingBallSpawner.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Arcade\Private\CC_PongAIController.cpp">
-      <Filter>Source\Arcade\Private</Filter>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PingPong.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PingPongBall.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PingPongController.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PingPongPawn.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PingPongWidget.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\Pong\CC_PongAIController.cpp">
+      <Filter>Source\Arcade\Private\Pong</Filter>
     </ClCompile>
     <Filter Include="Source\Arcade\Public">
       <UniqueIdentifier>{2C0BE153-D7E9-37E4-8965-01D068FAAFE7}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_ArcadeBase.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <Filter Include="Source\Arcade\Public\MainMenu">
+      <UniqueIdentifier>{4982665A-3AAC-3899-97FC-E7CF325DEC64}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\MainMenu\CC_ArcadeBase.h">
+      <Filter>Source\Arcade\Public\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_Gamemode.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\MainMenu\CC_Gamemode.h">
+      <Filter>Source\Arcade\Public\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_GoalPingPong.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\MainMenu\CC_MainMenuController.h">
+      <Filter>Source\Arcade\Public\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_MainCameraPong.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\MainMenu\CC_MainMenuPawn.h">
+      <Filter>Source\Arcade\Public\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuController.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\MainMenu\CC_MainMenuWidget.h">
+      <Filter>Source\Arcade\Public\MainMenu</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuPawn.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <Filter Include="Source\Arcade\Public\PacMan">
+      <UniqueIdentifier>{9970D828-DEF5-3F90-9CD8-B5D28238AA27}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_GridSystem.h">
+      <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_MainMenuWidget.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManController.h">
+      <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PickupPong.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManGM.h">
+      <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PickupSpawner.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PawnPacMan.h">
+      <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingBallSpawner.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_WidgetPacMan.h">
+      <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPong.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <Filter Include="Source\Arcade\Public\Pong">
+      <UniqueIdentifier>{3F720012-9240-3150-ACA5-C6CCED87B7D6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_GoalPingPong.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongBall.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_MainCameraPong.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongController.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PickupPong.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongPawn.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PickupSpawner.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PingPongWidget.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PingBallSpawner.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\Arcade\Public\CC_PongAIController.h">
-      <Filter>Source\Arcade\Public</Filter>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PingPong.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PingPongBall.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PingPongController.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PingPongPawn.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PingPongWidget.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\Pong\CC_PongAIController.h">
+      <Filter>Source\Arcade\Public\Pong</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

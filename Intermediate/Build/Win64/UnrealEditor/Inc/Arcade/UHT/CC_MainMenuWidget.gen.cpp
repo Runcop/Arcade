@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_MainMenuWidget.h"
+#include "MainMenu/CC_MainMenuWidget.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -37,7 +37,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Functions to change selected game\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Functions to change selected game" },
 #endif
@@ -77,7 +77,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -106,7 +106,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -135,7 +135,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -164,7 +164,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnPlayClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -193,7 +193,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -222,7 +222,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -251,7 +251,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -285,7 +285,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_PreviousSelectedGame_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
@@ -328,7 +328,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_Index;
@@ -339,7 +339,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics
 };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::NewProp_Index = { "Index", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_MainMenuWidget_eventSelectedArcadeMachine_Parms, Index), METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_MainMenuWidget_eventSelectedArcadeMachine_Parms, ReturnValue), Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(0, nullptr) }; // 563493015
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_MainMenuWidget_eventSelectedArcadeMachine_Parms, ReturnValue), Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(0, nullptr) }; // 1764124028
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::NewProp_Index,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine_Statics::NewProp_ReturnValue_Underlying,
@@ -377,7 +377,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_SetMainMenuController_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Controller" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Controller;
@@ -420,7 +420,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_SetNavigationEnabled_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static void NewProp_bEnabled_SetBit(void* Obj);
@@ -467,7 +467,7 @@ struct Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Update the onscreen game name\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Update the onscreen game name" },
 #endif
@@ -548,28 +548,28 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "CC_MainMenuWidget.h" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "IncludePath", "MainMenu/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuController_MetaData[] = {
 		{ "Category", "Default" },
 		{ "ExposeOnSpawn", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainMenuWidgetClass_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ArcadeMachines_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SelectedGame_MetaData[] = {
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Currently selected game index\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Currently selected game index" },
 #endif
@@ -581,7 +581,7 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 		{ "Comment", "// Buttons (match names in your Widget Blueprint)\n" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Buttons (match names in your Widget Blueprint)" },
 #endif
@@ -590,37 +590,37 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Start_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Settings_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_NextArrow_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_BackArrow_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Play_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_MainMenuWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TXT_GameSelected_MetaData[] = {
 		{ "BindWidgetOptional", "" },
@@ -629,7 +629,7 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 		{ "Comment", "// Text to update on next/back\n" },
 #endif
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Text to update on next/back" },
 #endif
@@ -639,18 +639,18 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Optional widget classes used by your buttons\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Optional widget classes used by your buttons" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_SelectGame_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Settings_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_MainMenuWidget.h" },
+		{ "ModuleRelativePath", "Public/MainMenu/CC_MainMenuWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MainMenuController;
@@ -674,19 +674,19 @@ struct Z_Construct_UClass_UCC_MainMenuWidget_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame, "NextSelectedGame" }, // 2250146621
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked, "OnBackClicked" }, // 74646048
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked, "OnBackToMainMenuClicked" }, // 2628173438
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked, "OnNextClicked" }, // 1733443797
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnPlayClicked, "OnPlayClicked" }, // 3107974564
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked, "OnQuitClicked" }, // 2220857065
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked, "OnSettingsClicked" }, // 3146675508
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked, "OnStartClicked" }, // 2368149671
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_PreviousSelectedGame, "PreviousSelectedGame" }, // 2094643577
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine, "SelectedArcadeMachine" }, // 2113172243
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetMainMenuController, "SetMainMenuController" }, // 1090807239
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetNavigationEnabled, "SetNavigationEnabled" }, // 3120703673
-		{ &Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText, "UpdateSelectedGameText" }, // 1343726564
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_NextSelectedGame, "NextSelectedGame" }, // 2049171090
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackClicked, "OnBackClicked" }, // 837665831
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnBackToMainMenuClicked, "OnBackToMainMenuClicked" }, // 1373022520
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnNextClicked, "OnNextClicked" }, // 2836798829
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnPlayClicked, "OnPlayClicked" }, // 3253964295
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnQuitClicked, "OnQuitClicked" }, // 1791735892
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnSettingsClicked, "OnSettingsClicked" }, // 4246232497
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_OnStartClicked, "OnStartClicked" }, // 454815036
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_PreviousSelectedGame, "PreviousSelectedGame" }, // 1951040559
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SelectedArcadeMachine, "SelectedArcadeMachine" }, // 2242434426
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetMainMenuController, "SetMainMenuController" }, // 114125116
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_SetNavigationEnabled, "SetNavigationEnabled" }, // 2564506110
+		{ &Z_Construct_UFunction_UCC_MainMenuWidget_UpdateSelectedGameText, "UpdateSelectedGameText" }, // 1084078529
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -698,8 +698,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWi
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_MainMenuWidgetClass = { "MainMenuWidgetClass", nullptr, (EPropertyFlags)0x0014000000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, MainMenuWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_MainMenuWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MainMenuWidgetClass_MetaData), NewProp_MainMenuWidgetClass_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_ArcadeMachines_ValueProp = { "ArcadeMachines", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, Z_Construct_UScriptStruct_FTransform, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_ArcadeMachines_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_ArcadeMachines_Key_KeyProp = { "ArcadeMachines_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(0, nullptr) }; // 563493015
-const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_ArcadeMachines = { "ArcadeMachines", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, ArcadeMachines), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ArcadeMachines_MetaData), NewProp_ArcadeMachines_MetaData) }; // 563493015
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_ArcadeMachines_Key_KeyProp = { "ArcadeMachines_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_Arcade_EArcadeMachine, METADATA_PARAMS(0, nullptr) }; // 1764124028
+const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_ArcadeMachines = { "ArcadeMachines", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, ArcadeMachines), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ArcadeMachines_MetaData), NewProp_ArcadeMachines_MetaData) }; // 1764124028
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_SelectedGame = { "SelectedGame", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, SelectedGame), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SelectedGame_MetaData), NewProp_SelectedGame_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Back = { "BTN_Back", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_Back), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Back_MetaData), NewProp_BTN_Back_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_MainMenuWidget_Statics::NewProp_BTN_Quit = { "BTN_Quit", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_MainMenuWidget, BTN_Quit), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Quit_MetaData), NewProp_BTN_Quit_MetaData) };
@@ -766,14 +766,14 @@ UCC_MainMenuWidget::~UCC_MainMenuWidget() {}
 // ********** End Class UCC_MainMenuWidget *********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_MainMenuWidget, UCC_MainMenuWidget::StaticClass, TEXT("UCC_MainMenuWidget"), &Z_Registration_Info_UClass_UCC_MainMenuWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_MainMenuWidget), 1532086609U) },
+		{ Z_Construct_UClass_UCC_MainMenuWidget, UCC_MainMenuWidget::StaticClass, TEXT("UCC_MainMenuWidget"), &Z_Registration_Info_UClass_UCC_MainMenuWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_MainMenuWidget), 170346887U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_1074798380(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h__Script_Arcade_143279828(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

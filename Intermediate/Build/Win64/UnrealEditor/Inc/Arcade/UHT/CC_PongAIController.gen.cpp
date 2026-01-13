@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_PongAIController.h"
+#include "Pong/CC_PongAIController.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -31,7 +31,7 @@ struct Z_Construct_UFunction_ACC_PongAIController_OnBallDestroyed_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Speed at which the AI paddle moves\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PongAIController.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Speed at which the AI paddle moves" },
 #endif
@@ -110,22 +110,22 @@ struct Z_Construct_UClass_ACC_PongAIController_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Collision Rendering Transformation" },
-		{ "IncludePath", "CC_PongAIController.h" },
-		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
+		{ "IncludePath", "Pong/CC_PongAIController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PongAIController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReactionTime_MetaData[] = {
 		{ "Category", "AI Reaction" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Direct assignment from spawner\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PongAIController.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Direct assignment from spawner" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReactionDistance_MetaData[] = {
 		{ "Category", "AI Reaction" },
-		{ "ModuleRelativePath", "Public/CC_PongAIController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PongAIController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReactionTime;
@@ -133,7 +133,7 @@ struct Z_Construct_UClass_ACC_PongAIController_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACC_PongAIController_OnBallDestroyed, "OnBallDestroyed" }, // 3148065419
+		{ &Z_Construct_UFunction_ACC_PongAIController_OnBallDestroyed, "OnBallDestroyed" }, // 73691287
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -182,14 +182,14 @@ ACC_PongAIController::~ACC_PongAIController() {}
 // ********** End Class ACC_PongAIController *******************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PongAIController_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PongAIController, ACC_PongAIController::StaticClass, TEXT("ACC_PongAIController"), &Z_Registration_Info_UClass_ACC_PongAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PongAIController), 613230443U) },
+		{ Z_Construct_UClass_ACC_PongAIController, ACC_PongAIController::StaticClass, TEXT("ACC_PongAIController"), &Z_Registration_Info_UClass_ACC_PongAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PongAIController), 781292959U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_3903584923(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PongAIController_h__Script_Arcade_1360471309(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PongAIController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

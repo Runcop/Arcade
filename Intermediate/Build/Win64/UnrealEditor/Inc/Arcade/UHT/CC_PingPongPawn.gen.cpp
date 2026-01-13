@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_PingPongPawn.h"
+#include "Pong/CC_PingPongPawn.h"
 #include "InputActionValue.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
@@ -40,7 +40,7 @@ struct Z_Construct_UFunction_ACC_PingPongPawn_BoostInput_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Value_MetaData[] = {
 		{ "NativeConst", "" },
@@ -81,7 +81,7 @@ struct Z_Construct_UFunction_ACC_PingPongPawn_PauseEvent_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -149,67 +149,67 @@ struct Z_Construct_UClass_ACC_PingPongPawn_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
-		{ "IncludePath", "CC_PingPongPawn.h" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "IncludePath", "Pong/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PingPongMappingContext_MetaData[] = {
 		{ "Category", "Enhanced Input" },
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "// Enhanced Input\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Enhanced Input" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[] = {
 		{ "Category", "Enhanced Input" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwitchCamera_MetaData[] = {
 		{ "Category", "Enhanced Input" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Pause_MetaData[] = {
 		{ "Category", "Enhanced Input" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CollisionBox_MetaData[] = {
 		{ "Category", "CC_PingPongPawn" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Movement_MetaData[] = {
 		{ "Category", "CC_PingPongPawn" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[] = {
 		{ "Category", "CC_PingPongPawn" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpringArm_MetaData[] = {
 		{ "Category", "CC_PingPongPawn" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Camera_MetaData[] = {
 		{ "Category", "CC_PingPongPawn" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallToSpawn_MetaData[] = {
 		{ "Category", "Ball" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MainCamera_MetaData[] = {
 		{ "Category", "MainCamera" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StartingLocation_MetaData[] = {
 		{ "Category", "Location" },
-		{ "ModuleRelativePath", "Public/CC_PingPongPawn.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongPawn.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PingPongMappingContext;
@@ -227,8 +227,8 @@ struct Z_Construct_UClass_ACC_PingPongPawn_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACC_PingPongPawn_BoostInput, "BoostInput" }, // 3550475421
-		{ &Z_Construct_UFunction_ACC_PingPongPawn_PauseEvent, "PauseEvent" }, // 3542731374
+		{ &Z_Construct_UFunction_ACC_PingPongPawn_BoostInput, "BoostInput" }, // 3209214506
+		{ &Z_Construct_UFunction_ACC_PingPongPawn_PauseEvent, "PauseEvent" }, // 4192594437
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -296,14 +296,14 @@ ACC_PingPongPawn::~ACC_PingPongPawn() {}
 // ********** End Class ACC_PingPongPawn ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongPawn, ACC_PingPongPawn::StaticClass, TEXT("ACC_PingPongPawn"), &Z_Registration_Info_UClass_ACC_PingPongPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongPawn), 2122039880U) },
+		{ Z_Construct_UClass_ACC_PingPongPawn, ACC_PingPongPawn::StaticClass, TEXT("ACC_PingPongPawn"), &Z_Registration_Info_UClass_ACC_PingPongPawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongPawn), 3452570252U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_2248440120(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h__Script_Arcade_1161856271(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

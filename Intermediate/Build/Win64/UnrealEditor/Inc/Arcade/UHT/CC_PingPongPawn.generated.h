@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "CC_PingPongPawn.h"
+// IWYU pragma: private, include "Pong/CC_PingPongPawn.h"
 
 #ifdef ARCADE_CC_PingPongPawn_generated_h
 #error "CC_PingPongPawn.generated.h already included, missing '#pragma once' in CC_PingPongPawn.h"
@@ -19,14 +19,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FInputActionValue;
 
 // ********** Begin Class ACC_PingPongPawn *********************************************************
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execBoostInput); \
 	DECLARE_FUNCTION(execPauseEvent);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PingPongPawn(); \
 	friend struct Z_Construct_UClass_ACC_PingPongPawn_Statics; \
@@ -37,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PingPongPawn)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PingPongPawn(ACC_PingPongPawn&&) = delete; \
 	ACC_PingPongPawn(const ACC_PingPongPawn&) = delete; \
@@ -47,13 +47,13 @@ public: \
 	NO_API virtual ~ACC_PingPongPawn();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_15_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_15_PROLOG
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -63,6 +63,6 @@ class ACC_PingPongPawn;
 // ********** End Class ACC_PingPongPawn ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_CC_PingPongPawn_h
+#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
