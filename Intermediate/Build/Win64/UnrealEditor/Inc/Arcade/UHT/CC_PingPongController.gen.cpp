@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_PingPongController.h"
+#include "Pong/CC_PingPongController.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -44,7 +44,7 @@ struct Z_Construct_UEnum_Arcade_EPlayer_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 		{ "PlayerOne.DisplayName", "PlayerOne" },
 		{ "PlayerOne.Name", "EPlayer::PlayerOne" },
 		{ "PlayerTwo.DisplayName", "PlayerTwo" },
@@ -88,7 +88,7 @@ struct Z_Construct_UFunction_ACC_PingPongController_ChangePlay_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 #endif // WITH_METADATA
 	static void NewProp_Playing_SetBit(void* Obj);
@@ -131,7 +131,7 @@ struct Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -164,7 +164,7 @@ struct Z_Construct_UFunction_ACC_PingPongController_MusicToPlay_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LocalMusic;
@@ -208,7 +208,7 @@ struct Z_Construct_UFunction_ACC_PingPongController_SoundToPlay_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Sound;
@@ -263,7 +263,7 @@ struct Z_Construct_UFunction_ACC_PingPongController_WidgetToDisplay_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_Widget;
@@ -343,46 +343,46 @@ struct Z_Construct_UClass_ACC_PingPongController_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "HideCategories", "Collision Rendering Transformation" },
-		{ "IncludePath", "CC_PingPongController.h" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "IncludePath", "Pong/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentInstance_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_PingPongGame_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Pause_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Resume_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Controls_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BallActor_MetaData[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Spawner_MetaData[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Music_MetaData[] = {
 		{ "Category", "Sounds" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentMusicInstance_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MusicVolume_MetaData[] = {
 		{ "Category", "Sounds" },
-		{ "ModuleRelativePath", "Public/CC_PingPongController.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentInstance;
@@ -398,11 +398,11 @@ struct Z_Construct_UClass_ACC_PingPongController_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACC_PingPongController_ChangePlay, "ChangePlay" }, // 3403965522
-		{ &Z_Construct_UFunction_ACC_PingPongController_GameStarting, "GameStarting" }, // 1082726697
-		{ &Z_Construct_UFunction_ACC_PingPongController_MusicToPlay, "MusicToPlay" }, // 1781910824
-		{ &Z_Construct_UFunction_ACC_PingPongController_SoundToPlay, "SoundToPlay" }, // 663588104
-		{ &Z_Construct_UFunction_ACC_PingPongController_WidgetToDisplay, "WidgetToDisplay" }, // 3547729752
+		{ &Z_Construct_UFunction_ACC_PingPongController_ChangePlay, "ChangePlay" }, // 2794968426
+		{ &Z_Construct_UFunction_ACC_PingPongController_GameStarting, "GameStarting" }, // 1461575094
+		{ &Z_Construct_UFunction_ACC_PingPongController_MusicToPlay, "MusicToPlay" }, // 728177037
+		{ &Z_Construct_UFunction_ACC_PingPongController_SoundToPlay, "SoundToPlay" }, // 378204644
+		{ &Z_Construct_UFunction_ACC_PingPongController_WidgetToDisplay, "WidgetToDisplay" }, // 2399285868
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -466,19 +466,19 @@ ACC_PingPongController::~ACC_PingPongController() {}
 // ********** End Class ACC_PingPongController *****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EPlayer_StaticEnum, TEXT("EPlayer"), &Z_Registration_Info_UEnum_EPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 609858780U) },
+		{ EPlayer_StaticEnum, TEXT("EPlayer"), &Z_Registration_Info_UEnum_EPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 797093708U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongController, ACC_PingPongController::StaticClass, TEXT("ACC_PingPongController"), &Z_Registration_Info_UClass_ACC_PingPongController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongController), 2839324396U) },
+		{ Z_Construct_UClass_ACC_PingPongController, ACC_PingPongController::StaticClass, TEXT("ACC_PingPongController"), &Z_Registration_Info_UClass_ACC_PingPongController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongController), 3983558504U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_2765298388(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_1786657510(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

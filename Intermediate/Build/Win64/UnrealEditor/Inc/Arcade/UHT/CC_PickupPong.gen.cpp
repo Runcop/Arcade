@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_PickupPong.h"
+#include "Pong/CC_PickupPong.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -33,7 +33,7 @@ struct Z_Construct_UFunction_ACC_PickupPong_GivenBoon_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Ball;
@@ -108,38 +108,38 @@ struct Z_Construct_UClass_ACC_PickupPong_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "CC_PickupPong.h" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "IncludePath", "Pong/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickUpSpawner_MetaData[] = {
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[] = {
 		{ "Category", "Mesh" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxCollision_MetaData[] = {
 		{ "Category", "Collision" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Rotate_MetaData[] = {
 		{ "Category", "Rotating" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Boost_MetaData[] = {
 		{ "Category", "Boost" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LifeSpanPickup_MetaData[] = {
 		{ "Category", "LifeSpan" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PickUpSound_MetaData[] = {
 		{ "Category", "Sound" },
-		{ "ModuleRelativePath", "Public/CC_PickupPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PickupPong.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PickUpSpawner;
@@ -152,7 +152,7 @@ struct Z_Construct_UClass_ACC_PickupPong_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACC_PickupPong_GivenBoon, "GivenBoon" }, // 2082044222
+		{ &Z_Construct_UFunction_ACC_PickupPong_GivenBoon, "GivenBoon" }, // 2876797487
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -210,14 +210,14 @@ ACC_PickupPong::~ACC_PickupPong() {}
 // ********** End Class ACC_PickupPong *************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PickupPong_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PickupPong, ACC_PickupPong::StaticClass, TEXT("ACC_PickupPong"), &Z_Registration_Info_UClass_ACC_PickupPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PickupPong), 288195592U) },
+		{ Z_Construct_UClass_ACC_PickupPong, ACC_PickupPong::StaticClass, TEXT("ACC_PickupPong"), &Z_Registration_Info_UClass_ACC_PickupPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PickupPong), 2219123861U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PickupPong_h__Script_Arcade_332258985(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PickupPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PickupPong_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h__Script_Arcade_4188482297(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_PingPongWidget.h"
+#include "Pong/CC_PingPongWidget.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -26,7 +26,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -55,7 +55,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -84,7 +84,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -113,7 +113,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_RetryGame_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -146,7 +146,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerOne_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_NewNumber;
@@ -188,7 +188,7 @@ struct Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerTwo_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_NewNumber;
@@ -268,57 +268,57 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
-		{ "IncludePath", "CC_PingPongWidget.h" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "IncludePath", "Pong/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Retry_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Resume_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_MainMenu_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Play_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TXT_TeamOne_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TXT_TeamTwo_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TXT_TimeLeft_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VB_GameStarting_MetaData[] = {
 		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PingPongWidget" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Public/CC_PingPongWidget.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Retry;
@@ -332,12 +332,12 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay, "ControlPlay" }, // 1370221539
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton, "MainMenuButton" }, // 2576158399
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton, "ResumeButton" }, // 1394973339
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_RetryGame, "RetryGame" }, // 684563458
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerOne, "UpdatePlayerOne" }, // 3212026349
-		{ &Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerTwo, "UpdatePlayerTwo" }, // 4226744526
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay, "ControlPlay" }, // 3240954316
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton, "MainMenuButton" }, // 2020476787
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton, "ResumeButton" }, // 1967470062
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_RetryGame, "RetryGame" }, // 2851775217
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerOne, "UpdatePlayerOne" }, // 1071944817
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_UpdatePlayerTwo, "UpdatePlayerTwo" }, // 1173296122
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -397,14 +397,14 @@ UCC_PingPongWidget::~UCC_PingPongWidget() {}
 // ********** End Class UCC_PingPongWidget *********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 3692183504U) },
+		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 1732942366U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_637693441(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_935089957(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

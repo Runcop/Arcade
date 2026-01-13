@@ -4,7 +4,7 @@
 	DO NOT modify this manually! Edit the corresponding .h files instead!
 ===========================================================================*/
 
-// IWYU pragma: private, include "CC_PingPongWidget.h"
+// IWYU pragma: private, include "Pong/CC_PingPongWidget.h"
 
 #ifdef ARCADE_CC_PingPongWidget_generated_h
 #error "CC_PingPongWidget.generated.h already included, missing '#pragma once' in CC_PingPongWidget.h"
@@ -17,7 +17,7 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UCC_PingPongWidget *******************************************************
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdatePlayerTwo); \
 	DECLARE_FUNCTION(execUpdatePlayerOne); \
 	DECLARE_FUNCTION(execControlPlay); \
@@ -28,7 +28,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 ARCADE_API UClass* Z_Construct_UClass_UCC_PingPongWidget_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCC_PingPongWidget(); \
 	friend struct Z_Construct_UClass_UCC_PingPongWidget_Statics; \
@@ -39,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(UCC_PingPongWidget)
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCC_PingPongWidget(UCC_PingPongWidget&&) = delete; \
 	UCC_PingPongWidget(const UCC_PingPongWidget&) = delete; \
@@ -49,13 +49,13 @@ public: \
 	NO_API virtual ~UCC_PingPongWidget();
 
 
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_14_PROLOG
-#define FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_14_PROLOG
+#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,6 +65,6 @@ class UCC_PingPongWidget;
 // ********** End Class UCC_PingPongWidget *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_CC_PingPongWidget_h
+#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

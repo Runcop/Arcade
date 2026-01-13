@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "CC_PingPong.h"
+#include "Pong/CC_PingPong.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -37,7 +37,7 @@ struct Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Return the last team scored\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Return the last team scored" },
 #endif
@@ -49,7 +49,7 @@ struct Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics::NewProp_ReturnValue_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_PingPong_eventGetLastScoredTeam_Parms, ReturnValue), Z_Construct_UEnum_Arcade_ETeams, METADATA_PARAMS(0, nullptr) }; // 982420193
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_PingPong_eventGetLastScoredTeam_Parms, ReturnValue), Z_Construct_UEnum_Arcade_ETeams, METADATA_PARAMS(0, nullptr) }; // 1903496890
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics::NewProp_ReturnValue_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam_Statics::NewProp_ReturnValue,
@@ -87,7 +87,7 @@ struct Z_Construct_UFunction_ACC_PingPong_Spawner_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//BallSpawner\n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "BallSpawner" },
 #endif
@@ -135,7 +135,7 @@ struct Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//Tracking Which Team scored last \n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Tracking Which Team scored last" },
 #endif
@@ -147,7 +147,7 @@ struct Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics::NewProp_Team_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics::NewProp_Team = { "Team", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_PingPong_eventTeamLastScored_Parms, Team), Z_Construct_UEnum_Arcade_ETeams, METADATA_PARAMS(0, nullptr) }; // 982420193
+const UECodeGen_Private::FEnumPropertyParams Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics::NewProp_Team = { "Team", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CC_PingPong_eventTeamLastScored_Parms, Team), Z_Construct_UEnum_Arcade_ETeams, METADATA_PARAMS(0, nullptr) }; // 1903496890
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics::NewProp_Team_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACC_PingPong_TeamLastScored_Statics::NewProp_Team,
@@ -179,7 +179,7 @@ struct Z_Construct_UFunction_ACC_PingPong_TeamOneScored_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -208,7 +208,7 @@ struct Z_Construct_UFunction_ACC_PingPong_TeamTwoScored_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
@@ -282,8 +282,8 @@ struct Z_Construct_UClass_ACC_PingPong_Statics
 		{ "Comment", "//Declaring the LastScored Variable, Will Define in the CPP file.\n" },
 #endif
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering HLOD WorldPartition DataLayers Transformation" },
-		{ "IncludePath", "CC_PingPong.h" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "IncludePath", "Pong/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "Declaring the LastScored Variable, Will Define in the CPP file." },
@@ -294,40 +294,40 @@ struct Z_Construct_UClass_ACC_PingPong_Statics
 #if !UE_BUILD_SHIPPING
 		{ "Comment", "//TeamScore To add \n" },
 #endif
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "TeamScore To add" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TeamTwoScore_MetaData[] = {
 		{ "Category", "Score" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SpawnPoint_MetaData[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameOver_MetaData[] = {
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_GameOverSound_MetaData[] = {
 		{ "Category", "Sound" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_VictorySound_MetaData[] = {
 		{ "Category", "Sound" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Ball_MetaData[] = {
 		{ "Category", "Test" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Victory_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_Lost_MetaData[] = {
 		{ "Category", "UI" },
-		{ "ModuleRelativePath", "Public/CC_PingPong.h" },
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPong.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FIntPropertyParams NewProp_TeamOneScore;
@@ -343,11 +343,11 @@ struct Z_Construct_UClass_ACC_PingPong_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam, "GetLastScoredTeam" }, // 2165320509
-		{ &Z_Construct_UFunction_ACC_PingPong_Spawner, "Spawner" }, // 777173893
-		{ &Z_Construct_UFunction_ACC_PingPong_TeamLastScored, "TeamLastScored" }, // 2843327574
-		{ &Z_Construct_UFunction_ACC_PingPong_TeamOneScored, "TeamOneScored" }, // 2271548137
-		{ &Z_Construct_UFunction_ACC_PingPong_TeamTwoScored, "TeamTwoScored" }, // 1931514889
+		{ &Z_Construct_UFunction_ACC_PingPong_GetLastScoredTeam, "GetLastScoredTeam" }, // 2155852042
+		{ &Z_Construct_UFunction_ACC_PingPong_Spawner, "Spawner" }, // 2484795151
+		{ &Z_Construct_UFunction_ACC_PingPong_TeamLastScored, "TeamLastScored" }, // 1512514001
+		{ &Z_Construct_UFunction_ACC_PingPong_TeamOneScored, "TeamOneScored" }, // 1539771067
+		{ &Z_Construct_UFunction_ACC_PingPong_TeamTwoScored, "TeamTwoScored" }, // 2195826087
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -414,14 +414,14 @@ ACC_PingPong::~ACC_PingPong() {}
 // ********** End Class ACC_PingPong ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPong_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPong, ACC_PingPong::StaticClass, TEXT("ACC_PingPong"), &Z_Registration_Info_UClass_ACC_PingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPong), 1178215926U) },
+		{ Z_Construct_UClass_ACC_PingPong, ACC_PingPong::StaticClass, TEXT("ACC_PingPong"), &Z_Registration_Info_UClass_ACC_PingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPong), 675747640U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_52184435(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_CC_PingPong_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPong_h__Script_Arcade_1545868834(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPong_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************
