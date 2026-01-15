@@ -55,8 +55,9 @@ private:
 	UPROPERTY(VisibleAnywhere) USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere) UCameraComponent* Camera;
 
-	
+	UFUNCTION()
 	void EnhancedMove(const FInputActionValue& Value);
+	UFUNCTION()
 	void SwitchingCamera();
 	UFUNCTION()
 	void PauseEvent();

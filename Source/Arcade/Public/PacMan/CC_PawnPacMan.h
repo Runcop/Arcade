@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
+#include "InputActionValue.h" 
 #include "CC_PawnPacMan.generated.h"
 
 
@@ -40,6 +41,10 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	
+
+
+	
+
 private:
 
 	UPROPERTY(VisibleAnywhere)UCameraComponent* Camera;
@@ -47,7 +52,11 @@ private:
 	UPROPERTY(VisibleAnywhere)UBoxComponent* BoxCollision;
 	UPROPERTY(VisibleAnywhere)UBillboardComponent* Billboard;
 	UPROPERTY(VisibleAnywhere)UStaticMeshComponent* StaticMesh;
-protected:
+
+
+	
+
+
 
 	
 
