@@ -151,13 +151,15 @@ void ACC_PingPong::Lost()
 		{
 			PlayerController->ChangePlay(false);
 			GameOver = true;
+			PlayerController->ClearMusic();
+			FVector Null = FVector();
+			PlayerController->SoundToPlay(GameOverSound, false, Null);
 			StopAllMovement(true);
 			ResetAllPaddles();
 			PlayerController->SetShowMouseCursor(true);
-			PlayerController->SetPause(true);
 			PlayerController->WidgetToDisplay(WB_Lost);
-			FVector Null = FVector();
-			PlayerController->SoundToPlay(GameOverSound, false,Null);
+			
+			
 		}
 	}
 }
@@ -184,6 +186,7 @@ void ACC_PingPong::ResetGame()
 			{
 				PlayerController->CurrentInstance->UpdatePlayerOne(TeamOneScore);
 				PlayerController->CurrentInstance->UpdatePlayerTwo(TeamTwoScore);
+				
 			}
 
 			// Safely spawn a new ball if we have a valid spawn point.

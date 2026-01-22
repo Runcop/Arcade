@@ -33,6 +33,7 @@ public:
 	UFUNCTION()void SoundToPlay(USoundBase* Sound, bool LocalSound, FVector Location);
 	UFUNCTION()void MusicToPlay(USoundBase* LocalMusic);
 	UFUNCTION()void ChangePlay(bool Playing);
+	UFUNCTION()void ClearMusic();
 
 	UPROPERTY()
 	UCC_PingPongWidget* CurrentInstance;

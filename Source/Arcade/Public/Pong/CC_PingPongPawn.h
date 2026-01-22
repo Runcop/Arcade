@@ -4,7 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "InputActionValue.h"          // for FInputActionValue
+#include "InputActionValue.h"          
+#include "InputMappingContext.h"
 #include "CC_PingPongPawn.generated.h"
 
 class UBoxComponent;
@@ -34,8 +35,10 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	// Enhanced Input
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
-	class UInputMappingContext* PingPongMappingContext;
+
+	UPROPERTY(EditAnywhere, Category = "Enhanced Input")
+	TSoftObjectPtr<UInputMappingContext> InputMapping;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
 	class UInputAction* MoveAction;
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Enhanced Input")

@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "InputActionValue.h" 
+#include "InputMappingContext.h"
+#include "Components/TimelineComponent.h"
 #include "CC_PawnPacMan.generated.h"
 
 
@@ -14,7 +16,8 @@ class UFloatingPawnMovement;
 class USpringArmComponent;
 class UCameraComponent;
 class UBillboardComponent;
-
+class UTimelineComponent;
+class UCurveFloat;
 
 
 
@@ -31,7 +34,16 @@ protected:
 	
 	virtual void BeginPlay() override;
 
+	
 
+	UPROPERTY()
+	FRotator RightRotation = FRotator(0.0f, 90.0f, 0.0f);
+	UPROPERTY()
+	FRotator LeftRotation = FRotator(0.0f, 270.0f, 0.0f);
+	UPROPERTY()
+	FRotator UpRotation = FRotator(0.0f, 0.0f, 0.0f);
+	UPROPERTY()
+	FRotator DownRotation = FRotator(0.0f, 180.0f, 0.0f);
 
 public:	
 	
@@ -39,25 +51,56 @@ public:
 
 	
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	
+	UPROPERTY(EditAnywhere, Category = "Enhanced Input")
+	TSoftObjectPtr<UInputMappingContext> InputMapping;
+
+	UPROPERTY(EditAnywhere, Category = "Enhanced Input")
+	TSoftObjectPtr<UInputMappingContext> ConflictingMappingContext;
+
+	
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
+	class UInputAction* IA_Movement;
+
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	class UCurveFloat* CameraCurve = nullptr;
+
+	
+	UPROPERTY()
+	UTimelineComponent* CameraTimeline = nullptr;
+
+	UFUNCTION(BlueprintCallable, Category = "Camera")
+	void CameraTimelineProgress(float Value);
+
+	UFUNCTION()
+	void OnCameraTimelineFinished();
 
 	
 
+	UPROPERTY()
+	FRotator UpdatedRotation;
 
-	
+	UPROPERTY()
+	FRotator InitialRotation;
+
 
 private:
 
 	UPROPERTY(VisibleAnywhere)UCameraComponent* Camera;
 	UPROPERTY(VisibleAnywhere)USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere)UBoxComponent* BoxCollision;
-	UPROPERTY(VisibleAnywhere)UBillboardComponent* Billboard;
+	
 	UPROPERTY(VisibleAnywhere)UStaticMeshComponent* StaticMesh;
 
 
 	
-
+	UFUNCTION()
+	void RoatatingDirection(const FInputActionValue& Value);
 
 
 	
 
+	UPROPERTY(EditAnywhere, Category = "Camera")
+	float RotationSpeed = 0.5f;
 };

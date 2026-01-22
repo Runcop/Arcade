@@ -7,6 +7,7 @@
 #include "Pong/CC_PingPong.h"
 #include "Pong/CC_PingBallSpawner.h"
 #include "Pong/CC_PingPongController.h"
+#include "Pong/CC_PingPong.h"
 
 
 
@@ -30,6 +31,8 @@ void UCC_PingPongWidget::NativeConstruct()
 	if (BTN_Resume)BTN_Resume->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ResumeButton);
 	if (BTN_MainMenu)BTN_MainMenu->OnClicked.AddDynamic(this, &UCC_PingPongWidget::MainMenuButton);
 	if (BTN_Play)BTN_Play->OnClicked.AddDynamic(this, &UCC_PingPongWidget::ControlPlay);
+
+	DisplayScores();
 	
 }
 
@@ -150,6 +153,19 @@ void UCC_PingPongWidget::ControlPlay()
 			PingPongController->GameStarting();
 		}
 
+	}
+}
+
+void UCC_PingPongWidget::DisplayScores()
+{
+
+	if (UWorld* World = GetWorld())
+	{
+		if (ACC_PingPong* Gamemode = (ACC_PingPong*)World->GetAuthGameMode())
+		{
+			UpdatePlayerOne(Gamemode->TeamOneScore);
+			UpdatePlayerTwo(Gamemode->TeamTwoScore);
+		}
 	}
 }
 

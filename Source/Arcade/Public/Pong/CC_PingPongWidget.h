@@ -27,6 +27,7 @@ protected:
 	UFUNCTION() void MainMenuButton();
 	UFUNCTION() void ControlPlay();
 	
+	
 
 
 
@@ -63,5 +64,6 @@ public:
 	void UpdateTimer(int Number);
 
 	void HideTimer(bool hide);
+	UFUNCTION() void DisplayScores();
 	
 };
