@@ -4,14 +4,11 @@
 #include "PacMan/CC_PawnPacMan.h"
 #include "Components/BoxComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
-#include "GameFramework/PlayerInput.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "EnhancedInput/Public/EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"    
-#include "Components/BillboardComponent.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "Kismet/GameplayStatics.h"
 #include "CoreMinimal.h"
 #include "PacMan/CC_PacManController.h"
 #include "InputMappingContext.h"
@@ -70,7 +67,15 @@ void ACC_PawnPacMan::BeginPlay()
 			
 			if (!InputMapping.IsNull())
 			{
-				InputSystem->AddMappingContext(InputMapping.LoadSynchronous(), 1);
+				UInputMappingContext* LoadedContext = InputMapping.Get();
+				if (!LoadedContext)
+				{
+					LoadedContext = InputMapping.LoadSynchronous();
+				}
+				if (LoadedContext)
+				{
+					InputSystem->AddMappingContext(LoadedContext, 1);
+				}
 			}
 		}
 	}
@@ -156,23 +161,24 @@ void ACC_PawnPacMan::RoatatingDirection(const FInputActionValue& Value)
 				UpdatedRotation = DownRotation;
 		}
 		
-		Movement->StopMovementImmediately();
-		Moving = false;
-		RotatingTimeline->PlayFromStart();
-		if (UWorld* World = GetWorld())
+		if (!UpdatedRotation.Equals(GetActorRotation(), 1.0f))
 		{
-			World->GetTimerManager().SetTimer(TimerRotation,this, &ACC_PawnPacMan::ResetMovement,0.1,false);
+			Movement->StopMovementImmediately();
+			Moving = false;
+			RotatingTimeline->PlayFromStart();
+			if (UWorld* World = GetWorld())
+			{
+				World->GetTimerManager().SetTimer(TimerRotation, this, &ACC_PawnPacMan::ResetMovement, 0.1f, false);
+			}
 		}
+	
+		
 		
 }
 
 void ACC_PawnPacMan::AlwaysMovingForward()
 {
-	
-	
-		AddMovementInput(GetActorForwardVector(), 1.0f);
-	
-	
+	AddMovementInput(GetActorForwardVector(), 1.0f);
 }
 
 
