@@ -11,8 +11,8 @@
 
 
 class UCC_MainMenuWidget;
-class UTimelineComponent; // forward-declare the type (do not declare a variable here)
-class UCurveFloat; // forward-declare the type (do not declare a variable here)
+class UTimelineComponent; 
+class UCurveFloat; 
 
 
 

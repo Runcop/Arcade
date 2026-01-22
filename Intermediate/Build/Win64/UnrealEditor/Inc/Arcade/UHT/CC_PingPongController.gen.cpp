@@ -126,6 +126,35 @@ DEFINE_FUNCTION(ACC_PingPongController::execChangePlay)
 }
 // ********** End Class ACC_PingPongController Function ChangePlay *********************************
 
+// ********** Begin Class ACC_PingPongController Function ClearMusic *******************************
+struct Z_Construct_UFunction_ACC_PingPongController_ClearMusic_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PingPongController_ClearMusic_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PingPongController, nullptr, "ClearMusic", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PingPongController_ClearMusic_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PingPongController_ClearMusic_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_PingPongController_ClearMusic()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PingPongController_ClearMusic_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PingPongController::execClearMusic)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClearMusic();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PingPongController Function ClearMusic *********************************
+
 // ********** Begin Class ACC_PingPongController Function GameStarting *****************************
 struct Z_Construct_UFunction_ACC_PingPongController_GameStarting_Statics
 {
@@ -302,6 +331,7 @@ void ACC_PingPongController::StaticRegisterNativesACC_PingPongController()
 	UClass* Class = ACC_PingPongController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "ChangePlay", &ACC_PingPongController::execChangePlay },
+		{ "ClearMusic", &ACC_PingPongController::execClearMusic },
 		{ "GameStarting", &ACC_PingPongController::execGameStarting },
 		{ "MusicToPlay", &ACC_PingPongController::execMusicToPlay },
 		{ "SoundToPlay", &ACC_PingPongController::execSoundToPlay },
@@ -399,6 +429,7 @@ struct Z_Construct_UClass_ACC_PingPongController_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ACC_PingPongController_ChangePlay, "ChangePlay" }, // 2794968426
+		{ &Z_Construct_UFunction_ACC_PingPongController_ClearMusic, "ClearMusic" }, // 3703573424
 		{ &Z_Construct_UFunction_ACC_PingPongController_GameStarting, "GameStarting" }, // 1461575094
 		{ &Z_Construct_UFunction_ACC_PingPongController_MusicToPlay, "MusicToPlay" }, // 728177037
 		{ &Z_Construct_UFunction_ACC_PingPongController_SoundToPlay, "SoundToPlay" }, // 378204644
@@ -472,10 +503,10 @@ struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongCon
 		{ EPlayer_StaticEnum, TEXT("EPlayer"), &Z_Registration_Info_UEnum_EPlayer, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 797093708U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PingPongController, ACC_PingPongController::StaticClass, TEXT("ACC_PingPongController"), &Z_Registration_Info_UClass_ACC_PingPongController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongController), 3983558504U) },
+		{ Z_Construct_UClass_ACC_PingPongController, ACC_PingPongController::StaticClass, TEXT("ACC_PingPongController"), &Z_Registration_Info_UClass_ACC_PingPongController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PingPongController), 2777399881U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_1786657510(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_1055059707(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h__Script_Arcade_Statics::EnumInfo));

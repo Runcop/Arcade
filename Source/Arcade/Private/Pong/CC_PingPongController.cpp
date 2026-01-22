@@ -73,6 +73,7 @@ void ACC_PingPongController::GameRestarted()
 		
 		this->SetShowMouseCursor(false);
 		this->SetPause(false);
+		MusicToPlay(Music);
 		ChangePlay(true);
 	}
 
@@ -116,6 +117,14 @@ void ACC_PingPongController::MusicToPlay(USoundBase* LocalMusic)
 void ACC_PingPongController::ChangePlay(bool Playing)
 {
 	PressedPlay = Playing;
+}
+
+void ACC_PingPongController::ClearMusic()
+{
+	if (CurrentMusicInstance)
+	{
+		CurrentMusicInstance->Stop();
+	}
 }
 
 

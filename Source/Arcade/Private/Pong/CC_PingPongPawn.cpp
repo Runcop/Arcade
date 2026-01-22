@@ -71,6 +71,19 @@ void ACC_PingPongPawn::BeginPlay()
 
 	SwitchingCamera();
 
+	if (ULocalPlayer* LocalPlayer = Cast<ULocalPlayer>(this))
+	{
+		if (UEnhancedInputLocalPlayerSubsystem* InputSystem = LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())
+		{
+			if (!InputMapping.IsNull())
+			{
+				InputSystem->AddMappingContext(InputMapping.LoadSynchronous(), 1);
+			}
+		}
+	}
+
+
+
 }
 
 // Called every frame

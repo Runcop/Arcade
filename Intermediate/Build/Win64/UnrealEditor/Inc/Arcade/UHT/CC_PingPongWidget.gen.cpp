@@ -50,6 +50,35 @@ DEFINE_FUNCTION(UCC_PingPongWidget::execControlPlay)
 }
 // ********** End Class UCC_PingPongWidget Function ControlPlay ************************************
 
+// ********** Begin Class UCC_PingPongWidget Function DisplayScores ********************************
+struct Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Pong/CC_PingPongWidget.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PingPongWidget, nullptr, "DisplayScores", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_PingPongWidget::execDisplayScores)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisplayScores();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_PingPongWidget Function DisplayScores **********************************
+
 // ********** Begin Class UCC_PingPongWidget Function MainMenuButton *******************************
 struct Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton_Statics
 {
@@ -227,6 +256,7 @@ void UCC_PingPongWidget::StaticRegisterNativesUCC_PingPongWidget()
 	UClass* Class = UCC_PingPongWidget::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "ControlPlay", &UCC_PingPongWidget::execControlPlay },
+		{ "DisplayScores", &UCC_PingPongWidget::execDisplayScores },
 		{ "MainMenuButton", &UCC_PingPongWidget::execMainMenuButton },
 		{ "ResumeButton", &UCC_PingPongWidget::execResumeButton },
 		{ "RetryGame", &UCC_PingPongWidget::execRetryGame },
@@ -333,6 +363,7 @@ struct Z_Construct_UClass_UCC_PingPongWidget_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_ControlPlay, "ControlPlay" }, // 3240954316
+		{ &Z_Construct_UFunction_UCC_PingPongWidget_DisplayScores, "DisplayScores" }, // 780634044
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_MainMenuButton, "MainMenuButton" }, // 2020476787
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_ResumeButton, "ResumeButton" }, // 1967470062
 		{ &Z_Construct_UFunction_UCC_PingPongWidget_RetryGame, "RetryGame" }, // 2851775217
@@ -400,10 +431,10 @@ UCC_PingPongWidget::~UCC_PingPongWidget() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 1732942366U) },
+		{ Z_Construct_UClass_UCC_PingPongWidget, UCC_PingPongWidget::StaticClass, TEXT("UCC_PingPongWidget"), &Z_Registration_Info_UClass_UCC_PingPongWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PingPongWidget), 660206109U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_935089957(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_349730063(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongWidget_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
