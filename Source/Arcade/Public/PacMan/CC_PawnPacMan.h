@@ -21,6 +21,7 @@ class UCurveFloat;
 
 
 
+
 UCLASS()
 class ARCADE_API ACC_PawnPacMan : public APawn
 {
@@ -35,7 +36,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	
-
+	
 	UPROPERTY()
 	FRotator RightRotation = FRotator(0.0f, 90.0f, 0.0f);
 	UPROPERTY()
@@ -68,7 +69,7 @@ public:
 
 	
 	UPROPERTY()
-	UTimelineComponent* CameraTimeline = nullptr;
+	UTimelineComponent* RotatingTimeline = nullptr;
 
 	UFUNCTION(BlueprintCallable, Category = "Camera")
 	void CameraTimelineProgress(float Value);
@@ -76,13 +77,18 @@ public:
 	UFUNCTION()
 	void OnCameraTimelineFinished();
 
-	
+	UPROPERTY()
+	bool Moving = true;
 
 	UPROPERTY()
 	FRotator UpdatedRotation;
 
 	UPROPERTY()
 	FRotator InitialRotation;
+	UFUNCTION()
+	void AlwaysMovingForward();
+	UFUNCTION()
+	void ResetMovement();
 
 
 private:
@@ -90,7 +96,7 @@ private:
 	UPROPERTY(VisibleAnywhere)UCameraComponent* Camera;
 	UPROPERTY(VisibleAnywhere)USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere)UBoxComponent* BoxCollision;
-	
+	UPROPERTY(VisibleAnywhere) UFloatingPawnMovement* Movement;
 	UPROPERTY(VisibleAnywhere)UStaticMeshComponent* StaticMesh;
 
 
@@ -98,7 +104,7 @@ private:
 	UFUNCTION()
 	void RoatatingDirection(const FInputActionValue& Value);
 
-
+	
 	
 
 	UPROPERTY(EditAnywhere, Category = "Camera")

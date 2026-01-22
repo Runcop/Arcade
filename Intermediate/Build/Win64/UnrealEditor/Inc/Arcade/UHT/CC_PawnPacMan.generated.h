@@ -19,15 +19,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FInputActionValue;
 
 // ********** Begin Class ACC_PawnPacMan ***********************************************************
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRoatatingDirection); \
+	DECLARE_FUNCTION(execResetMovement); \
+	DECLARE_FUNCTION(execAlwaysMovingForward); \
 	DECLARE_FUNCTION(execOnCameraTimelineFinished); \
 	DECLARE_FUNCTION(execCameraTimelineProgress);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PawnPacMan_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PawnPacMan(); \
 	friend struct Z_Construct_UClass_ACC_PawnPacMan_Statics; \
@@ -38,7 +40,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PawnPacMan)
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PawnPacMan(ACC_PawnPacMan&&) = delete; \
 	ACC_PawnPacMan(const ACC_PawnPacMan&) = delete; \
@@ -48,13 +50,13 @@ public: \
 	NO_API virtual ~ACC_PawnPacMan();
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_24_PROLOG
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_25_PROLOG
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_27_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

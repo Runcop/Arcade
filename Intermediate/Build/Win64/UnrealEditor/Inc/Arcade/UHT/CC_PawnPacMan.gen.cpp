@@ -20,6 +20,7 @@ ENGINE_API UClass* Z_Construct_UClass_APawn();
 ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UCurveFloat_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UFloatingPawnMovement_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UTimelineComponent_NoRegister();
@@ -28,6 +29,35 @@ ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputMappingContext_NoRegister();
 ENHANCEDINPUT_API UScriptStruct* Z_Construct_UScriptStruct_FInputActionValue();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin Class ACC_PawnPacMan Function AlwaysMovingForward ******************************
+struct Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PawnPacMan, nullptr, "AlwaysMovingForward", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PawnPacMan::execAlwaysMovingForward)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AlwaysMovingForward();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PawnPacMan Function AlwaysMovingForward ********************************
 
 // ********** Begin Class ACC_PawnPacMan Function CameraTimelineProgress ***************************
 struct Z_Construct_UFunction_ACC_PawnPacMan_CameraTimelineProgress_Statics
@@ -101,6 +131,35 @@ DEFINE_FUNCTION(ACC_PawnPacMan::execOnCameraTimelineFinished)
 }
 // ********** End Class ACC_PawnPacMan Function OnCameraTimelineFinished ***************************
 
+// ********** Begin Class ACC_PawnPacMan Function ResetMovement ************************************
+struct Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PawnPacMan, nullptr, "ResetMovement", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PawnPacMan::execResetMovement)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetMovement();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PawnPacMan Function ResetMovement **************************************
+
 // ********** Begin Class ACC_PawnPacMan Function RoatatingDirection *******************************
 struct Z_Construct_UFunction_ACC_PawnPacMan_RoatatingDirection_Statics
 {
@@ -151,8 +210,10 @@ void ACC_PawnPacMan::StaticRegisterNativesACC_PawnPacMan()
 {
 	UClass* Class = ACC_PawnPacMan::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "AlwaysMovingForward", &ACC_PawnPacMan::execAlwaysMovingForward },
 		{ "CameraTimelineProgress", &ACC_PawnPacMan::execCameraTimelineProgress },
 		{ "OnCameraTimelineFinished", &ACC_PawnPacMan::execOnCameraTimelineFinished },
+		{ "ResetMovement", &ACC_PawnPacMan::execResetMovement },
 		{ "RoatatingDirection", &ACC_PawnPacMan::execRoatatingDirection },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -222,8 +283,11 @@ struct Z_Construct_UClass_ACC_PawnPacMan_Statics
 		{ "Category", "Camera" },
 		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraTimeline_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RotatingTimeline_MetaData[] = {
 		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Moving_MetaData[] = {
 		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_UpdatedRotation_MetaData[] = {
@@ -247,6 +311,11 @@ struct Z_Construct_UClass_ACC_PawnPacMan_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Movement_MetaData[] = {
+		{ "Category", "CC_PawnPacMan" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StaticMesh_MetaData[] = {
 		{ "Category", "CC_PawnPacMan" },
 		{ "EditInline", "true" },
@@ -265,19 +334,24 @@ struct Z_Construct_UClass_ACC_PawnPacMan_Statics
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ConflictingMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_Movement;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraCurve;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraTimeline;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RotatingTimeline;
+	static void NewProp_Moving_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_Moving;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_UpdatedRotation;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_InitialRotation;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Camera;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArm;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BoxCollision;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Movement;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaticMesh;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RotationSpeed;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward, "AlwaysMovingForward" }, // 1437934320
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_CameraTimelineProgress, "CameraTimelineProgress" }, // 958933557
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_OnCameraTimelineFinished, "OnCameraTimelineFinished" }, // 3535307961
+		{ &Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement, "ResetMovement" }, // 3282715949
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_RoatatingDirection, "RoatatingDirection" }, // 1803810301
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -294,12 +368,18 @@ const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_ACC_PawnPa
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_ConflictingMappingContext = { "ConflictingMappingContext", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, ConflictingMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ConflictingMappingContext_MetaData), NewProp_ConflictingMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_IA_Movement = { "IA_Movement", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, IA_Movement), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_Movement_MetaData), NewProp_IA_Movement_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_CameraCurve = { "CameraCurve", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, CameraCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraCurve_MetaData), NewProp_CameraCurve_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_CameraTimeline = { "CameraTimeline", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, CameraTimeline), Z_Construct_UClass_UTimelineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraTimeline_MetaData), NewProp_CameraTimeline_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_RotatingTimeline = { "RotatingTimeline", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, RotatingTimeline), Z_Construct_UClass_UTimelineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotatingTimeline_MetaData), NewProp_RotatingTimeline_MetaData) };
+void Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Moving_SetBit(void* Obj)
+{
+	((ACC_PawnPacMan*)Obj)->Moving = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Moving = { "Moving", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ACC_PawnPacMan), &Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Moving_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Moving_MetaData), NewProp_Moving_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_UpdatedRotation = { "UpdatedRotation", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, UpdatedRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_UpdatedRotation_MetaData), NewProp_UpdatedRotation_MetaData) };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_InitialRotation = { "InitialRotation", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, InitialRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InitialRotation_MetaData), NewProp_InitialRotation_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Camera_MetaData), NewProp_Camera_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SpringArm_MetaData), NewProp_SpringArm_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_BoxCollision = { "BoxCollision", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, BoxCollision), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BoxCollision_MetaData), NewProp_BoxCollision_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Movement = { "Movement", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, Movement), Z_Construct_UClass_UFloatingPawnMovement_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Movement_MetaData), NewProp_Movement_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_StaticMesh = { "StaticMesh", nullptr, (EPropertyFlags)0x00400000000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, StaticMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaticMesh_MetaData), NewProp_StaticMesh_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_RotationSpeed = { "RotationSpeed", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, RotationSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotationSpeed_MetaData), NewProp_RotationSpeed_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PawnPacMan_Statics::PropPointers[] = {
@@ -311,12 +391,14 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PawnP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_ConflictingMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_IA_Movement,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_CameraCurve,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_CameraTimeline,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_RotatingTimeline,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Moving,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_UpdatedRotation,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_InitialRotation,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Camera,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_SpringArm,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_BoxCollision,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Movement,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_StaticMesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_RotationSpeed,
 };
@@ -357,10 +439,10 @@ ACC_PawnPacMan::~ACC_PawnPacMan() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PawnPacMan, ACC_PawnPacMan::StaticClass, TEXT("ACC_PawnPacMan"), &Z_Registration_Info_UClass_ACC_PawnPacMan, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PawnPacMan), 2408097541U) },
+		{ Z_Construct_UClass_ACC_PawnPacMan, ACC_PawnPacMan::StaticClass, TEXT("ACC_PawnPacMan"), &Z_Registration_Info_UClass_ACC_PawnPacMan, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PawnPacMan), 750216688U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_3320620275(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_1421503568(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

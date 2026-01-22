@@ -22,12 +22,13 @@ static FTimerHandle TimerRotation;
 // Sets default values
 ACC_PawnPacMan::ACC_PawnPacMan()
 {
-	CameraTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CameraTimeline"));
-	if (CameraTimeline)
+	RotatingTimeline = CreateDefaultSubobject<UTimelineComponent>(TEXT("CameraTimeline"));
+	if (RotatingTimeline)
 	{
-		CameraTimeline->SetLooping(false);
+		RotatingTimeline->SetLooping(false);
 	}
-
+	Movement = CreateDefaultSubobject<UFloatingPawnMovement>(TEXT("Movement"));
+	Movement->SetPlaneConstraintEnabled(true);
 	
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
@@ -74,15 +75,15 @@ void ACC_PawnPacMan::BeginPlay()
 		}
 	}
 
-	if (CameraTimeline && CameraCurve)
+	if (RotatingTimeline && CameraCurve)
 	{
 		FOnTimelineFloat Update;
 		Update.BindUFunction(this, FName("CameraTimelineProgress"));
-		CameraTimeline->AddInterpFloat(CameraCurve, Update);
+		RotatingTimeline->AddInterpFloat(CameraCurve, Update);
 
 		FOnTimelineEvent Finished;
 		Finished.BindUFunction(this, FName("OnCameraTimelineFinished"));
-		CameraTimeline->SetTimelineFinishedFunc(Finished);
+		RotatingTimeline->SetTimelineFinishedFunc(Finished);
 	}
 }
 
@@ -91,6 +92,11 @@ void ACC_PawnPacMan::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (Moving)
+	{
+		AlwaysMovingForward();
+	}
+	
 }
 
 // Called to bind functionality to input
@@ -110,13 +116,14 @@ void ACC_PawnPacMan::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 void ACC_PawnPacMan::CameraTimelineProgress(float Value)
 {
-
-	SetActorRotation(UKismetMathLibrary::RLerp(GetActorRotation(), UpdatedRotation, Value, true));
+	
+	SetActorRotation(UKismetMathLibrary::RLerp(GetActorRotation(), UpdatedRotation, RotationSpeed, true));
+	
 }
 
 void ACC_PawnPacMan::OnCameraTimelineFinished()
 {
-		
+	
 	
 }
 
@@ -149,9 +156,27 @@ void ACC_PawnPacMan::RoatatingDirection(const FInputActionValue& Value)
 				UpdatedRotation = DownRotation;
 		}
 		
-		CameraTimeline->PlayFromStart();
+		Movement->StopMovementImmediately();
+		Moving = false;
+		RotatingTimeline->PlayFromStart();
+		if (UWorld* World = GetWorld())
+		{
+			World->GetTimerManager().SetTimer(TimerRotation,this, &ACC_PawnPacMan::ResetMovement,0.1,false);
+		}
+		
+}
+
+void ACC_PawnPacMan::AlwaysMovingForward()
+{
+	
+	
+		AddMovementInput(GetActorForwardVector(), 1.0f);
+	
 	
 }
 
 
-
+void ACC_PawnPacMan::ResetMovement()
+{
+	Moving = true;
+}
