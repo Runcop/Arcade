@@ -108,5 +108,5 @@ private:
 	
 
 	UPROPERTY(EditAnywhere, Category = "Camera")
-	float RotationSpeed = 0.5f;
+	float RotationSpeed = 3.0f;
 };

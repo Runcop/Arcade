@@ -75,6 +75,9 @@
     <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PacManGM.cpp">
       <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PacManUI.cpp">
+      <Filter>Source\Arcade\Private\PacMan</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PawnPacMan.cpp">
       <Filter>Source\Arcade\Private\PacMan</Filter>
     </ClCompile>
@@ -151,6 +154,9 @@
       <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManGM.h">
+      <Filter>Source\Arcade\Public\PacMan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManUI.h">
       <Filter>Source\Arcade\Public\PacMan</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PawnPacMan.h">

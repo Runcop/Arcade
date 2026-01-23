@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ACC_PacManGM *************************************************************
 ARCADE_API UClass* Z_Construct_UClass_ACC_PacManGM_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PacManGM(); \
 	friend struct Z_Construct_UClass_ACC_PacManGM_Statics; \
@@ -30,24 +30,22 @@ public: \
 	DECLARE_SERIALIZER(ACC_PacManGM)
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACC_PacManGM(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PacManGM(ACC_PacManGM&&) = delete; \
 	ACC_PacManGM(const ACC_PacManGM&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACC_PacManGM); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACC_PacManGM); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACC_PacManGM) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACC_PacManGM) \
 	NO_API virtual ~ACC_PacManGM();
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_12_PROLOG
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_15_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_10_PROLOG
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

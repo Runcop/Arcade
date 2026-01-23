@@ -6,6 +6,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/BillboardComponent.h"
 #include "PacMan/CC_PawnPacMan.h"
+#include "PacMan/CC_PacManGM.h"
 
 // Sets default values
 ACC_ScorePacMan::ACC_ScorePacMan()
@@ -37,6 +38,14 @@ void ACC_ScorePacMan::NotifyActorBeginOverlap(AActor* OtherActor)
 
 	if (ACC_PawnPacMan* PacMan = Cast<ACC_PawnPacMan>(OtherActor))
 	{
+		ACC_PacManGM* GameMode;
+		UWorld* World = GetWorld();
+		GameMode = Cast<ACC_PacManGM>(World->GetAuthGameMode());
+		if (GameMode)
+		{
+			GameMode->AddingScore(Score);
+		}
+
 		Destroy();
 
 	}

@@ -289,6 +289,9 @@
     <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PacManGM.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PacManUI.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Arcade\Private\PacMan\CC_PawnPacMan.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -339,6 +342,7 @@
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_GridSystem.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManController.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManGM.h"/>
+    <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PacManUI.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_PawnPacMan.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_ScorePacMan.h"/>
     <ClInclude Include="..\..\Source\Arcade\Public\PacMan\CC_WidgetPacMan.h"/>
