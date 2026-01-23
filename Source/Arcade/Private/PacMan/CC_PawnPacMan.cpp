@@ -122,7 +122,7 @@ void ACC_PawnPacMan::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 void ACC_PawnPacMan::CameraTimelineProgress(float Value)
 {
 	
-	SetActorRotation(UKismetMathLibrary::RLerp(GetActorRotation(), UpdatedRotation, RotationSpeed, true));
+	SetActorRotation(UKismetMathLibrary::RLerp(GetActorRotation(), UpdatedRotation, Value, true));
 	
 }
 
@@ -161,14 +161,14 @@ void ACC_PawnPacMan::RoatatingDirection(const FInputActionValue& Value)
 				UpdatedRotation = DownRotation;
 		}
 		
-		if (!UpdatedRotation.Equals(GetActorRotation(), 1.0f))
+		if (!UpdatedRotation.Equals(GetActorRotation(), 1.0f ))
 		{
 			Movement->StopMovementImmediately();
 			Moving = false;
 			RotatingTimeline->PlayFromStart();
 			if (UWorld* World = GetWorld())
 			{
-				World->GetTimerManager().SetTimer(TimerRotation, this, &ACC_PawnPacMan::ResetMovement, 0.1f, false);
+				World->GetTimerManager().SetTimer(TimerRotation, this, &ACC_PawnPacMan::ResetMovement, 0.3f, false);
 			}
 		}
 	
@@ -178,6 +178,7 @@ void ACC_PawnPacMan::RoatatingDirection(const FInputActionValue& Value)
 
 void ACC_PawnPacMan::AlwaysMovingForward()
 {
+	
 	AddMovementInput(GetActorForwardVector(), 1.0f);
 }
 

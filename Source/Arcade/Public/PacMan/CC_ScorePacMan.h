@@ -40,4 +40,7 @@ public:
 	
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Score")
+	int Score = 1;
+
 };

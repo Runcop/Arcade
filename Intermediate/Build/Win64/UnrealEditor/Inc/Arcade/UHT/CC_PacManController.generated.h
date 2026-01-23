@@ -16,7 +16,14 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class UCC_PacManUI;
+
 // ********** Begin Class ACC_PacManController *****************************************************
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpdateUIScores); \
+	DECLARE_FUNCTION(execWidgetToDisplay);
+
+
 ARCADE_API UClass* Z_Construct_UClass_ACC_PacManController_NoRegister();
 
 #define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_INCLASS_NO_PURE_DECLS \
@@ -46,6 +53,7 @@ public: \
 #define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_INCLASS_NO_PURE_DECLS \
 	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_ENHANCED_CONSTRUCTORS \
 private: \
