@@ -131,6 +131,35 @@ DEFINE_FUNCTION(ACC_PawnPacMan::execOnCameraTimelineFinished)
 }
 // ********** End Class ACC_PawnPacMan Function OnCameraTimelineFinished ***************************
 
+// ********** Begin Class ACC_PawnPacMan Function Paused *******************************************
+struct Z_Construct_UFunction_ACC_PawnPacMan_Paused_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PawnPacMan_Paused_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PawnPacMan, nullptr, "Paused", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PawnPacMan_Paused_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PawnPacMan_Paused_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_PawnPacMan_Paused()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PawnPacMan_Paused_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PawnPacMan::execPaused)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Paused();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PawnPacMan Function Paused *********************************************
+
 // ********** Begin Class ACC_PawnPacMan Function ResetMovement ************************************
 struct Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement_Statics
 {
@@ -213,6 +242,7 @@ void ACC_PawnPacMan::StaticRegisterNativesACC_PawnPacMan()
 		{ "AlwaysMovingForward", &ACC_PawnPacMan::execAlwaysMovingForward },
 		{ "CameraTimelineProgress", &ACC_PawnPacMan::execCameraTimelineProgress },
 		{ "OnCameraTimelineFinished", &ACC_PawnPacMan::execOnCameraTimelineFinished },
+		{ "Paused", &ACC_PawnPacMan::execPaused },
 		{ "ResetMovement", &ACC_PawnPacMan::execResetMovement },
 		{ "RoatatingDirection", &ACC_PawnPacMan::execRoatatingDirection },
 	};
@@ -279,6 +309,10 @@ struct Z_Construct_UClass_ACC_PawnPacMan_Statics
 		{ "Category", "Enhanced Input" },
 		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IA_Pause_MetaData[] = {
+		{ "Category", "Enhanced Input" },
+		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraCurve_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "ModuleRelativePath", "Public/PacMan/CC_PawnPacMan.h" },
@@ -333,6 +367,7 @@ struct Z_Construct_UClass_ACC_PawnPacMan_Statics
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_InputMapping;
 	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ConflictingMappingContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_Movement;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_IA_Pause;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraCurve;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RotatingTimeline;
 	static void NewProp_Moving_SetBit(void* Obj);
@@ -351,6 +386,7 @@ struct Z_Construct_UClass_ACC_PawnPacMan_Statics
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_AlwaysMovingForward, "AlwaysMovingForward" }, // 1437934320
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_CameraTimelineProgress, "CameraTimelineProgress" }, // 958933557
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_OnCameraTimelineFinished, "OnCameraTimelineFinished" }, // 3535307961
+		{ &Z_Construct_UFunction_ACC_PawnPacMan_Paused, "Paused" }, // 3099295796
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_ResetMovement, "ResetMovement" }, // 3282715949
 		{ &Z_Construct_UFunction_ACC_PawnPacMan_RoatatingDirection, "RoatatingDirection" }, // 1803810301
 	};
@@ -367,6 +403,7 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ACC_PawnPacMan
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_InputMapping = { "InputMapping", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, InputMapping), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InputMapping_MetaData), NewProp_InputMapping_MetaData) };
 const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_ConflictingMappingContext = { "ConflictingMappingContext", nullptr, (EPropertyFlags)0x0014000000000001, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, ConflictingMappingContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ConflictingMappingContext_MetaData), NewProp_ConflictingMappingContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_IA_Movement = { "IA_Movement", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, IA_Movement), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_Movement_MetaData), NewProp_IA_Movement_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_IA_Pause = { "IA_Pause", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, IA_Pause), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IA_Pause_MetaData), NewProp_IA_Pause_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_CameraCurve = { "CameraCurve", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, CameraCurve), Z_Construct_UClass_UCurveFloat_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CameraCurve_MetaData), NewProp_CameraCurve_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_RotatingTimeline = { "RotatingTimeline", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PawnPacMan, RotatingTimeline), Z_Construct_UClass_UTimelineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RotatingTimeline_MetaData), NewProp_RotatingTimeline_MetaData) };
 void Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Moving_SetBit(void* Obj)
@@ -390,6 +427,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PawnP
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_InputMapping,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_ConflictingMappingContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_IA_Movement,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_IA_Pause,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_CameraCurve,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_RotatingTimeline,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PawnPacMan_Statics::NewProp_Moving,
@@ -439,10 +477,10 @@ ACC_PawnPacMan::~ACC_PawnPacMan() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PawnPacMan, ACC_PawnPacMan::StaticClass, TEXT("ACC_PawnPacMan"), &Z_Registration_Info_UClass_ACC_PawnPacMan, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PawnPacMan), 750216688U) },
+		{ Z_Construct_UClass_ACC_PawnPacMan, ACC_PawnPacMan::StaticClass, TEXT("ACC_PawnPacMan"), &Z_Registration_Info_UClass_ACC_PawnPacMan, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PawnPacMan), 4199682192U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_1421503568(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_3308707637(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

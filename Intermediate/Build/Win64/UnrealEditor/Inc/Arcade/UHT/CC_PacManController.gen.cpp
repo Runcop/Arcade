@@ -20,6 +20,35 @@ ENGINE_API UClass* Z_Construct_UClass_APlayerController();
 UPackage* Z_Construct_UPackage__Script_Arcade();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class ACC_PacManController Function PauseGame **********************************
+struct Z_Construct_UFunction_ACC_PacManController_PauseGame_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PacMan/CC_PacManController.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACC_PacManController_PauseGame_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACC_PacManController, nullptr, "PauseGame", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACC_PacManController_PauseGame_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACC_PacManController_PauseGame_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_ACC_PacManController_PauseGame()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACC_PacManController_PauseGame_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACC_PacManController::execPauseGame)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PauseGame();
+	P_NATIVE_END;
+}
+// ********** End Class ACC_PacManController Function PauseGame ************************************
+
 // ********** Begin Class ACC_PacManController Function UpdateUIScores *****************************
 struct Z_Construct_UFunction_ACC_PacManController_UpdateUIScores_Statics
 {
@@ -120,6 +149,7 @@ void ACC_PacManController::StaticRegisterNativesACC_PacManController()
 {
 	UClass* Class = ACC_PacManController::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "PauseGame", &ACC_PacManController::execPauseGame },
 		{ "UpdateUIScores", &ACC_PacManController::execUpdateUIScores },
 		{ "WidgetToDisplay", &ACC_PacManController::execWidgetToDisplay },
 	};
@@ -179,12 +209,18 @@ struct Z_Construct_UClass_ACC_PacManController_Statics
 		{ "ToolTip", "UI Subclasses" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WB_PauseUI_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/PacMan/CC_PacManController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentInstance;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_MainUI;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_WB_PauseUI;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACC_PacManController_PauseGame, "PauseGame" }, // 2346713995
 		{ &Z_Construct_UFunction_ACC_PacManController_UpdateUIScores, "UpdateUIScores" }, // 3451126645
 		{ &Z_Construct_UFunction_ACC_PacManController_WidgetToDisplay, "WidgetToDisplay" }, // 1045656501
 	};
@@ -196,9 +232,11 @@ struct Z_Construct_UClass_ACC_PacManController_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACC_PacManController_Statics::NewProp_CurrentInstance = { "CurrentInstance", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PacManController, CurrentInstance), Z_Construct_UClass_UCC_PacManUI_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentInstance_MetaData), NewProp_CurrentInstance_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PacManController_Statics::NewProp_WB_MainUI = { "WB_MainUI", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PacManController, WB_MainUI), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PacManUI_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_MainUI_MetaData), NewProp_WB_MainUI_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ACC_PacManController_Statics::NewProp_WB_PauseUI = { "WB_PauseUI", nullptr, (EPropertyFlags)0x0014000000000005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACC_PacManController, WB_PauseUI), Z_Construct_UClass_UClass, Z_Construct_UClass_UCC_PacManUI_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WB_PauseUI_MetaData), NewProp_WB_PauseUI_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACC_PacManController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PacManController_Statics::NewProp_CurrentInstance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PacManController_Statics::NewProp_WB_MainUI,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACC_PacManController_Statics::NewProp_WB_PauseUI,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACC_PacManController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACC_PacManController_Statics::DependentSingletons[])() = {
@@ -238,10 +276,10 @@ ACC_PacManController::~ACC_PacManController() {}
 struct Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACC_PacManController, ACC_PacManController::StaticClass, TEXT("ACC_PacManController"), &Z_Registration_Info_UClass_ACC_PacManController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PacManController), 326192928U) },
+		{ Z_Construct_UClass_ACC_PacManController, ACC_PacManController::StaticClass, TEXT("ACC_PacManController"), &Z_Registration_Info_UClass_ACC_PacManController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PacManController), 4212754328U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h__Script_Arcade_2611792763(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h__Script_Arcade_2607242984(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

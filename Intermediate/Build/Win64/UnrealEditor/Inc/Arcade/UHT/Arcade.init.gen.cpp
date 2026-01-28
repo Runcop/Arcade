@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeArcade_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x6D9FBDD6,
+				0xB6A54239,
 				0x1913BB35,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeArcade_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_Arcade.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Arcade(Z_Construct_UPackage__Script_Arcade, TEXT("/Script/Arcade"), Z_Registration_Info_UPackage__Script_Arcade, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x6D9FBDD6, 0x1913BB35));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Arcade(Z_Construct_UPackage__Script_Arcade, TEXT("/Script/Arcade"), Z_Registration_Info_UPackage__Script_Arcade, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xB6A54239, 0x1913BB35));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

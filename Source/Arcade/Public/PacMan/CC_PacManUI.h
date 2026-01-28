@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/TextBlock.h"
+#include "Components/Button.h"
 #include "CC_PacManUI.generated.h"
 
 /**
@@ -29,10 +30,16 @@ public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_Score = nullptr;
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_HighScore = nullptr;
+	UPROPERTY(meta = (BingWidgetOptional), BlueprintReadOnly) UButton* BTN_Resume = nullptr;
+	UPROPERTY(meta = (BingWidgetOptional), BlueprintReadOnly) UButton* BTN_MainMenu = nullptr;
 
 	
 
 	UFUNCTION()
 	void RefreshScore(int SetScore, int SetHighScore);
+	UFUNCTION()
+	void PauseGameUI();
+	UFUNCTION()
+	void MainMenu();
 
 };
