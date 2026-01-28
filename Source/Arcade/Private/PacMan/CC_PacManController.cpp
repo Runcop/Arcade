@@ -3,7 +3,8 @@
 
 #include "PacMan/CC_PacManController.h"
 #include "PacMan/CC_PacManUI.h"
-#include "PacMan//CC_PacManGM.h"
+#include "PacMan/CC_PacManGM.h"
+
 
 
 
@@ -46,5 +47,13 @@ void ACC_PacManController::BeginPlay()
 		WidgetToDisplay(WB_MainUI);
 		
 
+	
+}
+
+void ACC_PacManController::PauseGame()
+{
+	SetPause(true);
+	SetShowMouseCursor(true);
+	WidgetToDisplay(WB_PauseUI);
 	
 }

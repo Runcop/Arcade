@@ -114,6 +114,7 @@ void ACC_PawnPacMan::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	{
 	
 			EnhancedInput->BindAction(IA_Movement, ETriggerEvent::Triggered, this, &ACC_PawnPacMan::RoatatingDirection);
+			EnhancedInput->BindAction(IA_Pause, ETriggerEvent::Triggered, this, &ACC_PawnPacMan::Paused);
 	}
 }
 
@@ -132,6 +133,15 @@ void ACC_PawnPacMan::OnCameraTimelineFinished()
 	
 }
 
+void ACC_PawnPacMan::Paused()
+{
+
+	if (ACC_PacManController* PlayerController = Cast<ACC_PacManController>(GetController()))
+	{
+		PlayerController->PauseGame();
+	}
+
+}
 
 
 

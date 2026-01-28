@@ -14,6 +14,7 @@
 
 
 
+
 UCC_PingPongWidget::UCC_PingPongWidget(const FObjectInitializer& ObjectInitializer)
 	: UUserWidget(ObjectInitializer)
 {
@@ -134,8 +135,7 @@ void UCC_PingPongWidget::ResumeButton()
 
 	}
 	
-	
-	
+
 
 }
 

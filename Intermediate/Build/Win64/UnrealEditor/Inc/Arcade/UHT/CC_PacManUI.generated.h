@@ -17,13 +17,15 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UCC_PacManUI *************************************************************
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execMainMenu); \
+	DECLARE_FUNCTION(execPauseGameUI); \
 	DECLARE_FUNCTION(execRefreshScore);
 
 
 ARCADE_API UClass* Z_Construct_UClass_UCC_PacManUI_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCC_PacManUI(); \
 	friend struct Z_Construct_UClass_UCC_PacManUI_Statics; \
@@ -34,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(UCC_PacManUI)
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCC_PacManUI(UCC_PacManUI&&) = delete; \
 	UCC_PacManUI(const UCC_PacManUI&) = delete; \
@@ -44,13 +46,13 @@ public: \
 	NO_API virtual ~UCC_PacManUI();
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_13_PROLOG
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_GENERATED_BODY \
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_14_PROLOG
+#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

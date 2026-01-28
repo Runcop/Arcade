@@ -21,6 +21,7 @@ struct FInputActionValue;
 // ********** Begin Class ACC_PawnPacMan ***********************************************************
 #define FID_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRoatatingDirection); \
+	DECLARE_FUNCTION(execPaused); \
 	DECLARE_FUNCTION(execResetMovement); \
 	DECLARE_FUNCTION(execAlwaysMovingForward); \
 	DECLARE_FUNCTION(execOnCameraTimelineFinished); \

@@ -63,6 +63,8 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
 	class UInputAction* IA_Movement;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enhanced Input")
+	class UInputAction* IA_Pause;
 
 	UPROPERTY(EditAnywhere, Category = "Camera")
 	class UCurveFloat* CameraCurve = nullptr;
@@ -89,6 +91,8 @@ public:
 	void AlwaysMovingForward();
 	UFUNCTION()
 	void ResetMovement();
+	UFUNCTION()
+	void Paused();
 
 
 private:
