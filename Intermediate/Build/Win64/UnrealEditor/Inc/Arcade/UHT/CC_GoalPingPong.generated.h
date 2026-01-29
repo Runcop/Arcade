@@ -17,13 +17,13 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ACC_GoalPingPong *********************************************************
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGoalScored);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_GoalPingPong_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_INCLASS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_GoalPingPong(); \
 	friend struct Z_Construct_UClass_ACC_GoalPingPong_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_GoalPingPong)
 
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_ENHANCED_CONSTRUCTORS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_GoalPingPong(ACC_GoalPingPong&&) = delete; \
 	ACC_GoalPingPong(const ACC_GoalPingPong&) = delete; \
@@ -44,13 +44,13 @@ public: \
 	NO_API virtual ~ACC_GoalPingPong();
 
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_19_PROLOG
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_GENERATED_BODY \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_19_PROLOG
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_ENHANCED_CONSTRUCTORS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_INCLASS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -60,7 +60,7 @@ class ACC_GoalPingPong;
 // ********** End Class ACC_GoalPingPong ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h
+#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h
 
 // ********** Begin Enum ETeams ********************************************************************
 #define FOREACH_ENUM_ETEAMS(op) \

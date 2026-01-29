@@ -20,7 +20,7 @@ class ACC_MainMenuController;
 enum class EArcadeMachine : uint8;
 
 // ********** Begin Class UCC_MainMenuWidget *******************************************************
-#define FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execUpdateSelectedGameText); \
 	DECLARE_FUNCTION(execOnPlayClicked); \
 	DECLARE_FUNCTION(execOnBackToMainMenuClicked); \
@@ -38,7 +38,7 @@ enum class EArcadeMachine : uint8;
 
 ARCADE_API UClass* Z_Construct_UClass_UCC_MainMenuWidget_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCC_MainMenuWidget(); \
 	friend struct Z_Construct_UClass_UCC_MainMenuWidget_Statics; \
@@ -49,7 +49,7 @@ public: \
 	DECLARE_SERIALIZER(UCC_MainMenuWidget)
 
 
-#define FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UCC_MainMenuWidget(UCC_MainMenuWidget&&) = delete; \
 	UCC_MainMenuWidget(const UCC_MainMenuWidget&) = delete; \
@@ -59,13 +59,13 @@ public: \
 	NO_API virtual ~UCC_MainMenuWidget();
 
 
-#define FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_12_PROLOG
-#define FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_GENERATED_BODY \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_12_PROLOG
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -75,6 +75,6 @@ class UCC_MainMenuWidget;
 // ********** End Class UCC_MainMenuWidget *********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h
+#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuWidget_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
