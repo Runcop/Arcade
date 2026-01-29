@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ACC_PacManGM *************************************************************
 ARCADE_API UClass* Z_Construct_UClass_ACC_PacManGM_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PacManGM(); \
 	friend struct Z_Construct_UClass_ACC_PacManGM_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PacManGM)
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PacManGM(ACC_PacManGM&&) = delete; \
 	ACC_PacManGM(const ACC_PacManGM&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ACC_PacManGM();
 
 
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_10_PROLOG
-#define FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_GENERATED_BODY \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_10_PROLOG
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_ENHANCED_CONSTRUCTORS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class ACC_PacManGM;
 // ********** End Class ACC_PacManGM ***************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h
+#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

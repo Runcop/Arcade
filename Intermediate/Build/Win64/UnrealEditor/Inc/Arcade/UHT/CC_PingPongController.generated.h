@@ -20,7 +20,7 @@ class UCC_PingPongWidget;
 class USoundBase;
 
 // ********** Begin Class ACC_PingPongController ***************************************************
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execClearMusic); \
 	DECLARE_FUNCTION(execChangePlay); \
 	DECLARE_FUNCTION(execMusicToPlay); \
@@ -31,7 +31,7 @@ class USoundBase;
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongController_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_INCLASS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PingPongController(); \
 	friend struct Z_Construct_UClass_ACC_PingPongController_Statics; \
@@ -42,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PingPongController)
 
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_ENHANCED_CONSTRUCTORS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PingPongController(ACC_PingPongController&&) = delete; \
 	ACC_PingPongController(const ACC_PingPongController&) = delete; \
@@ -52,13 +52,13 @@ public: \
 	NO_API virtual ~ACC_PingPongController();
 
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_20_PROLOG
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_GENERATED_BODY \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_20_PROLOG
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_ENHANCED_CONSTRUCTORS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_INCLASS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -68,7 +68,7 @@ class ACC_PingPongController;
 // ********** End Class ACC_PingPongController *****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h
+#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongController_h
 
 // ********** Begin Enum EPlayer *******************************************************************
 #define FOREACH_ENUM_EPLAYER(op) \

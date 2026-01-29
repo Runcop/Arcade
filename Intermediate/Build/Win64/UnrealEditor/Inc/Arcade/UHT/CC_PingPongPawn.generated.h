@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 struct FInputActionValue;
 
 // ********** Begin Class ACC_PingPongPawn *********************************************************
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execBoostInput); \
 	DECLARE_FUNCTION(execPauseEvent); \
 	DECLARE_FUNCTION(execSwitchingCamera); \
@@ -28,7 +28,7 @@ struct FInputActionValue;
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PingPongPawn_NoRegister();
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_INCLASS_NO_PURE_DECLS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PingPongPawn(); \
 	friend struct Z_Construct_UClass_ACC_PingPongPawn_Statics; \
@@ -39,7 +39,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PingPongPawn)
 
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_ENHANCED_CONSTRUCTORS \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PingPongPawn(ACC_PingPongPawn&&) = delete; \
 	ACC_PingPongPawn(const ACC_PingPongPawn&) = delete; \
@@ -49,13 +49,13 @@ public: \
 	NO_API virtual ~ACC_PingPongPawn();
 
 
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_16_PROLOG
-#define FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_GENERATED_BODY \
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_16_PROLOG
+#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_INCLASS_NO_PURE_DECLS \
-	FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_ENHANCED_CONSTRUCTORS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_INCLASS_NO_PURE_DECLS \
+	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h_19_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,6 +65,6 @@ class ACC_PingPongPawn;
 // ********** End Class ACC_PingPongPawn ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h
+#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PingPongPawn_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
