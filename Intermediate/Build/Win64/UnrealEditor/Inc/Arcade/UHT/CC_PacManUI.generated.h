@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UCC_PacManUI *************************************************************
 #define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execPlay); \
 	DECLARE_FUNCTION(execMainMenu); \
 	DECLARE_FUNCTION(execPauseGameUI); \
 	DECLARE_FUNCTION(execRefreshScore);

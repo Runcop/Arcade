@@ -20,6 +20,7 @@ class UCC_PacManUI;
 
 // ********** Begin Class ACC_PacManController *****************************************************
 #define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execStartGame); \
 	DECLARE_FUNCTION(execPauseGame); \
 	DECLARE_FUNCTION(execUpdateUIScores); \
 	DECLARE_FUNCTION(execWidgetToDisplay);

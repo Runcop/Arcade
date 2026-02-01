@@ -36,6 +36,8 @@ public:
 	TSubclassOf<UCC_PacManUI> WB_MainUI;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 	TSubclassOf<UCC_PacManUI> WB_PauseUI;
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "UI")
+	TSubclassOf<UCC_PacManUI> WB_Controls;
 
 
 
@@ -48,4 +50,5 @@ public:
 	UFUNCTION()  void WidgetToDisplay(TSubclassOf<UCC_PacManUI> Widget);
 	UFUNCTION()  void UpdateUIScores(int Score, int HighScore);
 	UFUNCTION()  void PauseGame();
+	UFUNCTION()  void StartGame();
 };

@@ -14,6 +14,7 @@ void UCC_PacManUI::NativeConstruct()
 	
 	if(BTN_Resume)BTN_Resume->OnClicked.AddDynamic(this, &UCC_PacManUI::PauseGameUI);
 	if (BTN_MainMenu)BTN_MainMenu->OnClicked.AddDynamic(this, &UCC_PacManUI::MainMenu);
+	if (BTN_Play)BTN_Play->OnClicked.AddDynamic(this, &UCC_PacManUI::Play);
 
 }
 
@@ -67,4 +68,17 @@ void UCC_PacManUI::PauseGameUI()
 void UCC_PacManUI::MainMenu()
 {
 	UGameplayStatics::OpenLevel(this, FName("L_MainMenu"), true);
+}
+
+void UCC_PacManUI::Play()
+{
+	if (APlayerController* PacManPlayerController = UGameplayStatics::GetPlayerController(this, 0))
+	{
+
+		if (ACC_PacManController* PacManController = Cast<ACC_PacManController>(PacManPlayerController))
+		{
+			PacManController->StartGame();
+		}
+
+	}
 }
