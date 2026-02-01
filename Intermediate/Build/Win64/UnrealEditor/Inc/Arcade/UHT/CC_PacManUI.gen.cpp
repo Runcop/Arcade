@@ -78,6 +78,35 @@ DEFINE_FUNCTION(UCC_PacManUI::execPauseGameUI)
 }
 // ********** End Class UCC_PacManUI Function PauseGameUI ******************************************
 
+// ********** Begin Class UCC_PacManUI Function Play ***********************************************
+struct Z_Construct_UFunction_UCC_PacManUI_Play_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/PacMan/CC_PacManUI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UCC_PacManUI_Play_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UCC_PacManUI, nullptr, "Play", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UCC_PacManUI_Play_Statics::Function_MetaDataParams), Z_Construct_UFunction_UCC_PacManUI_Play_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UCC_PacManUI_Play()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UCC_PacManUI_Play_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UCC_PacManUI::execPlay)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Play();
+	P_NATIVE_END;
+}
+// ********** End Class UCC_PacManUI Function Play *************************************************
+
 // ********** Begin Class UCC_PacManUI Function RefreshScore ***************************************
 struct Z_Construct_UFunction_UCC_PacManUI_RefreshScore_Statics
 {
@@ -132,6 +161,7 @@ void UCC_PacManUI::StaticRegisterNativesUCC_PacManUI()
 	static const FNameNativePtrPair Funcs[] = {
 		{ "MainMenu", &UCC_PacManUI::execMainMenu },
 		{ "PauseGameUI", &UCC_PacManUI::execPauseGameUI },
+		{ "Play", &UCC_PacManUI::execPlay },
 		{ "RefreshScore", &UCC_PacManUI::execRefreshScore },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -189,13 +219,19 @@ struct Z_Construct_UClass_UCC_PacManUI_Statics
 		{ "ModuleRelativePath", "Public/PacMan/CC_PacManUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Resume_MetaData[] = {
-		{ "BingWidgetOptional", "" },
+		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PacManUI" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PacMan/CC_PacManUI.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_MainMenu_MetaData[] = {
-		{ "BingWidgetOptional", "" },
+		{ "BindWidgetOptional", "" },
+		{ "Category", "CC_PacManUI" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/PacMan/CC_PacManUI.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BTN_Play_MetaData[] = {
+		{ "BindWidgetOptional", "" },
 		{ "Category", "CC_PacManUI" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/PacMan/CC_PacManUI.h" },
@@ -205,11 +241,13 @@ struct Z_Construct_UClass_UCC_PacManUI_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TXT_HighScore;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Resume;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_MainMenu;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BTN_Play;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UCC_PacManUI_MainMenu, "MainMenu" }, // 687279165
 		{ &Z_Construct_UFunction_UCC_PacManUI_PauseGameUI, "PauseGameUI" }, // 2738835948
+		{ &Z_Construct_UFunction_UCC_PacManUI_Play, "Play" }, // 500382343
 		{ &Z_Construct_UFunction_UCC_PacManUI_RefreshScore, "RefreshScore" }, // 2879113134
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -222,11 +260,13 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PacManUI_S
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_TXT_HighScore = { "TXT_HighScore", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PacManUI, TXT_HighScore), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TXT_HighScore_MetaData), NewProp_TXT_HighScore_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_BTN_Resume = { "BTN_Resume", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PacManUI, BTN_Resume), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Resume_MetaData), NewProp_BTN_Resume_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_BTN_MainMenu = { "BTN_MainMenu", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PacManUI, BTN_MainMenu), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_MainMenu_MetaData), NewProp_BTN_MainMenu_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_BTN_Play = { "BTN_Play", nullptr, (EPropertyFlags)0x001000000008001c, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UCC_PacManUI, BTN_Play), Z_Construct_UClass_UButton_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BTN_Play_MetaData), NewProp_BTN_Play_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCC_PacManUI_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_TXT_Score,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_TXT_HighScore,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_BTN_Resume,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_BTN_MainMenu,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCC_PacManUI_Statics::NewProp_BTN_Play,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UCC_PacManUI_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UCC_PacManUI_Statics::DependentSingletons[])() = {
@@ -265,10 +305,10 @@ UCC_PacManUI::~UCC_PacManUI() {}
 struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UCC_PacManUI, UCC_PacManUI::StaticClass, TEXT("UCC_PacManUI"), &Z_Registration_Info_UClass_UCC_PacManUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PacManUI), 3943965809U) },
+		{ Z_Construct_UClass_UCC_PacManUI, UCC_PacManUI::StaticClass, TEXT("UCC_PacManUI"), &Z_Registration_Info_UClass_UCC_PacManUI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UCC_PacManUI), 3638286874U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h__Script_Arcade_1681087821(TEXT("/Script/Arcade"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h__Script_Arcade_1890729462(TEXT("/Script/Arcade"),
 	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManUI_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

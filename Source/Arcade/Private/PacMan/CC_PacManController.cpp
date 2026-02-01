@@ -43,8 +43,9 @@ void ACC_PacManController::BeginPlay()
 	Super::BeginPlay();
 
 	
-	
-		WidgetToDisplay(WB_MainUI);
+	SetPause(true);
+	SetShowMouseCursor(true);
+	WidgetToDisplay(WB_Controls);
 		
 
 	
@@ -56,4 +57,11 @@ void ACC_PacManController::PauseGame()
 	SetShowMouseCursor(true);
 	WidgetToDisplay(WB_PauseUI);
 	
+}
+
+void ACC_PacManController::StartGame()
+{
+	WidgetToDisplay(WB_MainUI);
+	SetShowMouseCursor(false);
+	SetPause(false);
 }

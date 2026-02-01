@@ -30,8 +30,9 @@ public:
 
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_Score = nullptr;
 	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UTextBlock* TXT_HighScore = nullptr;
-	UPROPERTY(meta = (BingWidgetOptional), BlueprintReadOnly) UButton* BTN_Resume = nullptr;
-	UPROPERTY(meta = (BingWidgetOptional), BlueprintReadOnly) UButton* BTN_MainMenu = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Resume = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_MainMenu = nullptr;
+	UPROPERTY(meta = (BindWidgetOptional), BlueprintReadOnly) UButton* BTN_Play = nullptr;
 
 	
 
@@ -41,5 +42,7 @@ public:
 	void PauseGameUI();
 	UFUNCTION()
 	void MainMenu();
+	UFUNCTION()
+	void Play();
 
 };
