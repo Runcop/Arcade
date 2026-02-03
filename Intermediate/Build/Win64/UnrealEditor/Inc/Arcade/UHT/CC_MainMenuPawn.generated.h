@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ACC_MainMenuPawn *********************************************************
 ARCADE_API UClass* Z_Construct_UClass_ACC_MainMenuPawn_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_MainMenuPawn(); \
 	friend struct Z_Construct_UClass_ACC_MainMenuPawn_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_MainMenuPawn)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_MainMenuPawn(ACC_MainMenuPawn&&) = delete; \
 	ACC_MainMenuPawn(const ACC_MainMenuPawn&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ACC_MainMenuPawn();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_10_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_10_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class ACC_MainMenuPawn;
 // ********** End Class ACC_MainMenuPawn ***********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuPawn_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

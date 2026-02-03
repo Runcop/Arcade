@@ -222,7 +222,7 @@ ACC_GoalPingPong::~ACC_GoalPingPong() {}
 // ********** End Class ACC_GoalPingPong ***********************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ ETeams_StaticEnum, TEXT("ETeams"), &Z_Registration_Info_UEnum_ETeams, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 1903496890U) },
@@ -231,10 +231,10 @@ struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_So
 		{ Z_Construct_UClass_ACC_GoalPingPong, ACC_GoalPingPong::StaticClass, TEXT("ACC_GoalPingPong"), &Z_Registration_Info_UClass_ACC_GoalPingPong, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_GoalPingPong), 1409677931U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_3178264337(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_3178264337(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_GoalPingPong_h__Script_Arcade_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

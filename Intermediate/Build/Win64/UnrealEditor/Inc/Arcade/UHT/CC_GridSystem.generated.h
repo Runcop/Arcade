@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class ACC_GridSystem ***********************************************************
 ARCADE_API UClass* Z_Construct_UClass_ACC_GridSystem_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_GridSystem(); \
 	friend struct Z_Construct_UClass_ACC_GridSystem_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_GridSystem)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_GridSystem(ACC_GridSystem&&) = delete; \
 	ACC_GridSystem(const ACC_GridSystem&) = delete; \
@@ -40,12 +40,12 @@ public: \
 	NO_API virtual ~ACC_GridSystem();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_9_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_9_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -55,6 +55,6 @@ class ACC_GridSystem;
 // ********** End Class ACC_GridSystem *************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_GridSystem_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

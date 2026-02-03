@@ -19,13 +19,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 enum class EArcadeMachine : uint8;
 
 // ********** Begin Class ACC_ArcadeBase ***********************************************************
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGetArcadeMachineType);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_ArcadeBase_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_ArcadeBase(); \
 	friend struct Z_Construct_UClass_ACC_ArcadeBase_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_ArcadeBase)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_ArcadeBase(ACC_ArcadeBase&&) = delete; \
 	ACC_ArcadeBase(const ACC_ArcadeBase&) = delete; \
@@ -46,13 +46,13 @@ public: \
 	NO_API virtual ~ACC_ArcadeBase();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_12_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_12_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -62,6 +62,6 @@ class ACC_ArcadeBase;
 // ********** End Class ACC_ArcadeBase *************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_ArcadeBase_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

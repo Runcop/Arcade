@@ -143,6 +143,11 @@ void ACC_PawnPacMan::Paused()
 
 }
 
+void ACC_PawnPacMan::OpenDirection(EPacDirection Direction)
+{
+	
+}
+
 
 
 
@@ -165,9 +170,13 @@ void ACC_PawnPacMan::RoatatingDirection(const FInputActionValue& Value)
 		else
 		{
 			// Vertical movement
-			if (MoveDirection.Y > 0.5f)
+			if (MoveDirection.Y > 0.5f || CanGoUp)
+			{
 				UpdatedRotation = UpRotation;
-			else if (MoveDirection.Y < -0.5f)
+			}
+
+				
+			if (MoveDirection.Y < -0.5f)
 				UpdatedRotation = DownRotation;
 		}
 		
