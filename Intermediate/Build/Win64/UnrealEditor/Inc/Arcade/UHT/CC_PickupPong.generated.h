@@ -19,13 +19,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ACC_PingPongBall;
 
 // ********** Begin Class ACC_PickupPong ***********************************************************
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execGivenBoon);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PickupPong_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PickupPong(); \
 	friend struct Z_Construct_UClass_ACC_PickupPong_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PickupPong)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PickupPong(ACC_PickupPong&&) = delete; \
 	ACC_PickupPong(const ACC_PickupPong&) = delete; \
@@ -46,13 +46,13 @@ public: \
 	NO_API virtual ~ACC_PickupPong();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_9_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_9_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h_12_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -62,6 +62,6 @@ class ACC_PickupPong;
 // ********** End Class ACC_PickupPong *************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupPong_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

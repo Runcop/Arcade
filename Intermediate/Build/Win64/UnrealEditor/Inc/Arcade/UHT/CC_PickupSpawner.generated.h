@@ -17,14 +17,14 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ACC_PickupSpawner ********************************************************
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execStartRespawnTimer); \
 	DECLARE_FUNCTION(execSpawningPickup);
 
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PickupSpawner_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PickupSpawner(); \
 	friend struct Z_Construct_UClass_ACC_PickupSpawner_Statics; \
@@ -35,7 +35,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PickupSpawner)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PickupSpawner(ACC_PickupSpawner&&) = delete; \
 	ACC_PickupSpawner(const ACC_PickupSpawner&) = delete; \
@@ -45,13 +45,13 @@ public: \
 	NO_API virtual ~ACC_PickupSpawner();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_10_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_10_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -61,6 +61,6 @@ class ACC_PickupSpawner;
 // ********** End Class ACC_PickupSpawner **********************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_Pong_CC_PickupSpawner_h
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

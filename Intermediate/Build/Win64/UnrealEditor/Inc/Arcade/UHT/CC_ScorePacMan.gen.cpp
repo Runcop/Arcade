@@ -136,14 +136,14 @@ ACC_ScorePacMan::~ACC_ScorePacMan() {}
 // ********** End Class ACC_ScorePacMan ************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACC_ScorePacMan, ACC_ScorePacMan::StaticClass, TEXT("ACC_ScorePacMan"), &Z_Registration_Info_UClass_ACC_ScorePacMan, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_ScorePacMan), 2990027315U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_1105870446(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_1105870446(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_ScorePacMan_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

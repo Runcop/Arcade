@@ -19,7 +19,14 @@ class UBillboardComponent;
 class UTimelineComponent;
 class UCurveFloat;
 
-
+UENUM(BlueprintType)
+enum class EPacDirection : uint8
+{
+	UP UMETA(DisplayName = "UP"),
+	Down UMETA(DisplayName = "Down"),
+	Left UMETA(DisplayName = "Left"),
+	Right UMETA(DisplayName = "Right")
+};
 
 
 UCLASS()
@@ -93,7 +100,13 @@ public:
 	void ResetMovement();
 	UFUNCTION()
 	void Paused();
+	UFUNCTION()
+	void OpenDirection(EPacDirection Direction);
 
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)UStaticMeshComponent* StaticMesh;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Direction")
+	bool CanGoUp = true;
 
 private:
 
@@ -101,7 +114,7 @@ private:
 	UPROPERTY(VisibleAnywhere)USpringArmComponent* SpringArm;
 	UPROPERTY(VisibleAnywhere)UBoxComponent* BoxCollision;
 	UPROPERTY(VisibleAnywhere) UFloatingPawnMovement* Movement;
-	UPROPERTY(VisibleAnywhere)UStaticMeshComponent* StaticMesh;
+	
 
 
 	

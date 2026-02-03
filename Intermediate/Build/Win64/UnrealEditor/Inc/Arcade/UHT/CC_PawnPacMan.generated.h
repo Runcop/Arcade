@@ -16,11 +16,13 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+enum class EPacDirection : uint8;
 struct FInputActionValue;
 
 // ********** Begin Class ACC_PawnPacMan ***********************************************************
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRoatatingDirection); \
+	DECLARE_FUNCTION(execOpenDirection); \
 	DECLARE_FUNCTION(execPaused); \
 	DECLARE_FUNCTION(execResetMovement); \
 	DECLARE_FUNCTION(execAlwaysMovingForward); \
@@ -30,7 +32,7 @@ struct FInputActionValue;
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_PawnPacMan_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_PawnPacMan(); \
 	friend struct Z_Construct_UClass_ACC_PawnPacMan_Statics; \
@@ -41,7 +43,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_PawnPacMan)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_PawnPacMan(ACC_PawnPacMan&&) = delete; \
 	ACC_PawnPacMan(const ACC_PawnPacMan&) = delete; \
@@ -51,13 +53,13 @@ public: \
 	NO_API virtual ~ACC_PawnPacMan();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_25_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_32_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_28_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h_35_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -67,6 +69,18 @@ class ACC_PawnPacMan;
 // ********** End Class ACC_PawnPacMan *************************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PawnPacMan_h
+
+// ********** Begin Enum EPacDirection *************************************************************
+#define FOREACH_ENUM_EPACDIRECTION(op) \
+	op(EPacDirection::UP) \
+	op(EPacDirection::Down) \
+	op(EPacDirection::Left) \
+	op(EPacDirection::Right) 
+
+enum class EPacDirection : uint8;
+template<> struct TIsUEnumClass<EPacDirection> { enum { Value = true }; };
+template<> ARCADE_API UEnum* StaticEnum<EPacDirection>();
+// ********** End Enum EPacDirection ***************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

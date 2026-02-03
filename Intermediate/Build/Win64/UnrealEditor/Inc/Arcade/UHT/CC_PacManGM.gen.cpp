@@ -116,14 +116,14 @@ ACC_PacManGM::~ACC_PacManGM() {}
 // ********** End Class ACC_PacManGM ***************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ACC_PacManGM, ACC_PacManGM::StaticClass, TEXT("ACC_PacManGM"), &Z_Registration_Info_UClass_ACC_PacManGM, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_PacManGM), 603437719U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_217820178(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_217820178(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_PacMan_CC_PacManGM_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

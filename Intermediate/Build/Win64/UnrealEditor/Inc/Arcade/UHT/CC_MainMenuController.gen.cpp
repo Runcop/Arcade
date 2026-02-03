@@ -778,7 +778,7 @@ ACC_MainMenuController::~ACC_MainMenuController() {}
 // ********** End Class ACC_MainMenuController *****************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics
+struct Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
 		{ EArcadeMachine_StaticEnum, TEXT("EArcadeMachine"), &Z_Registration_Info_UEnum_EArcadeMachine, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2870117583U) },
@@ -787,10 +787,10 @@ struct Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_So
 		{ Z_Construct_UClass_ACC_MainMenuController, ACC_MainMenuController::StaticClass, TEXT("ACC_MainMenuController"), &Z_Registration_Info_UClass_ACC_MainMenuController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACC_MainMenuController), 730391661U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_827755322(TEXT("/Script/Arcade"),
-	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_827755322(TEXT("/Script/Arcade"),
+	Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::ClassInfo),
 	nullptr, 0,
-	Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo));
+	Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h__Script_Arcade_Statics::EnumInfo));
 // ********** End Registration *********************************************************************
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

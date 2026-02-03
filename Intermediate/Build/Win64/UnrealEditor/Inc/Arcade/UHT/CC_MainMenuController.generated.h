@@ -21,7 +21,7 @@ enum class EArcadeMachine : uint8;
 enum class EArcadeMachine : uint8; 
 
 // ********** Begin Class ACC_MainMenuController ***************************************************
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execTimerGameSelected); \
 	DECLARE_FUNCTION(execGameSelected); \
 	DECLARE_FUNCTION(execIsCameraMoving); \
@@ -36,7 +36,7 @@ enum class EArcadeMachine : uint8;
 
 ARCADE_API UClass* Z_Construct_UClass_ACC_MainMenuController_NoRegister();
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_INCLASS_NO_PURE_DECLS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACC_MainMenuController(); \
 	friend struct Z_Construct_UClass_ACC_MainMenuController_Statics; \
@@ -47,7 +47,7 @@ public: \
 	DECLARE_SERIALIZER(ACC_MainMenuController)
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_ENHANCED_CONSTRUCTORS \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACC_MainMenuController(ACC_MainMenuController&&) = delete; \
 	ACC_MainMenuController(const ACC_MainMenuController&) = delete; \
@@ -57,13 +57,13 @@ public: \
 	NO_API virtual ~ACC_MainMenuController();
 
 
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_33_PROLOG
-#define FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_GENERATED_BODY \
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_33_PROLOG
+#define FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_INCLASS_NO_PURE_DECLS \
-	FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_ENHANCED_CONSTRUCTORS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_INCLASS_NO_PURE_DECLS \
+	FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h_36_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -73,7 +73,7 @@ class ACC_MainMenuController;
 // ********** End Class ACC_MainMenuController *****************************************************
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Users_jamie_Documents_Unreal_Projects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h
+#define CURRENT_FILE_ID FID_UnrealProjects_Arcade_Source_Arcade_Public_MainMenu_CC_MainMenuController_h
 
 // ********** Begin Enum EArcadeMachine ************************************************************
 #define FOREACH_ENUM_EARCADEMACHINE(op) \

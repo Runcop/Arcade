@@ -226,7 +226,7 @@ void ACC_MainMenuController::GameSelected(EArcadeMachine SelectedMachine)// Call
 			
 			float Time = 2;
 			GlobalSelectedMachine = SelectedMachine;
-			CurrentWidgetInstance->RemoveFromViewport();
+			CurrentWidgetInstance->RemoveFromParent();
 			CurrentWidgetInstance = nullptr;
 			this->SetViewTargetWithBlend(ZoomInto, Time);
 			World->GetTimerManager().SetTimer(Timer, this, &ACC_MainMenuController::TimerGameSelected, Time, false);
